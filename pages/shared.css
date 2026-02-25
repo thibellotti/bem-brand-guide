@@ -1,0 +1,218 @@
+/* Bem.ai Brand Guide — Design Tokens & Shared Styles */
+
+/* PP Neue Corp — @font-face declarations (Normal width) */
+@font-face {
+  font-family: 'PP Neue Corp';
+  src: url('fonts/PPNeueCorp-NormalThin.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Neue Corp';
+  src: url('fonts/PPNeueCorp-NormalUltralight.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Neue Corp';
+  src: url('fonts/PPNeueCorp-NormalMedium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Neue Corp';
+  src: url('fonts/PPNeueCorp-NormalUltrabold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Neue Corp';
+  src: url('fonts/PPNeueCorp-NormalBlack.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Fallback */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap');
+
+:root {
+  /* Colors */
+  --black: #000000;
+  --near-black: #0A0A0A;
+  --dark: #111111;
+  --white: #FFFFFF;
+  --gray-90: #E5E5E5;
+  --gray-60: #999999;
+  --gray-40: #666666;
+  --gray-20: #333333;
+  --blue: #2c3ab4;
+  --blue-bright: #3344FF;
+  --blue-electric: #4455FF;
+  --light-blue: #0df6f8;
+  --coral: #ff6f91;
+  --pink: #e075ff;
+
+  /* Typography */
+  --font: 'PP Neue Corp', 'Inter', 'SF Pro Display', -apple-system, system-ui, sans-serif;
+
+  /* Spacing (8pt grid) */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+  --sp-8: 64px;
+  --sp-9: 96px;
+  --sp-10: 128px;
+
+  /* Page */
+  --page-w: 1920px;
+  --page-h: 1080px;
+  --page-pad: 96px;
+}
+
+/* Reset */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+body {
+  font-family: var(--font);
+  color: var(--white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Page frame */
+.page {
+  width: var(--page-w);
+  height: var(--page-h);
+  background: var(--black);
+  position: relative;
+  overflow: hidden;
+  padding: var(--page-pad);
+}
+
+/* Page number */
+.page-number {
+  position: absolute;
+  bottom: var(--sp-7);
+  right: var(--page-pad);
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--gray-40);
+  letter-spacing: 0.05em;
+}
+
+/* Page title */
+.page-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray-40);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: var(--sp-8);
+}
+
+/* Section label */
+.section-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--blue-bright);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: var(--sp-4);
+}
+
+/* Heading styles — mapped to PP Neue Corp weights */
+.h1 {
+  font-size: 120px;
+  font-weight: 800; /* Ultrabold */
+  line-height: 1.0;
+  letter-spacing: -0.02em;
+}
+
+.h2 {
+  font-size: 72px;
+  font-weight: 500; /* Medium */
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+}
+
+.h3 {
+  font-size: 48px;
+  font-weight: 200; /* Ultralight */
+  line-height: 1.1;
+}
+
+.h4 {
+  font-size: 32px;
+  font-weight: 200; /* Ultralight */
+  line-height: 1.2;
+}
+
+.body-text {
+  font-size: 18px;
+  font-weight: 200; /* Ultralight */
+  line-height: 1.5;
+  color: var(--gray-60);
+}
+
+.caption {
+  font-size: 14px;
+  font-weight: 100; /* Thin */
+  line-height: 1.4;
+  color: var(--gray-40);
+}
+
+/* Logo SVG */
+.logo-bem {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-bem svg {
+  height: 1em;
+}
+
+/* Utility */
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.gap-1 { gap: var(--sp-1); }
+.gap-2 { gap: var(--sp-2); }
+.gap-3 { gap: var(--sp-3); }
+.gap-4 { gap: var(--sp-4); }
+.gap-5 { gap: var(--sp-5); }
+.gap-6 { gap: var(--sp-6); }
+.gap-7 { gap: var(--sp-7); }
+.gap-8 { gap: var(--sp-8); }
+.text-center { text-align: center; }
+.w-full { width: 100%; }
+.h-full { height: 100%; }
+.relative { position: relative; }
+.absolute { position: absolute; }

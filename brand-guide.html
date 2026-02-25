@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bem.ai — Brand Guide</title>
+
+  <!-- PP Neue Corp -->
+  <style>
+    @font-face { font-family: 'PP Neue Corp'; src: url('pages/fonts/PPNeueCorp-NormalThin.woff2') format('woff2'); font-weight: 100; font-style: normal; }
+    @font-face { font-family: 'PP Neue Corp'; src: url('pages/fonts/PPNeueCorp-NormalUltralight.woff2') format('woff2'); font-weight: 200; font-style: normal; }
+    @font-face { font-family: 'PP Neue Corp'; src: url('pages/fonts/PPNeueCorp-NormalMedium.woff2') format('woff2'); font-weight: 500; font-style: normal; }
+    @font-face { font-family: 'PP Neue Corp'; src: url('pages/fonts/PPNeueCorp-NormalUltrabold.woff2') format('woff2'); font-weight: 800; font-style: normal; }
+    @font-face { font-family: 'PP Neue Corp'; src: url('pages/fonts/PPNeueCorp-NormalBlack.woff2') format('woff2'); font-weight: 900; font-style: normal; }
+  </style>
+
+  <style>
+    :root {
+      --black: #000000;
+      --near-black: #0a0a0a;
+      --dark: #111111;
+      --dark-2: #161616;
+      --dark-3: #1a1a1a;
+      --white: #ffffff;
+      --gray-90: #e5e5e5;
+      --gray-70: #b3b3b3;
+      --gray-60: #999999;
+      --gray-40: #666666;
+      --gray-20: #333333;
+      --gray-10: #1f1f1f;
+      --blue: #3030ff;
+      --light-blue: #0073ff;
+      --coral: #ff6f91;
+      --pink: #e075ff;
+      --font: 'PP Neue Corp', 'Inter', -apple-system, system-ui, sans-serif;
+      --nav-w: 260px;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html {
+      background: var(--near-black);
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font);
+      color: var(--white);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      display: flex;
+    }
+
+    /* ===== SIDEBAR NAV ===== */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: var(--nav-w);
+      height: 100vh;
+      background: var(--black);
+      border-right: 1px solid var(--gray-20);
+      padding: 48px 32px;
+      display: flex;
+      flex-direction: column;
+      z-index: 100;
+      overflow-y: auto;
+    }
+
+    .sidebar-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+      text-decoration: none;
+    }
+
+    .sidebar-logo span {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--white);
+    }
+
+    .sidebar-logo svg { width: 30px; height: 30px; }
+
+    .sidebar-subtitle {
+      font-size: 12px;
+      font-weight: 200;
+      color: var(--gray-40);
+      letter-spacing: 0.05em;
+      margin-bottom: 48px;
+      line-height: 1.4;
+    }
+
+    .nav-section {
+      font-size: 10px;
+      font-weight: 500;
+      color: var(--gray-40);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      margin-top: 32px;
+    }
+
+    .nav-section:first-of-type { margin-top: 0; }
+
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 16px;
+      margin: 0 -16px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: var(--gray-60);
+      font-size: 14px;
+      font-weight: 200;
+      transition: all 0.15s;
+    }
+
+    .nav-link:hover {
+      background: var(--dark);
+      color: var(--white);
+    }
+
+    .nav-link.active {
+      background: var(--dark);
+      color: var(--white);
+      font-weight: 500;
+    }
+
+    .nav-num {
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--blue);
+      min-width: 20px;
+    }
+
+    .sidebar-footer {
+      margin-top: auto;
+      padding-top: 32px;
+      border-top: 1px solid var(--gray-20);
+      font-size: 11px;
+      color: var(--gray-40);
+      font-weight: 200;
+      line-height: 1.5;
+    }
+
+    /* ===== MAIN CONTENT ===== */
+    .main {
+      margin-left: var(--nav-w);
+      flex: 1;
+      min-height: 100vh;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      background: var(--black);
+    }
+
+    .hero-art {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ===== SECTIONS ===== */
+    .section {
+      padding: 120px 96px;
+      border-top: 1px solid var(--gray-20);
+      position: relative;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      gap: 24px;
+      margin-bottom: 64px;
+    }
+
+    .section-number {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--blue);
+      letter-spacing: 0.1em;
+    }
+
+    .section-title {
+      font-size: 42px;
+      font-weight: 200;
+      color: var(--white);
+      letter-spacing: -0.01em;
+    }
+
+    .section-desc {
+      font-size: 18px;
+      font-weight: 200;
+      color: var(--gray-60);
+      max-width: 720px;
+      line-height: 1.6;
+      margin-top: -40px;
+      margin-bottom: 64px;
+      margin-left: 54px;
+    }
+
+    .subsection {
+      margin-bottom: 64px;
+    }
+
+    .subsection:last-child { margin-bottom: 0; }
+
+    .subsection-label {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--blue);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .rule-text {
+      font-size: 16px;
+      font-weight: 200;
+      color: var(--gray-70);
+      line-height: 1.7;
+      max-width: 640px;
+    }
+
+    .rule-text strong {
+      color: var(--white);
+      font-weight: 500;
+    }
+
+    /* ===== LOGO SECTION ===== */
+    .logo-primary {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      padding: 96px;
+      background: var(--dark);
+      border-radius: 16px;
+      margin-bottom: 48px;
+    }
+
+    .logo-primary span {
+      font-size: 80px;
+      font-weight: 800;
+      color: var(--white);
+    }
+
+    .logo-primary svg { width: 72px; height: 72px; }
+
+    .logo-versions {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+
+    .logo-card {
+      aspect-ratio: 16/10;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      position: relative;
+    }
+
+    .logo-card.dark { background: var(--dark); }
+    .logo-card.light { background: var(--white); }
+
+    .logo-card span {
+      font-size: 28px;
+      font-weight: 800;
+    }
+
+    .logo-card svg { width: 28px; height: 28px; }
+
+    .logo-card-label {
+      position: absolute;
+      bottom: -28px;
+      left: 0;
+      font-size: 12px;
+      color: var(--gray-40);
+      font-weight: 200;
+    }
+
+    .logo-rule-box {
+      background: var(--dark);
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .logo-rule-box .rule-visual {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 32px;
+    }
+
+    .logo-rule-box .rule-info {
+      padding: 20px 24px;
+      border-top: 1px solid var(--gray-20);
+    }
+
+    .logo-rule-box h4 {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+
+    .logo-rule-box p {
+      font-size: 12px;
+      font-weight: 200;
+      color: var(--gray-40);
+      line-height: 1.4;
+    }
+
+    .clearspace-demo .cs-box {
+      border: 1px dashed var(--gray-40);
+      border-radius: 4px;
+      padding: 28px 32px;
+      position: relative;
+    }
+
+    .clearspace-demo .cs-label {
+      position: absolute;
+      font-size: 10px;
+      color: var(--blue);
+      font-weight: 500;
+    }
+
+    /* ===== COLOR SECTION ===== */
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+
+    .color-swatch {
+      border-radius: 16px;
+      aspect-ratio: 1/1.1;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .color-info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 24px;
+    }
+
+    .color-name {
+      font-size: 20px;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    .color-hex {
+      font-size: 14px;
+      font-weight: 200;
+      opacity: 0.7;
+      font-family: 'SF Mono', 'Fira Code', monospace;
+    }
+
+    .color-role {
+      font-size: 12px;
+      font-weight: 200;
+      opacity: 0.5;
+      margin-top: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .neutral-swatch {
+      border-radius: 10px;
+      aspect-ratio: 1/0.5;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .neutral-info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 12px;
+    }
+
+    .neutral-name {
+      font-size: 12px;
+      font-weight: 500;
+      margin-bottom: 2px;
+    }
+
+    .neutral-hex {
+      font-size: 11px;
+      font-weight: 200;
+      opacity: 0.7;
+      font-family: 'SF Mono', 'Fira Code', monospace;
+    }
+
+    .gradient-demos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+
+    .gradient-bar {
+      height: 80px;
+      border-radius: 12px;
+      position: relative;
+    }
+
+    .gradient-bar span {
+      position: absolute;
+      bottom: -28px;
+      left: 0;
+      font-size: 12px;
+      color: var(--gray-40);
+      font-weight: 200;
+    }
+
+    /* ===== TYPOGRAPHY ===== */
+    .type-showcase {
+      padding: 64px;
+      background: var(--dark);
+      border-radius: 16px;
+      margin-bottom: 48px;
+    }
+
+    .type-fontname {
+      font-size: 64px;
+      font-weight: 500;
+      color: var(--white);
+      margin-bottom: 48px;
+    }
+
+    .type-weights {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .type-weight-row {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .type-weight-row .tw-sample {
+      font-size: 36px;
+      color: var(--white);
+      min-width: 80px;
+    }
+
+    .type-weight-row .tw-line {
+      flex: 1;
+      border-bottom: 1px solid var(--gray-20);
+    }
+
+    .type-weight-row .tw-name {
+      font-size: 14px;
+      color: var(--gray-40);
+      font-weight: 200;
+      min-width: 100px;
+      text-align: right;
+    }
+
+    .type-scale {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .type-scale-item {
+      display: flex;
+      align-items: baseline;
+      gap: 32px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--gray-10);
+    }
+
+    .type-scale-item:last-child { border-bottom: none; }
+
+    .ts-meta {
+      min-width: 180px;
+      text-align: right;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--gray-40);
+      font-family: 'SF Mono', monospace;
+      line-height: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .ts-meta .ts-label {
+      color: var(--blue);
+      font-family: var(--font);
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .ts-sample {
+      flex: 1;
+    }
+
+    /* ===== ICON SYSTEM ===== */
+    .icon-layer {
+      margin-bottom: 64px;
+    }
+
+    .icon-layer-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .icon-layer-title {
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--white);
+    }
+
+    .icon-layer-badge {
+      font-size: 10px;
+      font-weight: 500;
+      color: var(--blue);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      border: 1px solid var(--blue);
+      padding: 4px 12px;
+      border-radius: 100px;
+    }
+
+    .icon-layer-desc {
+      font-size: 15px;
+      font-weight: 200;
+      color: var(--gray-70);
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+
+    /* ===== KEY VISUALS ===== */
+    .visuals-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .visual-card-caption {
+      font-size: 12px;
+      color: var(--gray-40);
+      font-weight: 200;
+      margin-top: 10px;
+      line-height: 1.4;
+    }
+
+    /* Mockups gallery */
+    .mockups-grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .mockups-grid img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+    }
+
+    .mockup-row-2 {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .mockup-row-3 {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .mockup-full {
+      grid-template-columns: 1fr;
+    }
+
+    /* ===== FOOTER ===== */
+    .guide-footer {
+      padding: 64px 96px;
+      border-top: 1px solid var(--gray-20);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-left {
+      font-size: 13px;
+      font-weight: 200;
+      color: var(--gray-40);
+    }
+
+    .footer-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--blue);
+    }
+
+    /* Asset frames */
+    .asset-frame {
+      background: var(--black);
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--gray-20);
+      margin-bottom: 24px;
+    }
+
+    .asset-frame img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .asset-frame-label {
+      padding: 16px 24px;
+      background: var(--dark);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid var(--gray-20);
+    }
+
+    .asset-frame-label span {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--white);
+    }
+
+    .asset-frame-label .asset-file {
+      font-size: 11px;
+      font-weight: 200;
+      color: var(--gray-40);
+      font-family: 'SF Mono', monospace;
+    }
+
+    /* scrollbar */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: var(--gray-20); border-radius: 3px; }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== SIDEBAR ===== -->
+  <nav class="sidebar">
+    <a href="#hero" class="sidebar-logo">
+      <span>bem</span>
+      <svg viewBox="0 0 52 52" fill="none"><rect x="0.3" y="0" width="6.7" height="42.5" fill="white"/><rect x="9.6" y="0" width="42.1" height="6.8" fill="white"/><rect x="0.3" y="45.3" width="42.1" height="6.7" fill="white"/><rect x="45" y="9.5" width="6.7" height="42.5" fill="white"/></svg>
+    </a>
+    <div class="sidebar-subtitle">Brand Expansion Guide</div>
+
+    <div class="nav-section">Identity</div>
+    <a href="#logo" class="nav-link"><span class="nav-num">01</span> Logo</a>
+    <a href="#color" class="nav-link"><span class="nav-num">02</span> Color</a>
+    <a href="#typography" class="nav-link"><span class="nav-num">03</span> Typography</a>
+    <a href="#iconography" class="nav-link"><span class="nav-num">04</span> Iconography</a>
+    <a href="#visual-language" class="nav-link"><span class="nav-num">05</span> Visual Language</a>
+
+    <div class="sidebar-footer">
+      THXType Studio<br>
+      February 2026<br>
+      v1.0
+    </div>
+  </nav>
+
+  <!-- ===== MAIN ===== -->
+  <main class="main">
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <img src="assets/bem-final-idv-24.svg" alt="Bem.ai Brand Guide" class="hero-art" style="object-fit:cover;object-position:center">
+    </section>
+
+    <!-- 01 LOGO -->
+    <section class="section" id="logo">
+      <div class="section-header">
+        <span class="section-number">01</span>
+        <h2 class="section-title">Logo</h2>
+      </div>
+      <p class="section-desc">The Bem logo combines a geometric wordmark with an open-corner square icon — representing structured intelligence emerging from raw data. The gap in the square is intentional: it signals openness, input, and transformation.</p>
+
+      <div class="subsection">
+        <div class="subsection-label">Primary Lockup</div>
+        <div class="logo-primary">
+          <span>bem</span>
+          <svg viewBox="0 0 52 52" fill="none" width="72" height="72"><rect x="0.3" y="0" width="6.7" height="42.5" fill="white"/><rect x="9.6" y="0" width="42.1" height="6.8" fill="white"/><rect x="0.3" y="45.3" width="42.1" height="6.7" fill="white"/><rect x="45" y="9.5" width="6.7" height="42.5" fill="white"/></svg>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <div class="subsection-label">Versions</div>
+        <div class="logo-versions">
+          <div>
+            <div class="logo-card dark">
+              <span style="font-size:28px;font-weight:800;color:#fff">bem</span>
+              <svg viewBox="0 0 52 52" fill="none" width="28" height="28"><rect x="0.3" y="0" width="6.7" height="42.5" fill="white"/><rect x="9.6" y="0" width="42.1" height="6.8" fill="white"/><rect x="0.3" y="45.3" width="42.1" height="6.7" fill="white"/><rect x="45" y="9.5" width="6.7" height="42.5" fill="white"/></svg>
+            </div>
+            <div class="logo-card-label">White on Dark — Primary</div>
+          </div>
+          <div>
+            <div class="logo-card light">
+              <span style="font-size:28px;font-weight:800;color:#000">bem</span>
+              <svg viewBox="0 0 52 52" fill="none" width="28" height="28"><rect x="0.3" y="0" width="6.7" height="42.5" fill="black"/><rect x="9.6" y="0" width="42.1" height="6.8" fill="black"/><rect x="0.3" y="45.3" width="42.1" height="6.7" fill="black"/><rect x="45" y="9.5" width="6.7" height="42.5" fill="black"/></svg>
+            </div>
+            <div class="logo-card-label">Black on Light</div>
+          </div>
+          <div>
+            <div class="logo-card dark" style="background:var(--blue)">
+              <span style="font-size:28px;font-weight:800;color:#fff">bem</span>
+              <svg viewBox="0 0 52 52" fill="none" width="28" height="28"><rect x="0.3" y="0" width="6.7" height="42.5" fill="white"/><rect x="9.6" y="0" width="42.1" height="6.8" fill="white"/><rect x="0.3" y="45.3" width="42.1" height="6.7" fill="white"/><rect x="45" y="9.5" width="6.7" height="42.5" fill="white"/></svg>
+            </div>
+            <div class="logo-card-label">White on Blue</div>
+          </div>
+          <div>
+            <div class="logo-card dark">
+              <svg viewBox="0 0 52 52" fill="none" width="40" height="40"><rect x="0.3" y="0" width="6.7" height="42.5" fill="white"/><rect x="9.6" y="0" width="42.1" height="6.8" fill="white"/><rect x="0.3" y="45.3" width="42.1" height="6.7" fill="white"/><rect x="45" y="9.5" width="6.7" height="42.5" fill="white"/></svg>
+            </div>
+            <div class="logo-card-label">Icon Only</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <div class="subsection-label">Rules</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px">
+          <div class="logo-rule-box">
+            <div class="rule-visual clearspace-demo">
+              <div class="cs-box">
+                <span style="font-size:20px;font-weight:800;display:flex;align-items:center;gap:6px;color:var(--white)">
+                  bem
+                  <svg viewBox="0 0 52 52" fill="none" width="20" height="20"><rect x="0.3" y="0" width="6.7" height="42.5" fill="white"/><rect x="9.6" y="0" width="42.1" height="6.8" fill="white"/><rect x="0.3" y="45.3" width="42.1" height="6.7" fill="white"/><rect x="45" y="9.5" width="6.7" height="42.5" fill="white"/></svg>
+                </span>
+                <span class="cs-label" style="top:-14px;left:50%;transform:translateX(-50%)">x</span>
+                <span class="cs-label" style="bottom:-14px;left:50%;transform:translateX(-50%)">x</span>
+                <span class="cs-label" style="left:-14px;top:50%;transform:translateY(-50%)">x</span>
+                <span class="cs-label" style="right:-14px;top:50%;transform:translateY(-50%)">x</span>
+              </div>
+            </div>
+            <div class="rule-info">
+              <h4>Clear Space</h4>
+              <p>1x minimum on all sides, where x = icon height.</p>
+            </div>
+          </div>
+          <div class="logo-rule-box">
+            <div class="rule-visual" style="flex-direction:column;gap:16px">
+              <span style="font-size:16px;font-weight:800;display:flex;align-items:center;gap:5px;color:var(--white)">
+                bem
+                <svg viewBox="0 0 52 52" fill="none" width="15" height="15"><rect x="0.3" y="0" width="6.7" height="42.5" fill="white"/><rect x="9.6" y="0" width="42.1" height="6.8" fill="white"/><rect x="0.3" y="45.3" width="42.1" height="6.7" fill="white"/><rect x="45" y="9.5" width="6.7" height="42.5" fill="white"/></svg>
+              </span>
+              <span style="font-size:11px;color:var(--blue);letter-spacing:0.05em">&larr; 24px min &rarr;</span>
+            </div>
+            <div class="rule-info">
+              <h4>Minimum Size</h4>
+              <p>Never smaller than 24px in height.</p>
+            </div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+          <div class="logo-rule-box">
+            <div class="rule-visual" style="border-bottom:2px solid var(--coral)">
+              <span style="font-size:20px;font-weight:800;color:var(--white);display:flex;align-items:center;gap:5px;transform:scaleX(1.4)">bem <svg viewBox="0 0 52 52" fill="none" width="20" height="20"><rect x="0.3" y="0" width="6.7" height="42.5" fill="white"/><rect x="9.6" y="0" width="42.1" height="6.8" fill="white"/><rect x="0.3" y="45.3" width="42.1" height="6.7" fill="white"/><rect x="45" y="9.5" width="6.7" height="42.5" fill="white"/></svg></span>
+            </div>
+            <div class="rule-info">
+              <h4 style="color:var(--coral)">Never distort or stretch</h4>
+            </div>
+          </div>
+          <div class="logo-rule-box">
+            <div class="rule-visual" style="border-bottom:2px solid var(--coral)">
+              <span style="font-size:20px;font-weight:800;color:#ff6f91;display:flex;align-items:center;gap:5px">bem <svg viewBox="0 0 52 52" fill="none" width="20" height="20"><rect x="0.3" y="0" width="6.7" height="42.5" fill="#ff6f91"/><rect x="9.6" y="0" width="42.1" height="6.8" fill="#ff6f91"/><rect x="0.3" y="45.3" width="42.1" height="6.7" fill="#ff6f91"/><rect x="45" y="9.5" width="6.7" height="42.5" fill="#ff6f91"/></svg></span>
+            </div>
+            <div class="rule-info">
+              <h4 style="color:var(--coral)">Never recolor</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 COLOR -->
+    <section class="section" id="color">
+      <div class="section-header">
+        <span class="section-number">02</span>
+        <h2 class="section-title">Color</h2>
+      </div>
+      <p class="section-desc">A restrained palette built for dark interfaces and technical content. Blue is the primary identity color. Coral and pink are accent-only — used sparingly for emphasis.</p>
+
+      <div class="subsection">
+        <div class="subsection-label">Brand Colors</div>
+        <div class="color-grid">
+          <div class="color-swatch" style="background:var(--blue)">
+            <div class="color-info" style="color:#fff">
+              <div class="color-name">Blue</div>
+              <div class="color-hex">#3030ff</div>
+              <div class="color-role">Primary</div>
+            </div>
+          </div>
+          <div class="color-swatch" style="background:var(--light-blue)">
+            <div class="color-info" style="color:#fff">
+              <div class="color-name">Light Blue</div>
+              <div class="color-hex">#0073ff</div>
+              <div class="color-role">Accent</div>
+            </div>
+          </div>
+          <div class="color-swatch" style="background:var(--coral)">
+            <div class="color-info" style="color:#fff">
+              <div class="color-name">Coral</div>
+              <div class="color-hex">#ff6f91</div>
+              <div class="color-role">Secondary</div>
+            </div>
+          </div>
+          <div class="color-swatch" style="background:var(--pink)">
+            <div class="color-info" style="color:#fff">
+              <div class="color-name">Pink</div>
+              <div class="color-hex">#e075ff</div>
+              <div class="color-role">Highlight</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <div class="subsection-label">Neutrals</div>
+        <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-bottom:48px">
+          <div class="neutral-swatch" style="background:#000;border:1px solid var(--gray-20)">
+            <div class="neutral-info" style="color:#fff">
+              <div class="neutral-name">Black</div>
+              <div class="neutral-hex">#000000</div>
+            </div>
+          </div>
+          <div class="neutral-swatch" style="background:#111">
+            <div class="neutral-info" style="color:#fff">
+              <div class="neutral-name">Dark</div>
+              <div class="neutral-hex">#111111</div>
+            </div>
+          </div>
+          <div class="neutral-swatch" style="background:#333">
+            <div class="neutral-info" style="color:#fff">
+              <div class="neutral-name">Gray 20</div>
+              <div class="neutral-hex">#333333</div>
+            </div>
+          </div>
+          <div class="neutral-swatch" style="background:#666">
+            <div class="neutral-info" style="color:#fff">
+              <div class="neutral-name">Gray 40</div>
+              <div class="neutral-hex">#666666</div>
+            </div>
+          </div>
+          <div class="neutral-swatch" style="background:#999">
+            <div class="neutral-info" style="color:#000">
+              <div class="neutral-name">Gray 60</div>
+              <div class="neutral-hex">#999999</div>
+            </div>
+          </div>
+          <div class="neutral-swatch" style="background:#fff;border:1px solid var(--gray-20)">
+            <div class="neutral-info" style="color:#000">
+              <div class="neutral-name">White</div>
+              <div class="neutral-hex">#ffffff</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <div class="subsection-label">Gradients</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px">
+          <div>
+            <div class="gradient-bar" style="background:linear-gradient(90deg, #3030ff, #0073ff)"></div>
+            <span style="font-size:12px;color:var(--gray-40);font-weight:200;display:block;margin-top:12px">Energy — Blue → Light Blue. Hero backgrounds, CTAs, featured elements.</span>
+          </div>
+          <div>
+            <div class="gradient-bar" style="background:linear-gradient(90deg, #3030ff, #ff6f91)"></div>
+            <span style="font-size:12px;color:var(--gray-40);font-weight:200;display:block;margin-top:12px">Warmth — Blue → Coral. Highlights, accents, event visuals.</span>
+          </div>
+          <div>
+            <div class="gradient-bar" style="background:linear-gradient(90deg, #3030ff, #000)"></div>
+            <span style="font-size:12px;color:var(--gray-40);font-weight:200;display:block;margin-top:12px">Depth — Blue → Black. 3D shapes, ambient glow, atmospheric effects.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <div class="subsection-label">Usage</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--gray-20);border-radius:12px;overflow:hidden">
+          <div style="padding:24px 28px;border-bottom:1px solid var(--gray-20);border-right:1px solid var(--gray-20);display:flex;gap:16px;align-items:flex-start">
+            <div style="width:8px;height:8px;border-radius:50%;background:var(--black);border:1px solid var(--gray-40);margin-top:4px;flex-shrink:0"></div>
+            <div><span style="font-size:14px;font-weight:500;color:var(--white);display:block;margin-bottom:4px">Dark-first canvas</span><span style="font-size:13px;font-weight:200;color:var(--gray-60)">Black is the default background for all communications.</span></div>
+          </div>
+          <div style="padding:24px 28px;border-bottom:1px solid var(--gray-20);display:flex;gap:16px;align-items:flex-start">
+            <div style="width:8px;height:8px;border-radius:50%;background:var(--blue);margin-top:4px;flex-shrink:0"></div>
+            <div><span style="font-size:14px;font-weight:500;color:var(--white);display:block;margin-bottom:4px">Blue as identity anchor</span><span style="font-size:13px;font-weight:200;color:var(--gray-60)">Accents, interactive elements, icons. Never as body text.</span></div>
+          </div>
+          <div style="padding:24px 28px;border-right:1px solid var(--gray-20);display:flex;gap:16px;align-items:flex-start">
+            <div style="width:8px;height:8px;border-radius:50%;background:var(--coral);margin-top:4px;flex-shrink:0"></div>
+            <div><span style="font-size:14px;font-weight:500;color:var(--white);display:block;margin-bottom:4px">Coral & Pink — sparingly</span><span style="font-size:13px;font-weight:200;color:var(--gray-60)">Small graphic accents only. Never as backgrounds.</span></div>
+          </div>
+          <div style="padding:24px 28px;display:flex;gap:16px;align-items:flex-start">
+            <div style="width:8px;height:8px;border-radius:50%;background:var(--white);margin-top:4px;flex-shrink:0"></div>
+            <div><span style="font-size:14px;font-weight:500;color:var(--white);display:block;margin-bottom:4px">White for text</span><span style="font-size:13px;font-weight:200;color:var(--gray-60)">Text hierarchy: #fff → #999 → #666 on dark.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 TYPOGRAPHY -->
+    <section class="section" id="typography">
+      <div class="section-header">
+        <span class="section-number">03</span>
+        <h2 class="section-title">Typography</h2>
+      </div>
+      <p class="section-desc">PP Neue Corp is the sole typeface. Its extended family (from Thin to Black, Compact to Wide) gives enough range for any application without introducing a second font.</p>
+
+      <div class="subsection">
+        <div class="subsection-label">Typeface</div>
+        <div class="type-showcase">
+          <div class="type-fontname">PP Neue Corp</div>
+          <div class="type-weights">
+            <div class="type-weight-row">
+              <span class="tw-sample" style="font-weight:100">Aa</span>
+              <div class="tw-line"></div>
+              <span class="tw-name">Thin — 100</span>
+            </div>
+            <div class="type-weight-row">
+              <span class="tw-sample" style="font-weight:200">Aa</span>
+              <div class="tw-line"></div>
+              <span class="tw-name">Ultralight — 200</span>
+            </div>
+            <div class="type-weight-row">
+              <span class="tw-sample" style="font-weight:500">Aa</span>
+              <div class="tw-line"></div>
+              <span class="tw-name">Medium — 500</span>
+            </div>
+            <div class="type-weight-row">
+              <span class="tw-sample" style="font-weight:800">Aa</span>
+              <div class="tw-line"></div>
+              <span class="tw-name">Ultrabold — 800</span>
+            </div>
+            <div class="type-weight-row">
+              <span class="tw-sample" style="font-weight:900">Aa</span>
+              <div class="tw-line"></div>
+              <span class="tw-name">Black — 900</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <div class="subsection-label">Type Scale</div>
+        <div class="type-scale">
+          <div class="type-scale-item">
+            <div class="ts-meta"><span class="ts-label">H1</span>120px / Ultrabold</div>
+            <div class="ts-sample" style="font-size:80px;font-weight:800;line-height:1;color:var(--white)">Intelligence</div>
+          </div>
+          <div class="type-scale-item">
+            <div class="ts-meta"><span class="ts-label">H2</span>72px / Medium</div>
+            <div class="ts-sample" style="font-size:52px;font-weight:500;line-height:1.05;color:var(--white)">Built for clarity</div>
+          </div>
+          <div class="type-scale-item">
+            <div class="ts-meta"><span class="ts-label">H3</span>48px / Ultralight</div>
+            <div class="ts-sample" style="font-size:38px;font-weight:200;line-height:1.1;color:var(--white)">Structure the chaos</div>
+          </div>
+          <div class="type-scale-item">
+            <div class="ts-meta"><span class="ts-label">H4</span>32px / Ultralight</div>
+            <div class="ts-sample" style="font-size:28px;font-weight:200;line-height:1.2;color:var(--gray-90)">Deploy the intelligence</div>
+          </div>
+          <div class="type-scale-item">
+            <div class="ts-meta"><span class="ts-label">Body</span>18px / Ultralight</div>
+            <div class="ts-sample" style="font-size:18px;font-weight:200;line-height:1.6;color:var(--gray-60)">Bem.ai turns unstructured data into structured product intelligence, enabling teams to build clarity from chaos at scale.</div>
+          </div>
+          <div class="type-scale-item">
+            <div class="ts-meta"><span class="ts-label">Caption</span>14px / Thin</div>
+            <div class="ts-sample" style="font-size:14px;font-weight:100;color:var(--gray-40)">Last updated: February 2026 — Version 1.0</div>
+          </div>
+          <div class="type-scale-item">
+            <div class="ts-meta"><span class="ts-label">Label</span>12px / Medium</div>
+            <div class="ts-sample" style="font-size:12px;font-weight:500;color:var(--blue);letter-spacing:0.15em;text-transform:uppercase">TRANSFORM</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection" style="margin-top:48px">
+        <div class="subsection-label">Usage</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+          <div style="background:var(--dark);border-radius:12px;padding:32px;display:flex;flex-direction:column;gap:16px;border-bottom:2px solid var(--blue)">
+            <div>
+              <span style="font-size:28px;font-weight:800;color:var(--white);line-height:1.1;display:block">Built for clarity</span>
+              <span style="font-size:15px;font-weight:200;color:var(--gray-60);line-height:1.5;display:block;margin-top:8px">Ultralight body text provides the contrast that makes headlines sing.</span>
+            </div>
+            <span style="font-size:12px;font-weight:500;color:var(--blue)">Ultrabold headlines + Ultralight body. Max 3 sizes per layout.</span>
+          </div>
+          <div style="background:var(--dark);border-radius:12px;padding:32px;display:flex;flex-direction:column;gap:16px;border-bottom:2px solid var(--coral)">
+            <div>
+              <span style="font-size:28px;font-weight:500;color:var(--white);line-height:1.1;display:block">Built for clarity</span>
+              <span style="font-size:15px;font-weight:500;color:var(--gray-60);line-height:1.5;display:block;margin-top:8px;font-family:Georgia,serif">When you mix fonts or set body in Medium, the system breaks.</span>
+            </div>
+            <span style="font-size:12px;font-weight:500;color:var(--coral)">Never use Medium for body. Never introduce a second typeface.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 ICONOGRAPHY -->
+    <section class="section" id="iconography">
+      <div class="section-header">
+        <span class="section-number">04</span>
+        <h2 class="section-title">Iconography</h2>
+      </div>
+      <p class="section-desc">The icon system maps to Bem.ai's architecture. Three visual layers represent three conceptual layers: what the system does (Functions), what it ingests (Inputs), and how it processes data (Operations).</p>
+
+      <!-- Full System Overview (actual asset) -->
+      <div class="subsection">
+        <div class="subsection-label">Complete Icon System</div>
+        <div class="asset-frame">
+          <img src="assets/bem-final-idv-12.svg" alt="Bem.ai Icon System — All 3 Layers">
+          <div class="asset-frame-label">
+            <span>All Layers — Functions (3D), Inputs (2D), Operations (Iconic)</span>
+            <span class="asset-file">bem-final-idv-12.svg</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="icon-layer">
+        <div class="icon-layer-header">
+          <span class="icon-layer-title">Layer 1 — Functions</span>
+          <span class="icon-layer-badge">3D Shapes</span>
+        </div>
+        <p class="icon-layer-desc">Core processing functions rendered as three-dimensional geometric forms. These use the blue glow effect and represent the primary capabilities of the platform.</p>
+        <div class="asset-frame">
+          <img src="assets/bem-final-idv-22.svg" alt="Functions Icons — Transform, Analyze, Route, Split, Join, Payload Shaping, Enrich">
+          <div class="asset-frame-label">
+            <span>7 Function Icons — Full Set</span>
+            <span class="asset-file">bem-final-idv-22.svg</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="icon-layer">
+        <div class="icon-layer-header">
+          <span class="icon-layer-title">Layer 2 — Inputs</span>
+          <span class="icon-layer-badge">2D Shapes</span>
+        </div>
+        <p class="icon-layer-desc">Data input types rendered as flat, two-dimensional forms. These represent the raw materials the platform ingests before processing.</p>
+        <div class="asset-frame">
+          <img src="assets/bem-final-idv-13.svg" alt="Input Icons — Documents, Images, Spreadsheets, Structured Data, Audio, Video">
+          <div class="asset-frame-label">
+            <span>6 Input Icons — Documents, Images, Spreadsheets, Structured Data, Audio, Video</span>
+            <span class="asset-file">bem-final-idv-13.svg</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="icon-layer">
+        <div class="icon-layer-header">
+          <span class="icon-layer-title">Layer 3 — Operations</span>
+          <span class="icon-layer-badge">Iconic</span>
+        </div>
+        <p class="icon-layer-desc">Data operations rendered as line icons. These represent the atomic data types the system works with internally.</p>
+        <div class="asset-frame">
+          <img src="assets/bem-final-idv-14.svg" alt="Operation Icons — String, Number, Boolean, Object, Array">
+          <div class="asset-frame-label">
+            <span>5 Operation Icons — String, Number, Boolean, Object, Array</span>
+            <span class="asset-file">bem-final-idv-14.svg</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <div class="subsection-label">Usage</div>
+        <div style="border:1px solid var(--gray-20);border-radius:12px;overflow:hidden">
+          <div style="padding:24px 28px;border-bottom:1px solid var(--gray-20);display:flex;gap:16px;align-items:flex-start">
+            <div style="width:8px;height:8px;border-radius:50%;background:var(--blue);margin-top:4px;flex-shrink:0"></div>
+            <div><span style="font-size:14px;font-weight:500;color:var(--white);display:block;margin-bottom:4px">Blue or white stroke only</span><span style="font-size:13px;font-weight:200;color:var(--gray-60)">1.5–2px stroke width. Blue for UI contexts, white for dark hero visuals.</span></div>
+          </div>
+          <div style="padding:24px 28px;border-bottom:1px solid var(--gray-20);display:flex;gap:16px;align-items:flex-start">
+            <div style="width:8px;height:8px;border-radius:50%;background:var(--white);margin-top:4px;flex-shrink:0"></div>
+            <div><span style="font-size:14px;font-weight:500;color:var(--white);display:block;margin-bottom:4px">3D for hero, flat for UI</span><span style="font-size:13px;font-weight:200;color:var(--gray-60)">Glow-rendered 3D in marketing. Flat stroke in product. Never mix both.</span></div>
+          </div>
+          <div style="padding:24px 28px;display:flex;gap:16px;align-items:flex-start">
+            <div style="width:8px;height:8px;border-radius:50%;background:var(--coral);margin-top:4px;flex-shrink:0"></div>
+            <div><span style="font-size:14px;font-weight:500;color:var(--white);display:block;margin-bottom:4px">Minimum 24px, geometric only</span><span style="font-size:13px;font-weight:200;color:var(--gray-60)">Use Iconic layer at small sizes. New icons must follow geometric language.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 VISUAL LANGUAGE -->
+    <section class="section" id="visual-language">
+      <div class="section-header">
+        <span class="section-number">05</span>
+        <h2 class="section-title">Visual Language</h2>
+      </div>
+      <p class="section-desc">How the brand looks and sounds. Every composition, headline, and message follows these principles.</p>
+
+      <!-- Key Visuals — Compositions -->
+      <div class="subsection">
+        <div class="subsection-label">Key Visuals</div>
+        <p class="rule-text" style="margin-bottom:32px">These compositions define the visual direction. Use them as reference — every new visual should feel like it belongs to this family.</p>
+
+        <!-- Row 1: two hero compositions -->
+        <div class="mockups-grid mockup-row-2" style="margin-bottom:16px">
+          <div>
+            <div class="asset-frame" style="margin-bottom:0"><img src="assets/bem-final-idv-04.svg" alt="Intelligence, engineered." style="aspect-ratio:16/9;object-fit:cover"></div>
+            <div class="visual-card-caption">Gradient hero — energy gradient with headline typography</div>
+          </div>
+          <div>
+            <div class="asset-frame" style="margin-bottom:0"><img src="assets/bem-final-idv-03.svg" alt="Turn unstructured data into product" style="aspect-ratio:16/9;object-fit:cover"></div>
+            <div class="visual-card-caption">3D shape hero — blue glow pyramid with mixed-weight type</div>
+          </div>
+        </div>
+
+        <!-- Row 2: three compositions -->
+        <div class="mockups-grid mockup-row-3" style="margin-bottom:16px">
+          <div>
+            <div class="asset-frame" style="margin-bottom:0"><img src="assets/bem-final-idv-09.svg" alt="Built for clarity." style="aspect-ratio:16/9;object-fit:cover"></div>
+            <div class="visual-card-caption">Split composition — dark/light with diamond</div>
+          </div>
+          <div>
+            <div class="asset-frame" style="margin-bottom:0"><img src="assets/bem-final-idv-07.svg" alt="From input to impact" style="aspect-ratio:16/9;object-fit:cover"></div>
+            <div class="visual-card-caption">Geometric pattern — parallelogram depth</div>
+          </div>
+          <div>
+            <div class="asset-frame" style="margin-bottom:0"><img src="assets/bem-final-idv-25.svg" alt="Key Visual — Composition" style="aspect-ratio:16/9;object-fit:cover"></div>
+            <div class="visual-card-caption">Extended composition — brand language variant</div>
+          </div>
+        </div>
+
+        <!-- Row 3: two wider compositions -->
+        <div class="mockups-grid mockup-row-2">
+          <div>
+            <div class="asset-frame" style="margin-bottom:0"><img src="assets/bem-final-idv-26.svg" alt="Key Visual — Composition" style="aspect-ratio:16/9;object-fit:cover"></div>
+            <div class="visual-card-caption">Environmental composition — atmospheric depth</div>
+          </div>
+          <div>
+            <div class="asset-frame" style="margin-bottom:0"><img src="assets/bem-final-idv-27.svg" alt="Key Visual — Composition" style="aspect-ratio:16/9;object-fit:cover"></div>
+            <div class="visual-card-caption">Abstract composition — geometric energy</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Brand in Context — Mockups -->
+      <div class="subsection" style="margin-top:80px">
+        <div class="subsection-label">Brand in Context</div>
+        <p class="rule-text" style="margin-bottom:32px">Real-world applications showing how the visual system translates across formats and environments.</p>
+
+        <!-- Row 1: two wide billboards -->
+        <div class="mockups-grid mockup-row-2" style="margin-bottom:16px">
+          <img src="assets/mockup-billboard-chaos.png" alt="Billboard — Chaos in. Clarity out.">
+          <img src="assets/mockup-billboard-clarity.png" alt="Billboard — Built for clarity.">
+        </div>
+
+        <!-- Row 2: full width billboard night -->
+        <div class="mockups-grid mockup-full" style="margin-bottom:16px">
+          <img src="assets/mockup-billboard-clarity-night.png" alt="Billboard — Built for clarity. Night.">
+        </div>
+
+        <!-- Row 3: three context shots -->
+        <div class="mockups-grid mockup-row-3" style="margin-bottom:16px">
+          <img src="assets/mockup-subway-intelligence.png" alt="Subway — Intelligence, engineered.">
+          <img src="assets/mockup-busstop.png" alt="Bus Stop — Compute the real world.">
+          <img src="assets/mockup-billboard-data.png" alt="Billboard — Turn unstructured data into product.">
+        </div>
+
+        <!-- Row 4: digital contexts -->
+        <div class="mockups-grid mockup-row-2">
+          <img src="assets/mockup-laptop.png" alt="Laptop — Product interface">
+          <img src="assets/mockup-tablet-icons.png" alt="Tablet — Icon system showcase">
+        </div>
+      </div>
+
+      <div class="subsection" style="margin-top:64px">
+        <div class="subsection-label">Brand Lines</div>
+        <div style="padding:64px;background:var(--dark);border-radius:16px;margin-bottom:48px;position:relative;overflow:hidden">
+          <div style="position:absolute;width:600px;height:600px;background:radial-gradient(circle,rgba(48,48,255,0.06) 0%,transparent 70%);right:-200px;bottom:-200px"></div>
+          <div style="display:flex;flex-direction:column;gap:48px;position:relative">
+            <div>
+              <span style="font-size:10px;font-weight:500;color:var(--blue);letter-spacing:0.15em;text-transform:uppercase;display:block;margin-bottom:16px">Primary</span>
+              <span style="font-size:48px;font-weight:200;color:var(--white);line-height:1.1">Intelligence, engineered.</span>
+            </div>
+            <div style="border-top:1px solid var(--gray-20);padding-top:32px;display:grid;grid-template-columns:1fr 1fr;gap:48px">
+              <div>
+                <span style="font-size:10px;font-weight:500;color:var(--gray-40);letter-spacing:0.15em;text-transform:uppercase;display:block;margin-bottom:12px">Elevator</span>
+                <span style="font-size:32px;font-weight:200;color:var(--gray-90);line-height:1.1">Chaos in. Clarity out.</span>
+              </div>
+              <div>
+                <span style="font-size:10px;font-weight:500;color:var(--gray-40);letter-spacing:0.15em;text-transform:uppercase;display:block;margin-bottom:12px">Process</span>
+                <span style="font-size:32px;font-weight:200;color:var(--gray-60);line-height:1.1">From input to impact.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <div class="subsection-label">Tone</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+          <div style="background:var(--dark);border-radius:10px;padding:28px 32px;border-bottom:2px solid var(--blue)">
+            <span style="font-size:12px;font-weight:500;color:var(--blue);display:block;margin-bottom:16px">Voice is</span>
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <span style="font-size:14px;font-weight:200;color:var(--gray-70)">Precise — every word earns its place</span>
+              <span style="font-size:14px;font-weight:200;color:var(--gray-70)">Confident — no hedging or qualifiers</span>
+              <span style="font-size:14px;font-weight:200;color:var(--gray-70)">Technical — speaks the audience's language</span>
+              <span style="font-size:14px;font-weight:200;color:var(--gray-70)">Active — "Transform data" not "Data is transformed"</span>
+            </div>
+          </div>
+          <div style="background:var(--dark);border-radius:10px;padding:28px 32px;border-bottom:2px solid var(--coral)">
+            <span style="font-size:12px;font-weight:500;color:var(--coral);display:block;margin-bottom:16px">Voice is not</span>
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <span style="font-size:14px;font-weight:200;color:var(--gray-70)">Hyperbolic — no "revolutionary" or "game-changing"</span>
+              <span style="font-size:14px;font-weight:200;color:var(--gray-70)">Casual — no slang, emojis, or exclamation marks</span>
+              <span style="font-size:14px;font-weight:200;color:var(--gray-70)">Vague — no "leverage synergies" or corporate filler</span>
+              <span style="font-size:14px;font-weight:200;color:var(--gray-70)">Apologetic — no "we try to" or "we believe"</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="guide-footer">
+      <div class="footer-left">
+        Bem.ai Brand Expansion Guide v1.0<br>
+        THXType Studio — February 2026
+      </div>
+      <div class="footer-right">
+        <span>bem</span>
+        <svg viewBox="0 0 52 52" fill="none" width="18" height="18"><rect x="0.3" y="0" width="6.7" height="42.5" fill="#3030FF"/><rect x="9.6" y="0" width="42.1" height="6.8" fill="#3030FF"/><rect x="0.3" y="45.3" width="42.1" height="6.7" fill="#3030FF"/><rect x="45" y="9.5" width="6.7" height="42.5" fill="#3030FF"/></svg>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- Active nav highlight -->
+  <script>
+    const sections = document.querySelectorAll('.section, .hero');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => link.classList.remove('active'));
+          const id = entry.target.id;
+          const activeLink = document.querySelector(`.nav-link[href="#${id}"]`);
+          if (activeLink) activeLink.classList.add('active');
+        }
+      });
+    }, { threshold: 0.3 });
+
+    sections.forEach(section => observer.observe(section));
+  </script>
+
+</body>
+</html>

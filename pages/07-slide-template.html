@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920">
+  <title>Bem.ai — Slide Templates</title>
+  <link rel="stylesheet" href="shared.css">
+  <style>
+    /* Page header */
+    .slide-header {
+      margin-bottom: var(--sp-7);
+    }
+
+    .slide-page-title {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--gray-40);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: var(--sp-2);
+    }
+
+    .slide-subtitle {
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--gray-40);
+    }
+
+    /* 2x2 Grid */
+    .slides-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 32px;
+      width: 100%;
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+
+    .slide-cell {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--sp-3);
+    }
+
+    .slide-label {
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--gray-40);
+      letter-spacing: 0.05em;
+    }
+
+    /* Mini-slide frame */
+    .mini-slide {
+      width: 780px;
+      height: 440px;
+      border: 1px solid var(--gray-20);
+      border-radius: 8px;
+      background: var(--black);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* ——— Slide 1: Cover ——— */
+    .slide-cover {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+
+    .slide-cover .cover-logo {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: -40px;
+    }
+
+    .slide-cover .cover-logo span {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1;
+    }
+
+    .slide-cover .cover-logo svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .slide-cover .cover-title {
+      font-size: 28px;
+      font-weight: 500;
+      color: var(--white);
+      margin-top: 32px;
+      letter-spacing: -0.01em;
+    }
+
+    .slide-cover .cover-date {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--gray-40);
+      margin-top: 12px;
+    }
+
+    .slide-cover .cover-blob {
+      position: absolute;
+      bottom: -60px;
+      right: -40px;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: radial-gradient(
+        circle at center,
+        var(--blue) 0%,
+        rgba(44, 58, 180, 0.25) 40%,
+        transparent 70%
+      );
+      opacity: 0.4;
+      pointer-events: none;
+    }
+
+    /* ——— Slide 2: Content ——— */
+    .slide-content-inner {
+      display: flex;
+      height: 100%;
+      padding: 40px;
+      gap: 32px;
+    }
+
+    .slide-content-left {
+      width: 45%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding-top: 8px;
+    }
+
+    .slide-content-left .section-title {
+      font-size: 24px;
+      font-weight: 500;
+      color: var(--white);
+      margin-bottom: 32px;
+      letter-spacing: -0.01em;
+    }
+
+    .slide-content-left .bullet-lines {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .slide-content-left .bullet-line {
+      width: 60%;
+      height: 2px;
+      background: var(--gray-20);
+      border-radius: 1px;
+    }
+
+    .slide-content-right {
+      width: 55%;
+      display: flex;
+      align-items: stretch;
+    }
+
+    .slide-content-right .visual-placeholder {
+      width: 100%;
+      background: var(--dark);
+      border-radius: 8px;
+    }
+
+    .slide-content-logo {
+      position: absolute;
+      bottom: 16px;
+      left: 20px;
+      display: flex;
+      align-items: center;
+      gap: 3px;
+    }
+
+    .slide-content-logo span {
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--gray-40);
+      line-height: 1;
+    }
+
+    .slide-content-logo svg {
+      width: 8px;
+      height: 8px;
+    }
+
+    /* ——— Slide 3: Divider ——— */
+    .slide-divider-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      padding: 40px;
+    }
+
+    .slide-divider-line {
+      width: 40%;
+      height: 1px;
+      background: var(--gray-20);
+    }
+
+    .slide-divider-quote {
+      font-size: 32px;
+      font-weight: 400;
+      color: var(--white);
+      text-align: center;
+      max-width: 60%;
+      line-height: 1.3;
+      padding: 24px 0;
+      letter-spacing: -0.01em;
+    }
+
+    .slide-divider-logo {
+      position: absolute;
+      bottom: 16px;
+      left: 20px;
+      display: flex;
+      align-items: center;
+      gap: 3px;
+    }
+
+    .slide-divider-logo span {
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--gray-40);
+      line-height: 1;
+    }
+
+    .slide-divider-logo svg {
+      width: 8px;
+      height: 8px;
+    }
+
+    /* ——— Slide 4: Closing ——— */
+    .slide-closing-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      gap: 16px;
+    }
+
+    .slide-closing-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .slide-closing-logo span {
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1;
+    }
+
+    .slide-closing-logo svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .slide-closing-thankyou {
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--white);
+      margin-top: 8px;
+    }
+
+    .slide-closing-url {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--blue-bright);
+    }
+
+    .slide-closing-contact {
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--gray-40);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page">
+
+    <!-- Header -->
+    <div class="slide-header">
+      <div class="slide-page-title">Slide Templates</div>
+      <div class="slide-subtitle">Master layouts for presentations — 16:9 format</div>
+    </div>
+
+    <!-- 2x2 Grid -->
+    <div class="slides-grid">
+
+      <!-- Slide 1 — Cover -->
+      <div class="slide-cell">
+        <div class="mini-slide">
+          <div class="slide-cover">
+            <div class="cover-logo">
+              <span>bem</span>
+              <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 38 2 L 6 2 L 6 50 L 50 50 L 50 14" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="cover-title">Presentation Title</div>
+            <div class="cover-date">February 2026</div>
+            <div class="cover-blob"></div>
+          </div>
+        </div>
+        <span class="slide-label">Cover</span>
+      </div>
+
+      <!-- Slide 2 — Content -->
+      <div class="slide-cell">
+        <div class="mini-slide">
+          <div class="slide-content-inner">
+            <div class="slide-content-left">
+              <div class="section-title">Section Title</div>
+              <div class="bullet-lines">
+                <div class="bullet-line"></div>
+                <div class="bullet-line"></div>
+                <div class="bullet-line"></div>
+              </div>
+            </div>
+            <div class="slide-content-right">
+              <div class="visual-placeholder"></div>
+            </div>
+          </div>
+          <div class="slide-content-logo">
+            <span>bem</span>
+            <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 38 2 L 6 2 L 6 50 L 50 50 L 50 14" stroke="#666" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+        <span class="slide-label">Content</span>
+      </div>
+
+      <!-- Slide 3 — Divider -->
+      <div class="slide-cell">
+        <div class="mini-slide">
+          <div class="slide-divider-inner">
+            <div class="slide-divider-line"></div>
+            <div class="slide-divider-quote">Key statement goes here.</div>
+            <div class="slide-divider-line"></div>
+          </div>
+          <div class="slide-divider-logo">
+            <span>bem</span>
+            <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 38 2 L 6 2 L 6 50 L 50 50 L 50 14" stroke="#666" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+        <span class="slide-label">Divider</span>
+      </div>
+
+      <!-- Slide 4 — Closing -->
+      <div class="slide-cell">
+        <div class="mini-slide">
+          <div class="slide-closing-inner">
+            <div class="slide-closing-logo">
+              <span>bem</span>
+              <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 38 2 L 6 2 L 6 50 L 50 50 L 50 14" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="slide-closing-thankyou">thank you</div>
+            <div class="slide-closing-url">bem.ai</div>
+            <div class="slide-closing-contact">contact@bem.ai</div>
+          </div>
+        </div>
+        <span class="slide-label">Closing</span>
+      </div>
+
+    </div>
+
+    <!-- Page number -->
+    <span class="page-number">07</span>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920">
+  <title>Bem.ai — System Overview</title>
+  <link rel="stylesheet" href="shared.css">
+  <style>
+    /* Full bleed — override page padding */
+    .page {
+      padding: 0;
+    }
+
+    /* ── Header ── */
+    .sys-logo {
+      position: absolute;
+      top: 48px;
+      left: 48px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: -0.02em;
+    }
+
+    .sys-logo svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .sys-label {
+      position: absolute;
+      top: 52px;
+      right: 48px;
+      font-size: 14px;
+      font-weight: 400;
+      color: #444;
+      letter-spacing: 0.05em;
+    }
+
+    /* ── SVG Canvas ── */
+    .sys-canvas {
+      position: absolute;
+      inset: 0;
+      width: 1920px;
+      height: 1080px;
+    }
+
+    /* ── Input / Output Nodes ── */
+    .node-card {
+      position: absolute;
+      width: 160px;
+      height: 80px;
+      background: #111;
+      border: 1px solid #222;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .node-card svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .node-card span {
+      font-size: 12px;
+      font-weight: 400;
+      color: #999;
+      letter-spacing: 0.04em;
+    }
+
+    /* ── Input positions (left column, x ~200, centered vertically) ── */
+    .input-1 { left: 120px; top: 356px; }  /* 540 - 80 - 64 - 40 = 356 */
+    .input-2 { left: 120px; top: 500px; }  /* center */
+    .input-3 { left: 120px; top: 644px; }  /* 540 + 40 + 64 = 644 */
+
+    /* ── Processing Box ── */
+    .proc-box {
+      position: absolute;
+      left: 660px;
+      top: 260px;
+      width: 600px;
+      height: 500px;
+      border: 1px dashed #222;
+      border-radius: 24px;
+    }
+
+    .proc-label {
+      position: absolute;
+      top: 24px;
+      left: 32px;
+      font-size: 10px;
+      font-weight: 500;
+      color: #444;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    /* ── Function Nodes (circles inside processing box) ── */
+    .func-node {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .func-circle {
+      width: 80px;
+      height: 80px;
+      border: 1px solid var(--blue);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .func-circle svg {
+      width: 28px;
+      height: 28px;
+    }
+
+    .func-label {
+      font-size: 11px;
+      font-weight: 400;
+      color: #666;
+      letter-spacing: 0.06em;
+    }
+
+    /* Function positions (2x2 grid inside proc-box) */
+    .func-transform  { left: 120px; top: 90px; }
+    .func-analyze    { left: 380px; top: 90px; }
+    .func-route      { left: 120px; top: 290px; }
+    .func-split      { left: 380px; top: 290px; }
+
+    /* ── Output positions (right column, x ~1600) ── */
+    .output-1 { left: 1640px; top: 428px; }
+    .output-2 { left: 1640px; top: 572px; }
+
+    /* ── Bottom Bar ── */
+    .bottom-line {
+      position: absolute;
+      left: 48px;
+      right: 48px;
+      top: 960px;
+      height: 1px;
+      background: #222;
+    }
+
+    .bottom-brand {
+      position: absolute;
+      left: 48px;
+      top: 980px;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--blue-bright);
+      letter-spacing: 0.04em;
+    }
+
+    .bottom-tagline {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 980px;
+      font-size: 12px;
+      font-weight: 300;
+      color: #444;
+      letter-spacing: 0.02em;
+    }
+
+    .sys-page-number {
+      position: absolute;
+      bottom: 48px;
+      right: 48px;
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--gray-20);
+      letter-spacing: 0.05em;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page">
+
+    <!-- ── Header ── -->
+    <div class="sys-logo">
+      <span>bem</span>
+      <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 12 1 L 2 1 L 2 15 L 15 15 L 15 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <span class="sys-label">System Overview</span>
+
+    <!-- ══════════════════════════════════════════════
+         SVG LAYER — all connecting lines + dots
+         ══════════════════════════════════════════════ -->
+    <svg class="sys-canvas" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+      <!-- ── Input → Processing lines ── -->
+      <!-- Input 1 (center: 200, 396) → Proc box left (660, 510) -->
+      <line x1="280" y1="396" x2="660" y2="440" stroke="#333" stroke-width="1"/>
+      <circle cx="280" cy="396" r="3" fill="#333"/>
+      <circle cx="660" cy="440" r="3" fill="#333"/>
+
+      <!-- Input 2 (center: 200, 540) → Proc box left (660, 510) -->
+      <line x1="280" y1="540" x2="660" y2="510" stroke="#333" stroke-width="1"/>
+      <circle cx="280" cy="540" r="3" fill="#333"/>
+      <circle cx="660" cy="510" r="3" fill="#333"/>
+
+      <!-- Input 3 (center: 200, 684) → Proc box left (660, 580) -->
+      <line x1="280" y1="684" x2="660" y2="580" stroke="#333" stroke-width="1"/>
+      <circle cx="280" cy="684" r="3" fill="#333"/>
+      <circle cx="660" cy="580" r="3" fill="#333"/>
+
+      <!-- ── Internal function connections (inside proc box) ── -->
+      <!-- Transform → Analyze (horizontal) -->
+      <line x1="840" y1="390" x2="980" y2="390" stroke="#333" stroke-width="1"/>
+      <!-- Route → Split (horizontal) -->
+      <line x1="840" y1="590" x2="980" y2="590" stroke="#333" stroke-width="1"/>
+      <!-- Transform → Route (vertical) -->
+      <line x1="800" y1="430" x2="800" y2="540" stroke="#333" stroke-width="1"/>
+      <!-- Analyze → Split (vertical) -->
+      <line x1="1060" y1="430" x2="1060" y2="540" stroke="#333" stroke-width="1"/>
+      <!-- Transform → Split (diagonal) -->
+      <line x1="840" y1="420" x2="980" y2="560" stroke="#222" stroke-width="1" stroke-dasharray="4 4"/>
+      <!-- Analyze → Route (diagonal) -->
+      <line x1="980" y1="420" x2="840" y2="560" stroke="#222" stroke-width="1" stroke-dasharray="4 4"/>
+
+      <!-- ── Processing → Output lines ── -->
+      <!-- Proc box right (1260, 460) → Output 1 (1640, 468) -->
+      <line x1="1260" y1="460" x2="1640" y2="468" stroke="#333" stroke-width="1"/>
+      <circle cx="1260" cy="460" r="3" fill="#333"/>
+      <circle cx="1640" cy="468" r="3" fill="#333"/>
+
+      <!-- Proc box right (1260, 560) → Output 2 (1640, 612) -->
+      <line x1="1260" y1="560" x2="1640" y2="612" stroke="#333" stroke-width="1"/>
+      <circle cx="1260" cy="560" r="3" fill="#333"/>
+      <circle cx="1640" cy="612" r="3" fill="#333"/>
+
+    </svg>
+
+    <!-- ══════════════════════════════════════════════
+         INPUT NODES
+         ══════════════════════════════════════════════ -->
+
+    <!-- Documents -->
+    <div class="node-card input-1">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="4" y="3" width="16" height="18" rx="2" stroke="#3344FF" stroke-width="1.5"/>
+        <line x1="8" y1="8" x2="16" y2="8" stroke="#3344FF" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="8" y1="12" x2="16" y2="12" stroke="#3344FF" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="8" y1="16" x2="13" y2="16" stroke="#3344FF" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      <span>Documents</span>
+    </div>
+
+    <!-- Images -->
+    <div class="node-card input-2">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="8" cy="10" r="4" stroke="#3344FF" stroke-width="1.5"/>
+        <circle cx="16" cy="14" r="4" stroke="#3344FF" stroke-width="1.5"/>
+        <circle cx="12" cy="7" r="2.5" stroke="#3344FF" stroke-width="1.5"/>
+      </svg>
+      <span>Images</span>
+    </div>
+
+    <!-- Structured Data -->
+    <div class="node-card input-3">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="3" y="3" width="18" height="18" rx="2" stroke="#3344FF" stroke-width="1.5"/>
+        <circle cx="12" cy="12" r="5" stroke="#3344FF" stroke-width="1.5"/>
+      </svg>
+      <span>Structured Data</span>
+    </div>
+
+    <!-- ══════════════════════════════════════════════
+         PROCESSING BOX
+         ══════════════════════════════════════════════ -->
+
+    <div class="proc-box">
+      <span class="proc-label">Processing Pipeline</span>
+
+      <!-- Transform -->
+      <div class="func-node func-transform">
+        <div class="func-circle">
+          <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 5 L24 22 L4 22 Z" stroke="#3344FF" stroke-width="1.5" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <span class="func-label">Transform</span>
+      </div>
+
+      <!-- Analyze -->
+      <div class="func-node func-analyze">
+        <div class="func-circle">
+          <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 4 L22 14 L14 24 L6 14 Z" stroke="#3344FF" stroke-width="1.5" stroke-linejoin="round"/>
+            <path d="M14 9 L18 14 L14 19 L10 14 Z" stroke="#3344FF" stroke-width="1.2" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <span class="func-label">Analyze</span>
+      </div>
+
+      <!-- Route -->
+      <div class="func-node func-route">
+        <div class="func-circle">
+          <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="14" cy="8" rx="8" ry="3" stroke="#3344FF" stroke-width="1.5"/>
+            <path d="M6 8 L6 20 C6 21.7 9.6 23 14 23 C18.4 23 22 21.7 22 20 L22 8" stroke="#3344FF" stroke-width="1.5"/>
+            <ellipse cx="14" cy="14" rx="8" ry="3" stroke="#3344FF" stroke-width="1.2" stroke-dasharray="2 2"/>
+          </svg>
+        </div>
+        <span class="func-label">Route</span>
+      </div>
+
+      <!-- Split -->
+      <div class="func-node func-split">
+        <div class="func-circle">
+          <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 4 L22 14 L14 24 L6 14 Z" stroke="#3344FF" stroke-width="1.5" stroke-linejoin="round"/>
+            <line x1="14" y1="4" x2="14" y2="24" stroke="#3344FF" stroke-width="1.2"/>
+          </svg>
+        </div>
+        <span class="func-label">Split</span>
+      </div>
+
+    </div>
+
+    <!-- ══════════════════════════════════════════════
+         OUTPUT NODES
+         ══════════════════════════════════════════════ -->
+
+    <!-- Clarity Score -->
+    <div class="node-card output-1">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="8" stroke="#3344FF" stroke-width="1.5"/>
+        <path d="M12 6 L12 12 L17 12" stroke="#3344FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>Clarity Score</span>
+    </div>
+
+    <!-- Product Intel -->
+    <div class="node-card output-2">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="3" y="3" width="18" height="18" rx="2" stroke="#3344FF" stroke-width="1.5"/>
+        <polyline points="7,16 11,10 15,13 19,7" stroke="#3344FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>Product Intel</span>
+    </div>
+
+    <!-- ══════════════════════════════════════════════
+         BOTTOM BAR
+         ══════════════════════════════════════════════ -->
+
+    <div class="bottom-line"></div>
+    <span class="bottom-brand">bem.ai</span>
+    <span class="bottom-tagline">Structure the chaos. Deploy the intelligence.</span>
+
+    <!-- Page number -->
+    <span class="sys-page-number">09</span>
+
+  </div>
+
+</body>
+</html>

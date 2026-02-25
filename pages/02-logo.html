@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920">
+  <title>Bem.ai Brand Guide — 02 Logo System</title>
+  <link rel="stylesheet" href="shared.css">
+  <style>
+    /* Logo component */
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25em;
+    }
+
+    .logo-text {
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      line-height: 1;
+    }
+
+    .logo-icon {
+      width: 0.65em;
+      height: 0.65em;
+      flex-shrink: 0;
+    }
+
+    /* Primary logo section */
+    .primary-logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 0 32px;
+    }
+
+    .primary-logo .logo {
+      font-size: 64px;
+    }
+
+    .primary-logo .label {
+      margin-top: 24px;
+      font-size: 14px;
+      color: var(--gray-60);
+      font-weight: 300;
+    }
+
+    /* Version cards */
+    .versions {
+      display: flex;
+      gap: 24px;
+      margin-top: 32px;
+    }
+
+    .version-card {
+      width: 280px;
+      height: 180px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .version-card--dark {
+      background: var(--dark);
+    }
+
+    .version-card--light {
+      background: var(--white);
+    }
+
+    .version-card .logo {
+      font-size: 32px;
+    }
+
+    .version-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .version-col .label {
+      font-size: 13px;
+      color: var(--gray-40);
+      font-weight: 300;
+    }
+
+    /* Bottom sections */
+    .bottom-sections {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 48px;
+      gap: 64px;
+    }
+
+    .bottom-section {
+      flex: 1;
+    }
+
+    .bottom-section-title {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--gray-40);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    /* Clear space diagram */
+    .clearspace-diagram {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+    }
+
+    .clearspace-border {
+      position: absolute;
+      inset: 0;
+      border: 1px dashed var(--gray-40);
+      border-radius: 4px;
+    }
+
+    .clearspace-logo {
+      font-size: 36px;
+    }
+
+    /* x-unit markers */
+    .x-marker {
+      position: absolute;
+      font-size: 11px;
+      color: var(--gray-60);
+      font-weight: 400;
+    }
+
+    .x-marker--top {
+      top: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .x-marker--right {
+      right: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .x-marker--bottom {
+      bottom: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .x-marker--left {
+      left: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    /* x-unit lines */
+    .x-line {
+      position: absolute;
+      background: var(--gray-40);
+      opacity: 0.4;
+    }
+
+    .x-line--top {
+      top: 22px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1px;
+      height: 14px;
+    }
+
+    .x-line--bottom {
+      bottom: 22px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1px;
+      height: 14px;
+    }
+
+    .x-line--left {
+      left: 22px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 14px;
+      height: 1px;
+    }
+
+    .x-line--right {
+      right: 22px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 14px;
+      height: 1px;
+    }
+
+    .clearspace-note {
+      font-size: 13px;
+      color: var(--gray-60);
+      font-weight: 300;
+      margin-top: 16px;
+    }
+
+    /* Minimum size */
+    .minsize-area {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .minsize-logo {
+      font-size: 24px;
+    }
+
+    .minsize-ruler {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .minsize-line {
+      width: 24px;
+      height: 1px;
+      background: var(--gray-40);
+      position: relative;
+    }
+
+    .minsize-line::before,
+    .minsize-line::after {
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 8px;
+      background: var(--gray-40);
+      top: -3.5px;
+    }
+
+    .minsize-line::before { left: 0; }
+    .minsize-line::after { right: 0; }
+
+    .minsize-value {
+      font-size: 12px;
+      color: var(--gray-60);
+      font-weight: 400;
+      white-space: nowrap;
+    }
+
+    .minsize-note {
+      font-size: 13px;
+      color: var(--gray-60);
+      font-weight: 300;
+      margin-top: 4px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- Page title -->
+  <div style="font-size: 12px; font-weight: 500; color: var(--gray-40); letter-spacing: 0.15em; text-transform: uppercase;">
+    LOGO SYSTEM
+  </div>
+
+  <!-- Section 1 — Primary Logo -->
+  <div class="primary-logo">
+    <div class="logo" style="font-size: 64px;">
+      <span class="logo-text" style="color: var(--white);">bem</span>
+      <svg class="logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M24 0H4C1.79 0 0 1.79 0 4v24c0 2.21 1.79 4 4 4h24c2.21 0 4-1.79 4-4V12h-3v16c0 0.55-0.45 1-1 1H4c-0.55 0-1-0.45-1-1V4c0-0.55 0.45-1 1-1h20V0z" fill="#FFFFFF"/>
+      </svg>
+    </div>
+    <span class="label" style="margin-top: 24px; font-size: 14px; color: var(--gray-60); font-weight: 300;">Primary — White on dark</span>
+  </div>
+
+  <!-- Section 2 — Versions -->
+  <div class="versions" style="justify-content: center;">
+    <!-- Dark Background -->
+    <div class="version-col">
+      <div class="version-card version-card--dark">
+        <div class="logo" style="font-size: 32px;">
+          <span class="logo-text" style="color: var(--white);">bem</span>
+          <svg class="logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 0H4C1.79 0 0 1.79 0 4v24c0 2.21 1.79 4 4 4h24c2.21 0 4-1.79 4-4V12h-3v16c0 0.55-0.45 1-1 1H4c-0.55 0-1-0.45-1-1V4c0-0.55 0.45-1 1-1h20V0z" fill="#FFFFFF"/>
+          </svg>
+        </div>
+      </div>
+      <span class="label">Dark Background</span>
+    </div>
+
+    <!-- Light Background -->
+    <div class="version-col">
+      <div class="version-card version-card--light">
+        <div class="logo" style="font-size: 32px;">
+          <span class="logo-text" style="color: #000000;">bem</span>
+          <svg class="logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 0H4C1.79 0 0 1.79 0 4v24c0 2.21 1.79 4 4 4h24c2.21 0 4-1.79 4-4V12h-3v16c0 0.55-0.45 1-1 1H4c-0.55 0-1-0.45-1-1V4c0-0.55 0.45-1 1-1h20V0z" fill="#000000"/>
+          </svg>
+        </div>
+      </div>
+      <span class="label">Light Background</span>
+    </div>
+
+    <!-- With Icon -->
+    <div class="version-col">
+      <div class="version-card version-card--dark">
+        <div class="logo" style="font-size: 32px;">
+          <svg class="logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 0H4C1.79 0 0 1.79 0 4v24c0 2.21 1.79 4 4 4h24c2.21 0 4-1.79 4-4V12h-3v16c0 0.55-0.45 1-1 1H4c-0.55 0-1-0.45-1-1V4c0-0.55 0.45-1 1-1h20V0z" fill="#FFFFFF"/>
+          </svg>
+          <span class="logo-text" style="color: var(--white);">bem</span>
+        </div>
+      </div>
+      <span class="label">With Icon</span>
+    </div>
+
+    <!-- Icon Only -->
+    <div class="version-col">
+      <div class="version-card version-card--dark">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 48px; height: 48px;">
+          <path d="M24 0H4C1.79 0 0 1.79 0 4v24c0 2.21 1.79 4 4 4h24c2.21 0 4-1.79 4-4V12h-3v16c0 0.55-0.45 1-1 1H4c-0.55 0-1-0.45-1-1V4c0-0.55 0.45-1 1-1h20V0z" fill="#FFFFFF"/>
+        </svg>
+      </div>
+      <span class="label">Icon Only</span>
+    </div>
+  </div>
+
+  <!-- Bottom sections -->
+  <div class="bottom-sections">
+
+    <!-- Section 3 — Clear Space -->
+    <div class="bottom-section">
+      <div class="bottom-section-title">Clear Space</div>
+      <div class="clearspace-diagram">
+        <div class="clearspace-border"></div>
+        <span class="x-marker x-marker--top">x</span>
+        <span class="x-marker x-marker--right">x</span>
+        <span class="x-marker x-marker--bottom">x</span>
+        <span class="x-marker x-marker--left">x</span>
+        <div class="x-line x-line--top"></div>
+        <div class="x-line x-line--bottom"></div>
+        <div class="x-line x-line--left"></div>
+        <div class="x-line x-line--right"></div>
+        <div class="logo clearspace-logo">
+          <span class="logo-text" style="color: var(--white);">bem</span>
+          <svg class="logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 0H4C1.79 0 0 1.79 0 4v24c0 2.21 1.79 4 4 4h24c2.21 0 4-1.79 4-4V12h-3v16c0 0.55-0.45 1-1 1H4c-0.55 0-1-0.45-1-1V4c0-0.55 0.45-1 1-1h20V0z" fill="#FFFFFF"/>
+          </svg>
+        </div>
+      </div>
+      <div class="clearspace-note">Clear space = 1x around all sides</div>
+    </div>
+
+    <!-- Section 4 — Minimum Size -->
+    <div class="bottom-section">
+      <div class="bottom-section-title">Minimum Size</div>
+      <div class="minsize-area">
+        <div class="logo minsize-logo">
+          <span class="logo-text" style="color: var(--white);">bem</span>
+          <svg class="logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 0H4C1.79 0 0 1.79 0 4v24c0 2.21 1.79 4 4 4h24c2.21 0 4-1.79 4-4V12h-3v16c0 0.55-0.45 1-1 1H4c-0.55 0-1-0.45-1-1V4c0-0.55 0.45-1 1-1h20V0z" fill="#FFFFFF"/>
+          </svg>
+        </div>
+        <div class="minsize-ruler">
+          <div class="minsize-line"></div>
+          <span class="minsize-value">24px min height</span>
+        </div>
+        <div class="minsize-note">Minimum reproduction size</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Page number -->
+  <div class="page-number">02</div>
+
+</div>
+
+</body>
+</html>

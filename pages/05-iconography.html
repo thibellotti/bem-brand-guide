@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920">
+  <title>Bem.ai — Icon System</title>
+  <link rel="stylesheet" href="shared.css">
+  <style>
+    /* Icon page layout */
+    .icon-content {
+      display: flex;
+      flex-direction: column;
+      height: calc(100% - 40px); /* subtract page title area */
+      justify-content: space-between;
+    }
+
+    /* Layer row */
+    .icon-layer {
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-4);
+    }
+
+    /* Layer header */
+    .layer-header {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-3);
+    }
+
+    .layer-label {
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--white);
+    }
+
+    .layer-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 3px 10px;
+      border: 1px solid var(--blue-bright);
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--blue-bright);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    /* Icon cards row */
+    .icon-cards {
+      display: flex;
+      gap: var(--sp-4);
+    }
+
+    /* Individual card */
+    .icon-card {
+      width: 200px;
+      height: 160px;
+      background: var(--dark);
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: var(--sp-3);
+      flex-shrink: 0;
+    }
+
+    .icon-card svg {
+      width: 64px;
+      height: 64px;
+    }
+
+    .icon-card-label {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--gray-60);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page">
+
+    <!-- Page title -->
+    <div style="font-size: 12px; font-weight: 500; color: var(--gray-40); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: var(--sp-6);">Icon System</div>
+
+    <!-- Three layer rows -->
+    <div class="icon-content">
+
+      <!-- Layer 1 — Functions (3D Shapes) -->
+      <div class="icon-layer">
+        <div class="layer-header">
+          <span class="layer-label">Layer #1 — Functions</span>
+          <span class="layer-badge">3D Shapes</span>
+        </div>
+        <div class="icon-cards">
+
+          <!-- Transform — pyramid/triangle -->
+          <div class="icon-card">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M32 8 L54 48 L10 48 Z" stroke="#3344FF" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M32 8 L42 38" stroke="#3344FF" stroke-width="1.5" stroke-dasharray="3 2" opacity="0.5"/>
+              <path d="M32 48 L32 8" stroke="#3344FF" stroke-width="1" stroke-dasharray="2 2" opacity="0.3"/>
+            </svg>
+            <span class="icon-card-label">Transform</span>
+          </div>
+
+          <!-- Analyze — 3 stacked diamonds -->
+          <div class="icon-card">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M32 6 L42 16 L32 26 L22 16 Z" stroke="#3344FF" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M32 20 L42 30 L32 40 L22 30 Z" stroke="#3344FF" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M32 34 L42 44 L32 54 L22 44 Z" stroke="#3344FF" stroke-width="2" stroke-linejoin="round"/>
+            </svg>
+            <span class="icon-card-label">Analyze</span>
+          </div>
+
+          <!-- Route — cylinder -->
+          <div class="icon-card">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="32" cy="16" rx="16" ry="6" stroke="#3344FF" stroke-width="2"/>
+              <path d="M16 16 L16 48" stroke="#3344FF" stroke-width="2"/>
+              <path d="M48 16 L48 48" stroke="#3344FF" stroke-width="2"/>
+              <ellipse cx="32" cy="48" rx="16" ry="6" stroke="#3344FF" stroke-width="2"/>
+            </svg>
+            <span class="icon-card-label">Route</span>
+          </div>
+
+          <!-- Split — diamond split by horizontal line -->
+          <div class="icon-card">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M32 8 L52 32 L32 56 L12 32 Z" stroke="#3344FF" stroke-width="2" stroke-linejoin="round"/>
+              <line x1="12" y1="32" x2="52" y2="32" stroke="#3344FF" stroke-width="2"/>
+            </svg>
+            <span class="icon-card-label">Split</span>
+          </div>
+
+          <!-- Join — two overlapping squares -->
+          <div class="icon-card">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="10" y="14" width="28" height="28" rx="2" stroke="#3344FF" stroke-width="2"/>
+              <rect x="26" y="22" width="28" height="28" rx="2" stroke="#3344FF" stroke-width="2"/>
+            </svg>
+            <span class="icon-card-label">Join</span>
+          </div>
+
+          <!-- Payload Shaping — diamond inside diamond -->
+          <div class="icon-card">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M32 6 L56 32 L32 58 L8 32 Z" stroke="#3344FF" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M32 20 L44 32 L32 44 L20 32 Z" stroke="#3344FF" stroke-width="2" stroke-linejoin="round"/>
+            </svg>
+            <span class="icon-card-label">Payload Shaping</span>
+          </div>
+
+          <!-- Enrich — nested rectangles (staircase) -->
+          <div class="icon-card">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8" y="8" width="48" height="48" rx="2" stroke="#3344FF" stroke-width="2"/>
+              <rect x="16" y="16" width="40" height="40" rx="2" stroke="#3344FF" stroke-width="2"/>
+              <rect x="24" y="24" width="32" height="32" rx="2" stroke="#3344FF" stroke-width="2"/>
+            </svg>
+            <span class="icon-card-label">Enrich</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Layer 2 — Inputs (2D Shapes) -->
+      <div class="icon-layer">
+        <div class="layer-header">
+          <span class="layer-label">Layer #2 — Inputs</span>
+          <span class="layer-badge">2D Shapes</span>
+        </div>
+        <div class="icon-cards">
+
+          <!-- Documents — rectangle (page shape) -->
+          <div class="icon-card">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 8 L40 8 L48 16 L48 56 L16 56 Z" stroke="#3344FF" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M40 8 L40 16 L48 16" stroke="#3344FF" stroke-width="2" stroke-linejoin="round"/>
+              <line x1="22" y1="26" x2="42" y2="26" stroke="#3344FF" stroke-width="1.5" opacity="0.5"/>
+              <line x1="22" y1="34" x2="42" y2="34" stroke="#3344FF" stroke-width="1.5" opacity="0.5"/>
+              <line x1="22" y1="42" x2="36" y2="42" stroke="#3344FF" stroke-width="1.5" opacity="0.5"/>
+            </svg>
+            <span class="icon-card-label">Documents</span>
+          </div>
+
+          <!-- Images — 4 circles in grid -->
+          <div class="icon-card">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="22" cy="22" r="9" stroke="#3344FF" stroke-width="2"/>
+              <circle cx="42" cy="22" r="9" stroke="#3344FF" stroke-width="2"/>
+              <circle cx="22" cy="42" r="9" stroke="#3344FF" stroke-width="2"/>
+              <circle cx="42" cy="42" r="9" stroke="#3344FF" stroke-width="2"/>
+            </svg>
+            <span class="icon-card-label">Images</span>
+          </div>
+
+          <!-- Spreadsheets — grid of rectangles -->
+          <div class="icon-card">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="10" y="10" width="44" height="44" rx="2" stroke="#3344FF" stroke-width="2"/>
+              <line x1="10" y1="24" x2="54" y2="24" stroke="#3344FF" stroke-width="1.5"/>
+              <line x1="10" y1="38" x2="54" y2="38" stroke="#3344FF" stroke-width="1.5"/>
+              <line x1="25" y1="10" x2="25" y2="54" stroke="#3344FF" stroke-width="1.5"/>
+              <line x1="40" y1="10" x2="40" y2="54" stroke="#3344FF" stroke-width="1.5"/>
+            </svg>
+            <span class="icon-card-label">Spreadsheets</span>
+          </div>
+
+          <!-- Structured Data — circle inside square -->
+          <div class="icon-card">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="10" y="10" width="44" height="44" rx="2" stroke="#3344FF" stroke-width="2"/>
+              <circle cx="32" cy="32" r="14" stroke="#3344FF" stroke-width="2"/>
+            </svg>
+            <span class="icon-card-label">Structured Data</span>
+          </div>
+
+          <!-- Audio — wave shape -->
+          <div class="icon-card">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <line x1="12" y1="28" x2="12" y2="36" stroke="#3344FF" stroke-width="2" stroke-linecap="round"/>
+              <line x1="19" y1="22" x2="19" y2="42" stroke="#3344FF" stroke-width="2" stroke-linecap="round"/>
+              <line x1="26" y1="14" x2="26" y2="50" stroke="#3344FF" stroke-width="2" stroke-linecap="round"/>
+              <line x1="33" y1="20" x2="33" y2="44" stroke="#3344FF" stroke-width="2" stroke-linecap="round"/>
+              <line x1="40" y1="10" x2="40" y2="54" stroke="#3344FF" stroke-width="2" stroke-linecap="round"/>
+              <line x1="47" y1="18" x2="47" y2="46" stroke="#3344FF" stroke-width="2" stroke-linecap="round"/>
+              <line x1="54" y1="26" x2="54" y2="38" stroke="#3344FF" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <span class="icon-card-label">Audio</span>
+          </div>
+
+          <!-- Video — double chevron / fast-forward -->
+          <div class="icon-card">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 16 L30 32 L12 48" stroke="#3344FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M32 16 L50 32 L32 48" stroke="#3344FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="icon-card-label">Video</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Layer 3 — Operations (Iconic) -->
+      <div class="icon-layer">
+        <div class="layer-header">
+          <span class="layer-label">Layer #3 — Operations</span>
+          <span class="layer-badge">Iconic</span>
+        </div>
+        <div class="icon-cards">
+
+          <!-- String — hexagon with brackets -->
+          <div class="icon-card">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="32,8 52,18 52,46 32,56 12,46 12,18" stroke="#3344FF" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M24 24 L20 28 L20 36 L24 40" stroke="#3344FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M40 24 L44 28 L44 36 L40 40" stroke="#3344FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="icon-card-label">String</span>
+          </div>
+
+          <!-- Number — hash # symbol -->
+          <div class="icon-card">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <line x1="22" y1="12" x2="18" y2="52" stroke="#3344FF" stroke-width="2" stroke-linecap="round"/>
+              <line x1="42" y1="12" x2="38" y2="52" stroke="#3344FF" stroke-width="2" stroke-linecap="round"/>
+              <line x1="10" y1="24" x2="52" y2="24" stroke="#3344FF" stroke-width="2" stroke-linecap="round"/>
+              <line x1="10" y1="40" x2="52" y2="40" stroke="#3344FF" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <span class="icon-card-label">Number</span>
+          </div>
+
+          <!-- Boolean — two overlapping circles -->
+          <div class="icon-card">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="32" r="16" stroke="#3344FF" stroke-width="2"/>
+              <circle cx="40" cy="32" r="16" stroke="#3344FF" stroke-width="2"/>
+            </svg>
+            <span class="icon-card-label">Boolean</span>
+          </div>
+
+          <!-- Object — cube/box with diamond -->
+          <div class="icon-card">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Isometric cube -->
+              <path d="M32 8 L52 20 L52 44 L32 56 L12 44 L12 20 Z" stroke="#3344FF" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M32 8 L32 32" stroke="#3344FF" stroke-width="1.5" opacity="0.6"/>
+              <path d="M12 20 L32 32 L52 20" stroke="#3344FF" stroke-width="1.5" opacity="0.6"/>
+              <path d="M32 32 L32 56" stroke="#3344FF" stroke-width="1.5" opacity="0.6"/>
+            </svg>
+            <span class="icon-card-label">Object</span>
+          </div>
+
+          <!-- Array — three horizontal lines -->
+          <div class="icon-card">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <line x1="14" y1="20" x2="50" y2="20" stroke="#3344FF" stroke-width="2" stroke-linecap="round"/>
+              <line x1="14" y1="32" x2="50" y2="32" stroke="#3344FF" stroke-width="2" stroke-linecap="round"/>
+              <line x1="14" y1="44" x2="50" y2="44" stroke="#3344FF" stroke-width="2" stroke-linecap="round"/>
+              <!-- Bracket left -->
+              <path d="M10 12 L10 52" stroke="#3344FF" stroke-width="2" stroke-linecap="round"/>
+              <path d="M10 12 L16 12" stroke="#3344FF" stroke-width="2" stroke-linecap="round"/>
+              <path d="M10 52 L16 52" stroke="#3344FF" stroke-width="2" stroke-linecap="round"/>
+              <!-- Bracket right -->
+              <path d="M54 12 L54 52" stroke="#3344FF" stroke-width="2" stroke-linecap="round"/>
+              <path d="M54 12 L48 12" stroke="#3344FF" stroke-width="2" stroke-linecap="round"/>
+              <path d="M54 52 L48 52" stroke="#3344FF" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <span class="icon-card-label">Array</span>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Page number -->
+    <span class="page-number">05</span>
+
+  </div>
+
+</body>
+</html>

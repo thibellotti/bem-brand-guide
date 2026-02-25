@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920">
+  <title>Bem.ai Brand Guide — Typography</title>
+  <link rel="stylesheet" href="shared.css">
+  <style>
+    /* Weight specimens */
+    .specimen-row {
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      width: 100%;
+    }
+
+    .specimen-letters {
+      font-size: 36px;
+      color: var(--white);
+      flex-shrink: 0;
+      width: 56px;
+    }
+
+    .specimen-line {
+      flex: 1;
+      border-bottom: 1px solid var(--gray-20);
+      align-self: center;
+      margin-bottom: 4px;
+    }
+
+    .specimen-label {
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--gray-40);
+      flex-shrink: 0;
+      text-align: right;
+    }
+
+    /* Type scale entries */
+    .scale-entry {
+      display: flex;
+      align-items: baseline;
+      gap: 24px;
+    }
+
+    .scale-meta {
+      font-size: 12px;
+      font-weight: 400;
+      color: #444444;
+      flex-shrink: 0;
+      width: 160px;
+      text-align: right;
+      letter-spacing: 0.02em;
+      line-height: 1.2;
+    }
+
+    .scale-sample {
+      flex: 1;
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  </style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- Page title -->
+  <div style="
+    font-size: 12px;
+    font-weight: 500;
+    color: #666;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    position: absolute;
+    top: 96px;
+    left: 96px;
+  ">Typography</div>
+
+  <!-- Main layout: two halves -->
+  <div style="
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding-top: 48px;
+  ">
+
+    <!-- Left half: 55% — Font name + weight specimens -->
+    <div style="
+      width: 55%;
+      display: flex;
+      flex-direction: column;
+      padding-right: 64px;
+    ">
+
+      <!-- Font name -->
+      <div style="
+        font-size: 56px;
+        font-weight: 500;
+        color: var(--white);
+        letter-spacing: -0.01em;
+        margin-bottom: 64px;
+      ">PP Neue Corp</div>
+
+      <!-- Weight specimens -->
+      <div style="display: flex; flex-direction: column; gap: 32px;">
+
+        <!-- Light -->
+        <div class="specimen-row">
+          <span class="specimen-letters" style="font-weight: 300;">Aa</span>
+          <div class="specimen-line"></div>
+          <span class="specimen-label">Light</span>
+        </div>
+
+        <!-- Regular -->
+        <div class="specimen-row">
+          <span class="specimen-letters" style="font-weight: 400;">Bb</span>
+          <div class="specimen-line"></div>
+          <span class="specimen-label">Regular</span>
+        </div>
+
+        <!-- Medium -->
+        <div class="specimen-row">
+          <span class="specimen-letters" style="font-weight: 500;">Cc</span>
+          <div class="specimen-line"></div>
+          <span class="specimen-label">Medium</span>
+        </div>
+
+        <!-- Bold -->
+        <div class="specimen-row">
+          <span class="specimen-letters" style="font-weight: 700;">Dd</span>
+          <div class="specimen-line"></div>
+          <span class="specimen-label">Bold</span>
+        </div>
+
+      </div>
+
+      <!-- Alphabet preview -->
+      <div style="
+        margin-top: auto;
+        margin-bottom: 32px;
+        font-size: 14px;
+        font-weight: 300;
+        color: var(--gray-20);
+        letter-spacing: 0.25em;
+        line-height: 2;
+      ">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789 &amp; ? ! @ # % ( )</div>
+
+    </div>
+
+    <!-- Right half: 45% — Type scale -->
+    <div style="
+      width: 45%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      border-left: 1px solid #1a1a1a;
+      padding-left: 48px;
+    ">
+
+      <!-- H1 -->
+      <div class="scale-entry" style="margin-bottom: 20px;">
+        <div class="scale-meta">H1 &middot; 120px &middot; Bold</div>
+        <div class="scale-sample" style="
+          font-size: 120px;
+          font-weight: 700;
+          color: var(--white);
+          line-height: 1.0;
+          letter-spacing: -0.02em;
+        ">Intelligence</div>
+      </div>
+
+      <!-- H2 -->
+      <div class="scale-entry" style="margin-bottom: 20px;">
+        <div class="scale-meta">H2 &middot; 72px &middot; Medium</div>
+        <div class="scale-sample" style="
+          font-size: 72px;
+          font-weight: 500;
+          color: var(--white);
+          line-height: 1.05;
+          letter-spacing: -0.01em;
+        ">Built for clarity</div>
+      </div>
+
+      <!-- H3 -->
+      <div class="scale-entry" style="margin-bottom: 20px;">
+        <div class="scale-meta">H3 &middot; 48px &middot; Regular</div>
+        <div class="scale-sample" style="
+          font-size: 48px;
+          font-weight: 400;
+          color: var(--white);
+          line-height: 1.1;
+        ">Structure the chaos</div>
+      </div>
+
+      <!-- H4 -->
+      <div class="scale-entry" style="margin-bottom: 24px;">
+        <div class="scale-meta">H4 &middot; 32px &middot; Regular</div>
+        <div class="scale-sample" style="
+          font-size: 32px;
+          font-weight: 400;
+          color: #cccccc;
+          line-height: 1.2;
+        ">Deploy intelligence</div>
+      </div>
+
+      <!-- Body -->
+      <div class="scale-entry" style="margin-bottom: 20px;">
+        <div class="scale-meta">Body &middot; 18px &middot; Regular</div>
+        <div class="scale-sample" style="
+          font-size: 18px;
+          font-weight: 400;
+          color: #999999;
+          line-height: 1.5;
+          white-space: normal;
+        ">Bem.ai turns unstructured data into structured product intelligence.</div>
+      </div>
+
+      <!-- Caption -->
+      <div class="scale-entry" style="margin-bottom: 16px;">
+        <div class="scale-meta">Caption &middot; 14px &middot; Light</div>
+        <div class="scale-sample" style="
+          font-size: 14px;
+          font-weight: 300;
+          color: #666666;
+          line-height: 1.4;
+        ">Last updated: Feb 2026</div>
+      </div>
+
+      <!-- Label -->
+      <div class="scale-entry">
+        <div class="scale-meta">Label &middot; 12px &middot; Medium</div>
+        <div class="scale-sample" style="
+          font-size: 12px;
+          font-weight: 500;
+          color: #3344FF;
+          letter-spacing: 0.15em;
+          text-transform: uppercase;
+          line-height: 1.4;
+        ">TRANSFORM</div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Page number -->
+  <div class="page-number">04</div>
+
+</div>
+
+</body>
+</html>

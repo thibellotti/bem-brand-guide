@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920">
+  <title>Bem.ai — Key Visuals</title>
+  <link rel="stylesheet" href="shared.css">
+  <style>
+    /* Page subtitle */
+    .page-subtitle {
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--gray-40);
+      line-height: 1.5;
+      margin-top: var(--sp-3);
+      margin-bottom: var(--sp-7);
+    }
+
+    /* 2x2 grid */
+    .visuals-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 24px;
+      width: 100%;
+      height: calc(100% - 140px);
+    }
+
+    /* Card wrapper: card + caption */
+    .card-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-2);
+    }
+
+    /* Card base */
+    .card {
+      flex: 1;
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+      min-height: 0;
+    }
+
+    /* Card caption */
+    .card-caption {
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--gray-40);
+      letter-spacing: 0.02em;
+    }
+
+    /* Card logo */
+    .card-logo {
+      position: absolute;
+      font-size: 14px;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      z-index: 2;
+    }
+
+    .card-logo svg {
+      width: 12px;
+      height: 12px;
+    }
+
+    /* ========================================
+       Card 1 — Gradient Treatment
+    ======================================== */
+    .card-1 {
+      background: linear-gradient(135deg, #2c3ab4, #0df6f8);
+      display: flex;
+      align-items: center;
+      padding: var(--sp-7);
+    }
+
+    .card-1 .card-logo {
+      top: var(--sp-5);
+      left: var(--sp-5);
+      color: #000;
+    }
+
+    .card-1-text {
+      font-size: 48px;
+      font-weight: 400;
+      color: #000;
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+      margin-top: var(--sp-6);
+    }
+
+    /* ========================================
+       Card 2 — 3D Shape + Typography
+    ======================================== */
+    .card-2 {
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--sp-7);
+    }
+
+    .card-2-content {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card-2-shape {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .card-2-glow {
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(circle, rgba(51, 68, 255, 0.35) 0%, rgba(51, 68, 255, 0.08) 50%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .card-2-text {
+      position: relative;
+      z-index: 2;
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 1.2;
+      text-align: center;
+      max-width: 520px;
+      letter-spacing: -0.01em;
+    }
+
+    .card-2-text .gray {
+      color: var(--gray-40);
+    }
+
+    .card-2-text .white {
+      color: var(--white);
+    }
+
+    /* ========================================
+       Card 3 — Split Composition
+    ======================================== */
+    .card-3 {
+      background: #000;
+      display: flex;
+      position: relative;
+    }
+
+    .card-3-left {
+      width: 50%;
+      height: 100%;
+      background: #000;
+    }
+
+    .card-3-right {
+      width: 50%;
+      height: 100%;
+      background: #fff;
+    }
+
+    .card-3 .card-logo {
+      top: var(--sp-5);
+      right: var(--sp-5);
+      color: #fff;
+    }
+
+    .card-3-diamond {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      width: 160px;
+      height: 160px;
+      z-index: 2;
+    }
+
+    .card-3-diamond-glow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 280px;
+      height: 280px;
+      background: radial-gradient(circle, rgba(51, 68, 255, 0.4) 0%, rgba(51, 68, 255, 0.1) 40%, transparent 65%);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .card-3-text {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      transform: translateY(-50%);
+      font-size: 48px;
+      font-weight: 400;
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+      z-index: 3;
+      display: flex;
+      width: 100%;
+    }
+
+    .card-3-text-dark {
+      width: 50%;
+      text-align: right;
+      padding-right: var(--sp-3);
+      color: var(--gray-40);
+    }
+
+    .card-3-text-light {
+      width: 50%;
+      text-align: left;
+      padding-left: var(--sp-3);
+      color: #000;
+    }
+
+    /* ========================================
+       Card 4 — Geometric Pattern
+    ======================================== */
+    .card-4 {
+      background: #000;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+      padding: var(--sp-7);
+    }
+
+    .card-4 .card-logo {
+      top: var(--sp-5);
+      left: var(--sp-5);
+      color: #fff;
+    }
+
+    .card-4-pattern {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .card-4-para {
+      position: absolute;
+      background: rgba(51, 68, 255, 0.15);
+      border: 1px solid rgba(51, 68, 255, 0.25);
+      transform: skewX(-20deg);
+    }
+
+    .card-4-para--1 {
+      width: 200px;
+      height: 120px;
+      top: 20px;
+      right: 80px;
+      background: rgba(51, 68, 255, 0.12);
+      border-color: rgba(51, 68, 255, 0.2);
+    }
+
+    .card-4-para--2 {
+      width: 160px;
+      height: 180px;
+      top: 60px;
+      right: 300px;
+      background: rgba(51, 68, 255, 0.08);
+      border-color: rgba(51, 68, 255, 0.15);
+    }
+
+    .card-4-para--3 {
+      width: 240px;
+      height: 100px;
+      top: -10px;
+      right: -20px;
+      background: rgba(51, 68, 255, 0.18);
+      border-color: rgba(51, 68, 255, 0.3);
+    }
+
+    .card-4-para--4 {
+      width: 180px;
+      height: 140px;
+      top: 160px;
+      right: 160px;
+      background: rgba(51, 68, 255, 0.06);
+      border-color: rgba(51, 68, 255, 0.12);
+    }
+
+    .card-4-para--5 {
+      width: 120px;
+      height: 200px;
+      top: 40px;
+      right: 500px;
+      background: rgba(51, 68, 255, 0.1);
+      border-color: rgba(51, 68, 255, 0.18);
+    }
+
+    .card-4-para--6 {
+      width: 280px;
+      height: 80px;
+      top: 100px;
+      right: -60px;
+      background: rgba(51, 68, 255, 0.14);
+      border-color: rgba(51, 68, 255, 0.22);
+    }
+
+    .card-4-text {
+      position: relative;
+      z-index: 2;
+      font-size: 64px;
+      font-weight: 400;
+      color: #fff;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page">
+
+    <!-- Page title -->
+    <div class="page-title" style="font-size: 12px; margin-bottom: 0;">Key Visuals</div>
+
+    <!-- Subtitle -->
+    <p class="page-subtitle">Brand language reference — use these compositions as direction for all visual communications.</p>
+
+    <!-- 2x2 Grid -->
+    <div class="visuals-grid">
+
+      <!-- Card 1 — Gradient Treatment -->
+      <div class="card-wrapper">
+        <div class="card card-1">
+          <!-- Logo -->
+          <span class="card-logo" style="color: #000;">
+            bem
+            <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 38 2 L 6 2 L 6 50 L 50 50 L 50 14" stroke="#000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <!-- Text -->
+          <span class="card-1-text">Intelligence,<br>engineered.</span>
+        </div>
+        <span class="card-caption">Hero — Gradient Treatment</span>
+      </div>
+
+      <!-- Card 2 — 3D Shape + Typography -->
+      <div class="card-wrapper">
+        <div class="card card-2">
+          <div class="card-2-content">
+            <!-- Glow -->
+            <div class="card-2-glow"></div>
+            <!-- Triangle / Pyramid SVG -->
+            <svg class="card-2-shape" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <radialGradient id="pyramidGlow" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#3344FF" stop-opacity="0.5"/>
+                  <stop offset="60%" stop-color="#3344FF" stop-opacity="0.15"/>
+                  <stop offset="100%" stop-color="#3344FF" stop-opacity="0"/>
+                </radialGradient>
+              </defs>
+              <!-- Filled glow triangle -->
+              <polygon points="100,15 20,175 180,175" fill="url(#pyramidGlow)"/>
+              <!-- Stroke triangle -->
+              <polygon points="100,15 20,175 180,175" stroke="#3344FF" stroke-width="1.5" fill="none"/>
+              <!-- Inner edge lines for 3D pyramid effect -->
+              <line x1="100" y1="15" x2="100" y2="120" stroke="#3344FF" stroke-width="0.8" opacity="0.4"/>
+              <line x1="100" y1="120" x2="20" y2="175" stroke="#3344FF" stroke-width="0.8" opacity="0.3"/>
+              <line x1="100" y1="120" x2="180" y2="175" stroke="#3344FF" stroke-width="0.8" opacity="0.3"/>
+            </svg>
+            <!-- Text -->
+            <div class="card-2-text">
+              <span class="gray">Turn unstructured</span><br>
+              <span class="gray">data into</span> <span class="white">product</span>
+            </div>
+          </div>
+        </div>
+        <span class="card-caption">Hero — 3D Shape + Typography</span>
+      </div>
+
+      <!-- Card 3 — Split Composition -->
+      <div class="card-wrapper">
+        <div class="card card-3">
+          <!-- Split halves -->
+          <div class="card-3-left"></div>
+          <div class="card-3-right"></div>
+          <!-- Logo top-right (white on dark half area) -->
+          <span class="card-logo" style="top: var(--sp-5); right: calc(50% + var(--sp-5)); color: #fff;">
+            bem
+            <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 38 2 L 6 2 L 6 50 L 50 50 L 50 14" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <!-- Diamond glow -->
+          <div class="card-3-diamond-glow"></div>
+          <!-- Diamond SVG -->
+          <svg class="card-3-diamond" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="diamondGlow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#3344FF" stop-opacity="0.6"/>
+                <stop offset="50%" stop-color="#3344FF" stop-opacity="0.2"/>
+                <stop offset="100%" stop-color="#3344FF" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <rect width="160" height="160" rx="4" fill="url(#diamondGlow)"/>
+            <rect x="1" y="1" width="158" height="158" rx="3" stroke="#3344FF" stroke-width="1.5" fill="none"/>
+          </svg>
+          <!-- Text spanning both halves -->
+          <div class="card-3-text">
+            <span class="card-3-text-dark">Built for</span>
+            <span class="card-3-text-light">clarity.</span>
+          </div>
+        </div>
+        <span class="card-caption">Hero — Split Composition</span>
+      </div>
+
+      <!-- Card 4 — Geometric Pattern -->
+      <div class="card-wrapper">
+        <div class="card card-4">
+          <!-- Logo -->
+          <span class="card-logo">
+            bem
+            <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 38 2 L 6 2 L 6 50 L 50 50 L 50 14" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <!-- Parallelogram pattern -->
+          <div class="card-4-pattern">
+            <div class="card-4-para card-4-para--1"></div>
+            <div class="card-4-para card-4-para--2"></div>
+            <div class="card-4-para card-4-para--3"></div>
+            <div class="card-4-para card-4-para--4"></div>
+            <div class="card-4-para card-4-para--5"></div>
+            <div class="card-4-para card-4-para--6"></div>
+          </div>
+          <!-- Text -->
+          <span class="card-4-text">From input<br>to impact</span>
+        </div>
+        <span class="card-caption">Hero — Geometric Pattern</span>
+      </div>
+
+    </div>
+
+    <!-- Page number -->
+    <span class="page-number">06</span>
+
+  </div>
+
+</body>
+</html>

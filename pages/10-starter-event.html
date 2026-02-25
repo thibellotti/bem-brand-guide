@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920">
+  <title>Bem.ai — Starter Asset: Conference Slide</title>
+  <link rel="stylesheet" href="shared.css">
+  <style>
+    /* Full-bleed event slide — no page padding */
+    .page.event-slide {
+      padding: 0;
+    }
+
+    /* Diamond / rhombus glow shape */
+    .diamond {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      top: 500px;
+      left: 1200px;
+      transform: translate(-50%, -50%) rotate(45deg);
+      background: radial-gradient(
+        circle at center,
+        var(--blue-bright) 0%,
+        var(--blue) 40%,
+        var(--black) 100%
+      );
+      pointer-events: none;
+    }
+
+    /* Top-left logo */
+    .event-logo {
+      position: absolute;
+      top: 64px;
+      left: 64px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      z-index: 2;
+    }
+
+    .event-logo-text {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1;
+    }
+
+    .event-logo svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    /* Main headline */
+    .event-headline {
+      position: absolute;
+      top: 350px;
+      left: 64px;
+      z-index: 2;
+      font-size: 140px;
+      font-weight: 400;
+      line-height: 1.0;
+      letter-spacing: -0.03em;
+      color: var(--white);
+    }
+
+    /* Coral accent lines */
+    .accent-line {
+      position: absolute;
+      height: 2px;
+      background: var(--coral);
+      border-radius: 1px;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .accent-line--top-right {
+      top: 140px;
+      right: 180px;
+      width: 80px;
+    }
+
+    .accent-line--bottom-center {
+      bottom: 160px;
+      left: 820px;
+      width: 120px;
+    }
+
+    .accent-line--right-headline {
+      top: 480px;
+      left: 680px;
+      width: 60px;
+    }
+
+    /* Bottom strip */
+    .event-bottom {
+      position: absolute;
+      bottom: 48px;
+      left: 64px;
+      right: 64px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 2;
+    }
+
+    .event-bottom-domain {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--blue-bright);
+    }
+
+    .event-bottom-tagline {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--gray-40);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page event-slide">
+
+    <!-- Blue glow diamond -->
+    <div class="diamond"></div>
+
+    <!-- Logo: bem + square icon -->
+    <div class="event-logo">
+      <span class="event-logo-text">bem</span>
+      <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 38 2 L 6 2 L 6 50 L 50 50 L 50 14" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <!-- Main headline -->
+    <div class="event-headline">
+      Chaos in.<br>Clarity out.
+    </div>
+
+    <!-- Coral accent lines -->
+    <div class="accent-line accent-line--top-right"></div>
+    <div class="accent-line accent-line--bottom-center"></div>
+    <div class="accent-line accent-line--right-headline"></div>
+
+    <!-- Bottom strip -->
+    <div class="event-bottom">
+      <span class="event-bottom-domain">bem.ai</span>
+      <span class="event-bottom-tagline">Structure the chaos. Deploy the intelligence.</span>
+    </div>
+
+  </div>
+
+</body>
+</html>
