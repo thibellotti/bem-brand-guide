@@ -1,9 +1,9 @@
 /* Bem.ai Brand Guide — Design Tokens & Shared Styles */
 
-/* PP Neue Corp — @font-face declarations (Normal width) */
+/* PP Neue Corp Compact — @font-face declarations */
 @font-face {
   font-family: 'PP Neue Corp';
-  src: url('fonts/PPNeueCorp-NormalThin.woff2') format('woff2');
+  src: url('fonts/PPNeueCorp-CompactThin.woff2') format('woff2');
   font-weight: 100;
   font-style: normal;
   font-display: swap;
@@ -11,7 +11,7 @@
 
 @font-face {
   font-family: 'PP Neue Corp';
-  src: url('fonts/PPNeueCorp-NormalUltralight.woff2') format('woff2');
+  src: url('fonts/PPNeueCorp-CompactUltralight.woff2') format('woff2');
   font-weight: 200;
   font-style: normal;
   font-display: swap;
@@ -19,7 +19,7 @@
 
 @font-face {
   font-family: 'PP Neue Corp';
-  src: url('fonts/PPNeueCorp-NormalMedium.woff2') format('woff2');
+  src: url('fonts/PPNeueCorp-CompactMedium.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -27,7 +27,7 @@
 
 @font-face {
   font-family: 'PP Neue Corp';
-  src: url('fonts/PPNeueCorp-NormalUltrabold.woff2') format('woff2');
+  src: url('fonts/PPNeueCorp-CompactUltrabold.woff2') format('woff2');
   font-weight: 800;
   font-style: normal;
   font-display: swap;
@@ -35,7 +35,7 @@
 
 @font-face {
   font-family: 'PP Neue Corp';
-  src: url('fonts/PPNeueCorp-NormalBlack.woff2') format('woff2');
+  src: url('fonts/PPNeueCorp-CompactBlack.woff2') format('woff2');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -120,7 +120,7 @@ body {
   bottom: var(--sp-7);
   right: var(--page-pad);
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 200;
   color: var(--gray-40);
   letter-spacing: 0.05em;
 }
@@ -145,7 +145,7 @@ body {
   margin-bottom: var(--sp-4);
 }
 
-/* Heading styles — mapped to PP Neue Corp weights */
+/* Heading styles — mapped to PP Neue Corp Compact weights */
 .h1 {
   font-size: 120px;
   font-weight: 800; /* Ultrabold */

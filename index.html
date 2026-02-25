@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bem.ai — Brand Guide</title>
 
-  <!-- PP Neue Corp -->
+  <!-- PP Neue Corp Compact -->
   <style>
-    @font-face { font-family: 'PP Neue Corp'; src: url('pages/fonts/PPNeueCorp-NormalThin.woff2') format('woff2'); font-weight: 100; font-style: normal; }
-    @font-face { font-family: 'PP Neue Corp'; src: url('pages/fonts/PPNeueCorp-NormalUltralight.woff2') format('woff2'); font-weight: 200; font-style: normal; }
-    @font-face { font-family: 'PP Neue Corp'; src: url('pages/fonts/PPNeueCorp-NormalMedium.woff2') format('woff2'); font-weight: 500; font-style: normal; }
-    @font-face { font-family: 'PP Neue Corp'; src: url('pages/fonts/PPNeueCorp-NormalUltrabold.woff2') format('woff2'); font-weight: 800; font-style: normal; }
-    @font-face { font-family: 'PP Neue Corp'; src: url('pages/fonts/PPNeueCorp-NormalBlack.woff2') format('woff2'); font-weight: 900; font-style: normal; }
+    @font-face { font-family: 'PP Neue Corp'; src: url('pages/fonts/PPNeueCorp-CompactThin.woff2') format('woff2'); font-weight: 100; font-style: normal; }
+    @font-face { font-family: 'PP Neue Corp'; src: url('pages/fonts/PPNeueCorp-CompactUltralight.woff2') format('woff2'); font-weight: 200; font-style: normal; }
+    @font-face { font-family: 'PP Neue Corp'; src: url('pages/fonts/PPNeueCorp-CompactMedium.woff2') format('woff2'); font-weight: 500; font-style: normal; }
+    @font-face { font-family: 'PP Neue Corp'; src: url('pages/fonts/PPNeueCorp-CompactUltrabold.woff2') format('woff2'); font-weight: 800; font-style: normal; }
+    @font-face { font-family: 'PP Neue Corp'; src: url('pages/fonts/PPNeueCorp-CompactBlack.woff2') format('woff2'); font-weight: 900; font-style: normal; }
   </style>
 
   <style>
@@ -70,18 +70,11 @@
     .sidebar-logo {
       display: flex;
       align-items: center;
-      gap: 10px;
       margin-bottom: 12px;
       text-decoration: none;
     }
 
-    .sidebar-logo span {
-      font-size: 28px;
-      font-weight: 800;
-      color: var(--white);
-    }
-
-    .sidebar-logo svg { width: 30px; height: 30px; }
+    .sidebar-logo img { height: 22px; width: auto; }
 
     .sidebar-subtitle {
       font-size: 12px;
@@ -237,20 +230,13 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 20px;
       padding: 96px;
       background: var(--dark);
       border-radius: 16px;
       margin-bottom: 48px;
     }
 
-    .logo-primary span {
-      font-size: 80px;
-      font-weight: 800;
-      color: var(--white);
-    }
-
-    .logo-primary svg { width: 72px; height: 72px; }
+    .logo-primary img { height: 72px; width: auto; }
 
     .logo-versions {
       display: grid;
@@ -265,19 +251,13 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 14px;
       position: relative;
     }
 
     .logo-card.dark { background: var(--dark); }
     .logo-card.light { background: var(--white); }
 
-    .logo-card span {
-      font-size: 48px;
-      font-weight: 800;
-    }
-
-    .logo-card svg { width: 44px; height: 44px; }
+    .logo-card img { height: 44px; width: auto; }
 
     .logo-card-label {
       position: absolute;
@@ -627,6 +607,7 @@
       overflow: hidden;
       border: 1px solid var(--gray-20);
       margin-bottom: 24px;
+      position: relative;
     }
 
     .asset-frame img {
@@ -636,13 +617,20 @@
     }
 
     .asset-frame-label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
       padding: 16px 24px;
-      background: var(--dark);
+      background: linear-gradient(transparent, rgba(0,0,0,0.85));
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-top: 1px solid var(--gray-20);
+      opacity: 0;
+      transition: opacity 0.25s;
     }
+
+    .asset-frame:hover .asset-frame-label { opacity: 1; }
 
     .asset-frame-label span {
       font-size: 13px;
@@ -657,6 +645,79 @@
       font-family: 'SF Mono', monospace;
     }
 
+    .dl-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      padding: 4px 10px;
+      border-radius: 6px;
+      border: 1px solid rgba(255,255,255,0.2);
+      transition: all 0.2s;
+      cursor: pointer;
+      background: none;
+    }
+    .dl-btn:hover { color: var(--white); border-color: var(--blue); background: rgba(48,48,255,0.2); }
+    .dl-btn svg { width: 12px; height: 12px; }
+
+    .visual-card-caption { position: relative; display: none; }
+
+    .asset-frame .asset-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 16px 20px;
+      background: linear-gradient(transparent, rgba(0,0,0,0.85));
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.25s;
+    }
+    .asset-frame:hover .asset-overlay { opacity: 1; }
+    .asset-overlay span {
+      font-size: 12px;
+      font-weight: 200;
+      color: rgba(255,255,255,0.7);
+    }
+
+    .dl-all-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 28px;
+      background: var(--dark);
+      border: 1px solid var(--gray-20);
+      border-radius: 12px;
+      margin-top: 48px;
+    }
+    .dl-all-bar span {
+      font-size: 13px;
+      font-weight: 200;
+      color: var(--gray-60);
+    }
+    .dl-all-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--white);
+      text-decoration: none;
+      padding: 8px 20px;
+      border-radius: 8px;
+      background: var(--blue);
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .dl-all-btn:hover { background: #4444ff; }
+    .dl-all-btn svg { width: 14px; height: 14px; }
+
     /* scrollbar */
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: transparent; }
@@ -669,8 +730,7 @@
   <!-- ===== SIDEBAR ===== -->
   <nav class="sidebar">
     <a href="#hero" class="sidebar-logo">
-      <span>bem</span>
-      <svg viewBox="0 0 52 52" fill="none"><rect x="0.3" y="0" width="6.7" height="42.5" fill="white"/><rect x="9.6" y="0" width="42.1" height="6.8" fill="white"/><rect x="0.3" y="45.3" width="42.1" height="6.7" fill="white"/><rect x="45" y="9.5" width="6.7" height="42.5" fill="white"/></svg>
+      <img src="assets/bem-logo.svg" alt="bem">
     </a>
     <div class="sidebar-subtitle">Brand Expansion Guide</div>
 
@@ -682,7 +742,7 @@
     <a href="#visual-language" class="nav-link"><span class="nav-num">05</span> Visual Language</a>
 
     <div class="sidebar-footer">
-      THXType Studio<br>
+      Branding&Co<br>
       February 2026<br>
       v1.0
     </div>
@@ -693,7 +753,7 @@
 
     <!-- HERO -->
     <section class="hero" id="hero">
-      <img src="assets/bem-final-idv-24.svg" alt="Bem.ai Brand Guide" class="hero-art">
+      <img src="assets/png/cover/bem-final-idv-23.png" alt="Bem.ai Brand Guide" class="hero-art">
     </section>
 
     <!-- 01 LOGO -->
@@ -707,8 +767,7 @@
       <div class="subsection">
         <div class="subsection-label">Primary Lockup</div>
         <div class="logo-primary">
-          <span>bem</span>
-          <svg viewBox="0 0 52 52" fill="none" width="72" height="72"><rect x="0.3" y="0" width="6.7" height="42.5" fill="white"/><rect x="9.6" y="0" width="42.1" height="6.8" fill="white"/><rect x="0.3" y="45.3" width="42.1" height="6.7" fill="white"/><rect x="45" y="9.5" width="6.7" height="42.5" fill="white"/></svg>
+          <img src="assets/bem-logo.svg" alt="bem">
         </div>
       </div>
 
@@ -717,30 +776,27 @@
         <div class="logo-versions">
           <div>
             <div class="logo-card dark">
-              <span style="color:#fff">bem</span>
-              <svg viewBox="0 0 52 52" fill="none"><rect x="0.3" y="0" width="6.7" height="42.5" fill="white"/><rect x="9.6" y="0" width="42.1" height="6.8" fill="white"/><rect x="0.3" y="45.3" width="42.1" height="6.7" fill="white"/><rect x="45" y="9.5" width="6.7" height="42.5" fill="white"/></svg>
+              <img src="assets/bem-logo.svg" alt="bem">
             </div>
             <div class="logo-card-label">White on Dark — Primary</div>
           </div>
           <div>
             <div class="logo-card light">
-              <span style="color:#000">bem</span>
-              <svg viewBox="0 0 52 52" fill="none"><rect x="0.3" y="0" width="6.7" height="42.5" fill="black"/><rect x="9.6" y="0" width="42.1" height="6.8" fill="black"/><rect x="0.3" y="45.3" width="42.1" height="6.7" fill="black"/><rect x="45" y="9.5" width="6.7" height="42.5" fill="black"/></svg>
+              <img src="assets/bem-logo.svg" alt="bem" style="filter:invert(1)">
             </div>
             <div class="logo-card-label">Black on Light</div>
           </div>
           <div>
             <div class="logo-card dark" style="background:var(--blue)">
-              <span style="color:#fff">bem</span>
-              <svg viewBox="0 0 52 52" fill="none"><rect x="0.3" y="0" width="6.7" height="42.5" fill="white"/><rect x="9.6" y="0" width="42.1" height="6.8" fill="white"/><rect x="0.3" y="45.3" width="42.1" height="6.7" fill="white"/><rect x="45" y="9.5" width="6.7" height="42.5" fill="white"/></svg>
+              <img src="assets/bem-logo.svg" alt="bem">
             </div>
             <div class="logo-card-label">White on Blue</div>
           </div>
           <div>
             <div class="logo-card dark">
-              <svg viewBox="0 0 52 52" fill="none" style="width:56px;height:56px"><rect x="0.3" y="0" width="6.7" height="42.5" fill="white"/><rect x="9.6" y="0" width="42.1" height="6.8" fill="white"/><rect x="0.3" y="45.3" width="42.1" height="6.7" fill="white"/><rect x="45" y="9.5" width="6.7" height="42.5" fill="white"/></svg>
+              <img src="assets/bem-logo.svg" alt="bem" style="height:56px">
             </div>
-            <div class="logo-card-label">Icon Only</div>
+            <div class="logo-card-label">Lockup</div>
           </div>
         </div>
       </div>
@@ -751,9 +807,8 @@
           <div class="logo-rule-box">
             <div class="rule-visual clearspace-demo">
               <div class="cs-box" style="padding:36px 44px">
-                <span style="font-size:36px;font-weight:800;display:flex;align-items:center;gap:10px;color:var(--white)">
-                  bem
-                  <svg viewBox="0 0 52 52" fill="none" width="32" height="32"><rect x="0.3" y="0" width="6.7" height="42.5" fill="white"/><rect x="9.6" y="0" width="42.1" height="6.8" fill="white"/><rect x="0.3" y="45.3" width="42.1" height="6.7" fill="white"/><rect x="45" y="9.5" width="6.7" height="42.5" fill="white"/></svg>
+                <span style="display:flex;align-items:center">
+                  <img src="assets/bem-logo.svg" alt="bem" style="height:32px;width:auto">
                 </span>
                 <span class="cs-label" style="top:-16px;left:50%;transform:translateX(-50%)">x</span>
                 <span class="cs-label" style="bottom:-16px;left:50%;transform:translateX(-50%)">x</span>
@@ -768,11 +823,10 @@
           </div>
           <div class="logo-rule-box">
             <div class="rule-visual" style="flex-direction:column;gap:20px">
-              <span style="font-size:28px;font-weight:800;display:flex;align-items:center;gap:8px;color:var(--white)">
-                bem
-                <svg viewBox="0 0 52 52" fill="none" width="24" height="24"><rect x="0.3" y="0" width="6.7" height="42.5" fill="white"/><rect x="9.6" y="0" width="42.1" height="6.8" fill="white"/><rect x="0.3" y="45.3" width="42.1" height="6.7" fill="white"/><rect x="45" y="9.5" width="6.7" height="42.5" fill="white"/></svg>
+              <span style="display:flex;align-items:center">
+                <img src="assets/bem-logo.svg" alt="bem" style="height:24px;width:auto">
               </span>
-              <span style="font-size:13px;color:var(--blue);letter-spacing:0.05em;font-weight:400">&larr; 24px min &rarr;</span>
+              <span style="font-size:13px;color:var(--blue);letter-spacing:0.05em;font-weight:200">&larr; 24px min &rarr;</span>
             </div>
             <div class="rule-info">
               <h4>Minimum Size</h4>
@@ -783,7 +837,7 @@
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
           <div class="logo-rule-box">
             <div class="rule-visual" style="border-bottom:2px solid var(--coral)">
-              <span style="font-size:36px;font-weight:800;color:var(--white);display:flex;align-items:center;gap:10px;transform:scaleX(1.4)">bem <svg viewBox="0 0 52 52" fill="none" width="32" height="32"><rect x="0.3" y="0" width="6.7" height="42.5" fill="white"/><rect x="9.6" y="0" width="42.1" height="6.8" fill="white"/><rect x="0.3" y="45.3" width="42.1" height="6.7" fill="white"/><rect x="45" y="9.5" width="6.7" height="42.5" fill="white"/></svg></span>
+              <img src="assets/bem-logo.svg" alt="bem" style="height:32px;width:auto;transform:scaleX(1.4)">
             </div>
             <div class="rule-info">
               <h4 style="color:var(--coral)">Never distort or stretch</h4>
@@ -791,7 +845,7 @@
           </div>
           <div class="logo-rule-box">
             <div class="rule-visual" style="border-bottom:2px solid var(--coral)">
-              <span style="font-size:36px;font-weight:800;color:#ff6f91;display:flex;align-items:center;gap:10px">bem <svg viewBox="0 0 52 52" fill="none" width="32" height="32"><rect x="0.3" y="0" width="6.7" height="42.5" fill="#ff6f91"/><rect x="9.6" y="0" width="42.1" height="6.8" fill="#ff6f91"/><rect x="0.3" y="45.3" width="42.1" height="6.7" fill="#ff6f91"/><rect x="45" y="9.5" width="6.7" height="42.5" fill="#ff6f91"/></svg></span>
+              <img src="assets/bem-logo.svg" alt="bem" style="height:32px;width:auto;filter:brightness(0) saturate(100%) invert(56%) sepia(63%) saturate(1037%) hue-rotate(310deg) brightness(101%) contrast(101%)">
             </div>
             <div class="rule-info">
               <h4 style="color:var(--coral)">Never recolor</h4>
@@ -932,12 +986,12 @@
         <span class="section-number">03</span>
         <h2 class="section-title">Typography</h2>
       </div>
-      <p class="section-desc">PP Neue Corp is the sole typeface. Its extended family (from Thin to Black, Compact to Wide) gives enough range for any application without introducing a second font.</p>
+      <p class="section-desc">PP Neue Corp Compact is the sole typeface. Its extended family (from Thin to Black) gives enough range for any application without introducing a second font.</p>
 
       <div class="subsection">
         <div class="subsection-label">Typeface</div>
         <div class="type-showcase">
-          <div class="type-fontname">PP Neue Corp</div>
+          <div class="type-fontname">PP Neue Corp Compact</div>
           <div class="type-weights">
             <div class="type-weight-row">
               <span class="tw-sample" style="font-weight:100">Aa</span>
@@ -1031,60 +1085,63 @@
       </div>
       <p class="section-desc">The icon system maps to Bem.ai's architecture. Three visual layers represent three conceptual layers: what the system does (Functions), what it ingests (Inputs), and how it processes data (Operations).</p>
 
-      <!-- Full System Overview (actual asset) -->
+      <!-- All 3 Layers Overview -->
       <div class="subsection">
         <div class="subsection-label">Complete Icon System</div>
         <div class="asset-frame">
-          <img src="assets/bem-final-idv-12.svg" alt="Bem.ai Icon System — All 3 Layers">
+          <img src="assets/png/icons/bem-final-idv-11.png" alt="Bem.ai Icon System — All 3 Layers">
           <div class="asset-frame-label">
-            <span>All Layers — Functions (3D), Inputs (2D), Operations (Iconic)</span>
-            <span class="asset-file">bem-final-idv-12.svg</span>
+            <span>All Layers — Functions (3D), Inputs (2D), Data Types (Iconic)</span>
+            <span class="asset-file">bem-final-idv-11.png</span>
+            <a class="dl-btn" href="assets/svg/bem-final-idv-11.svg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>SVG</a>
           </div>
         </div>
       </div>
 
       <div class="icon-layer">
         <div class="icon-layer-header">
-          <span class="icon-layer-title">Layer 1 — Functions</span>
-          <span class="icon-layer-badge">3D Shapes</span>
-        </div>
-        <p class="icon-layer-desc">Core processing functions rendered as three-dimensional geometric forms. These use the blue glow effect and represent the primary capabilities of the platform.</p>
-        <div class="asset-frame">
-          <img src="assets/bem-final-idv-22.svg" alt="Functions Icons — Transform, Analyze, Route, Split, Join, Payload Shaping, Enrich">
-          <div class="asset-frame-label">
-            <span>7 Function Icons — Full Set</span>
-            <span class="asset-file">bem-final-idv-22.svg</span>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="icon-layer">
-        <div class="icon-layer-header">
-          <span class="icon-layer-title">Layer 2 — Inputs</span>
+          <span class="icon-layer-title">Layer 1 — Inputs</span>
           <span class="icon-layer-badge">2D Shapes</span>
         </div>
         <p class="icon-layer-desc">Data input types rendered as flat, two-dimensional forms. These represent the raw materials the platform ingests before processing.</p>
         <div class="asset-frame">
-          <img src="assets/bem-final-idv-13.svg" alt="Input Icons — Documents, Images, Spreadsheets, Structured Data, Audio, Video">
+          <img src="assets/png/icons/bem-final-idv-12.png" alt="Input Icons — Documents, Images, Spreadsheets, Structured Data, Audio, Video">
           <div class="asset-frame-label">
             <span>6 Input Icons — Documents, Images, Spreadsheets, Structured Data, Audio, Video</span>
-            <span class="asset-file">bem-final-idv-13.svg</span>
+            <span class="asset-file">bem-final-idv-12.png</span>
+            <a class="dl-btn" href="assets/svg/bem-final-idv-12.svg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>SVG</a>
           </div>
         </div>
       </div>
 
       <div class="icon-layer">
         <div class="icon-layer-header">
-          <span class="icon-layer-title">Layer 3 — Operations</span>
+          <span class="icon-layer-title">Layer 2 — Data Types</span>
           <span class="icon-layer-badge">Iconic</span>
         </div>
-        <p class="icon-layer-desc">Data operations rendered as line icons. These represent the atomic data types the system works with internally.</p>
+        <p class="icon-layer-desc">Data types rendered as line icons. These represent the atomic data types the system works with internally.</p>
         <div class="asset-frame">
-          <img src="assets/bem-final-idv-14.svg" alt="Operation Icons — String, Number, Boolean, Object, Array">
+          <img src="assets/png/icons/bem-final-idv-13.png" alt="Data Type Icons — String, Number, Boolean, Object, Array">
           <div class="asset-frame-label">
-            <span>5 Operation Icons — String, Number, Boolean, Object, Array</span>
-            <span class="asset-file">bem-final-idv-14.svg</span>
+            <span>5 Data Type Icons — String, Number, Boolean, Object, Array</span>
+            <span class="asset-file">bem-final-idv-13.png</span>
+            <a class="dl-btn" href="assets/svg/bem-final-idv-13.svg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>SVG</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="icon-layer">
+        <div class="icon-layer-header">
+          <span class="icon-layer-title">Complete Grid</span>
+          <span class="icon-layer-badge">All Icons</span>
+        </div>
+        <p class="icon-layer-desc">The full icon set at a glance — all functions, inputs, and data types in one reference sheet.</p>
+        <div class="asset-frame">
+          <img src="assets/png/icons/bem-final-idv-10.png" alt="Complete Icon Grid">
+          <div class="asset-frame-label">
+            <span>Complete Icon Grid — All icons at reference scale</span>
+            <span class="asset-file">bem-final-idv-10.png</span>
+            <a class="dl-btn" href="assets/svg/bem-final-idv-10.svg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>SVG</a>
           </div>
         </div>
       </div>
@@ -1116,81 +1173,84 @@
       </div>
       <p class="section-desc">How the brand looks and sounds. Every composition, headline, and message follows these principles.</p>
 
-      <!-- Key Visuals — Compositions -->
+      <!-- Brand System Pages -->
+      <div class="subsection">
+        <div class="subsection-label">Brand System</div>
+        <p class="rule-text" style="margin-bottom:32px">Core brand pages — typography, iconography layers, and the complete icon grid.</p>
+
+        <div class="mockups-grid" style="grid-template-columns:repeat(5,1fr);margin-bottom:16px">
+          <div><div class="asset-frame" style="margin-bottom:0"><img src="assets/png/typography/bem-final-idv-07.png" alt="Typography — PP Neue Corp Compact" style="aspect-ratio:16/9;object-fit:cover"><div class="asset-overlay"><span>Typography — PP Neue Corp Compact</span><a class="dl-btn" href="assets/svg/bem-final-idv-07.svg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>SVG</a></div></div></div>
+          <div><div class="asset-frame" style="margin-bottom:0"><img src="assets/png/icons/bem-final-idv-11.png" alt="Icon System — Functions Layer" style="aspect-ratio:16/9;object-fit:cover"><div class="asset-overlay"><span>Icon System — Functions Layer</span><a class="dl-btn" href="assets/svg/bem-final-idv-11.svg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>SVG</a></div></div></div>
+          <div><div class="asset-frame" style="margin-bottom:0"><img src="assets/png/icons/bem-final-idv-12.png" alt="Icon System — All 3 Layers" style="aspect-ratio:16/9;object-fit:cover"><div class="asset-overlay"><span>Icon System — All 3 Layers</span><a class="dl-btn" href="assets/svg/bem-final-idv-12.svg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>SVG</a></div></div></div>
+          <div><div class="asset-frame" style="margin-bottom:0"><img src="assets/png/icons/bem-final-idv-13.png" alt="Icon System — Inputs Layer" style="aspect-ratio:16/9;object-fit:cover"><div class="asset-overlay"><span>Icon System — Inputs Layer</span><a class="dl-btn" href="assets/svg/bem-final-idv-13.svg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>SVG</a></div></div></div>
+          <div><div class="asset-frame" style="margin-bottom:0"><img src="assets/png/icons/bem-final-idv-10.png" alt="Icon System — Complete Grid" style="aspect-ratio:16/9;object-fit:cover"><div class="asset-overlay"><span>Icon System — Complete Grid</span><a class="dl-btn" href="assets/svg/bem-final-idv-10.svg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>SVG</a></div></div></div>
+        </div>
+      </div>
+
+      <!-- 3D Shapes -->
+      <div class="subsection">
+        <div class="subsection-label">3D Shapes</div>
+        <p class="rule-text" style="margin-bottom:32px">Individual function icons — Transform, Analyze, Route, Split, Join, Payload Shaping, Enrich.</p>
+
+        <div class="mockups-grid" style="grid-template-columns:repeat(8,1fr);margin-bottom:16px">
+          <div><div class="asset-frame" style="margin-bottom:0"><img src="assets/png/shapes/bem-final-idv-32.png" alt="Enrich" style="aspect-ratio:1/1;object-fit:cover"><div class="asset-overlay"><span>Enrich</span><a class="dl-btn" href="assets/svg/bem-final-idv-32.svg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>SVG</a></div></div></div>
+          <div><div class="asset-frame" style="margin-bottom:0"><img src="assets/png/shapes/bem-final-idv-14.png" alt="Transform" style="aspect-ratio:1/1;object-fit:cover"><div class="asset-overlay"><span>Transform</span><a class="dl-btn" href="assets/svg/bem-final-idv-14.svg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>SVG</a></div></div></div>
+          <div><div class="asset-frame" style="margin-bottom:0"><img src="assets/png/shapes/bem-final-idv-15.png" alt="Analyze" style="aspect-ratio:1/1;object-fit:cover"><div class="asset-overlay"><span>Analyze</span><a class="dl-btn" href="assets/svg/bem-final-idv-15.svg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>SVG</a></div></div></div>
+          <div><div class="asset-frame" style="margin-bottom:0"><img src="assets/png/shapes/bem-final-idv-16.png" alt="Route" style="aspect-ratio:1/1;object-fit:cover"><div class="asset-overlay"><span>Route</span><a class="dl-btn" href="assets/svg/bem-final-idv-16.svg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>SVG</a></div></div></div>
+          <div><div class="asset-frame" style="margin-bottom:0"><img src="assets/png/shapes/bem-final-idv-17.png" alt="Split" style="aspect-ratio:1/1;object-fit:cover"><div class="asset-overlay"><span>Split</span><a class="dl-btn" href="assets/svg/bem-final-idv-17.svg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>SVG</a></div></div></div>
+          <div><div class="asset-frame" style="margin-bottom:0"><img src="assets/png/shapes/bem-final-idv-18.png" alt="Join" style="aspect-ratio:1/1;object-fit:cover"><div class="asset-overlay"><span>Join</span><a class="dl-btn" href="assets/svg/bem-final-idv-18.svg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>SVG</a></div></div></div>
+          <div><div class="asset-frame" style="margin-bottom:0"><img src="assets/png/shapes/bem-final-idv-19.png" alt="Payload Shaping" style="aspect-ratio:1/1;object-fit:cover"><div class="asset-overlay"><span>Payload Shaping</span><a class="dl-btn" href="assets/svg/bem-final-idv-19.svg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>SVG</a></div></div></div>
+          <div><div class="asset-frame" style="margin-bottom:0"><img src="assets/png/shapes/bem-final-idv-20.png" alt="Enrich" style="aspect-ratio:1/1;object-fit:cover"><div class="asset-overlay"><span>Enrich</span><a class="dl-btn" href="assets/svg/bem-final-idv-20.svg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>SVG</a></div></div></div>
+        </div>
+      </div>
+
+      <!-- Slides & Templates -->
+      <div class="subsection">
+        <div class="subsection-label">Slides & Templates</div>
+        <p class="rule-text" style="margin-bottom:32px">Presentation layouts, icon compositions, and logo lockups for decks and product screens.</p>
+
+        <div class="mockups-grid" style="grid-template-columns:repeat(4,1fr);margin-bottom:16px">
+          <div><div class="asset-frame" style="margin-bottom:0"><img src="assets/png/slides/bem-final-idv-24.png" alt="Slide — Icon Composition" style="aspect-ratio:16/9;object-fit:cover"><div class="asset-overlay"><span>Slide — Icon Composition</span><a class="dl-btn" href="assets/svg/bem-final-idv-24.svg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>SVG</a></div></div></div>
+          <div><div class="asset-frame" style="margin-bottom:0"><img src="assets/png/logo/bem-final-idv-25.png" alt="Slide — Logo Lockup" style="aspect-ratio:16/9;object-fit:cover"><div class="asset-overlay"><span>Slide — Logo Lockup</span><a class="dl-btn" href="assets/svg/bem-final-idv-25.svg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>SVG</a></div></div></div>
+          <div><div class="asset-frame" style="margin-bottom:0"><img src="assets/png/compositions/bem-final-idv-28.png" alt="Slide — Flow Diagram" style="aspect-ratio:16/9;object-fit:cover"><div class="asset-overlay"><span>Slide — Flow Diagram</span><a class="dl-btn" href="assets/svg/bem-final-idv-28.svg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>SVG</a></div></div></div>
+          <div><div class="asset-frame" style="margin-bottom:0"><img src="assets/png/compositions/bem-final-idv-31.png" alt="Slide — System Diagram" style="aspect-ratio:16/9;object-fit:cover"><div class="asset-overlay"><span>Slide — System Diagram</span><a class="dl-btn" href="assets/svg/bem-final-idv-31.svg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>SVG</a></div></div></div>
+        </div>
+        <div class="mockups-grid" style="grid-template-columns:repeat(4,1fr);margin-bottom:16px">
+          <div><div class="asset-frame" style="margin-bottom:0"><img src="assets/png/slides/bem-final-idv-27.png" alt="Slide — Shape Grid" style="aspect-ratio:16/9;object-fit:cover"><div class="asset-overlay"><span>Slide — Shape Grid</span><a class="dl-btn" href="assets/svg/bem-final-idv-27.svg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>SVG</a></div></div></div>
+          <div><div class="asset-frame" style="margin-bottom:0"><img src="assets/png/logo/bem-final-idv-26.png" alt="Slide — Logo System" style="aspect-ratio:16/9;object-fit:cover"><div class="asset-overlay"><span>Slide — Logo System</span><a class="dl-btn" href="assets/svg/bem-final-idv-26.svg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>SVG</a></div></div></div>
+          <div><div class="asset-frame" style="margin-bottom:0"><img src="assets/png/compositions/bem-final-idv-30.png" alt="Slide — 3D Showcase" style="aspect-ratio:16/9;object-fit:cover"><div class="asset-overlay"><span>Slide — 3D Showcase</span><a class="dl-btn" href="assets/svg/bem-final-idv-30.svg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>SVG</a></div></div></div>
+          <div><div class="asset-frame" style="margin-bottom:0"><img src="assets/png/compositions/bem-final-idv-29.png" alt="Slide — Geometric Pattern" style="aspect-ratio:16/9;object-fit:cover"><div class="asset-overlay"><span>Slide — Geometric Pattern</span><a class="dl-btn" href="assets/svg/bem-final-idv-29.svg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>SVG</a></div></div></div>
+        </div>
+      </div>
+
+      <!-- Key Visuals -->
       <div class="subsection">
         <div class="subsection-label">Key Visuals</div>
-        <p class="rule-text" style="margin-bottom:32px">These compositions define the visual direction. Use them as reference — every new visual should feel like it belongs to this family.</p>
+        <p class="rule-text" style="margin-bottom:32px">Hero compositions and marketing visuals. Every new visual should feel like it belongs to this family.</p>
 
-        <!-- Row 1: two hero compositions -->
+        <div class="mockups-grid" style="grid-template-columns:repeat(5,1fr);margin-bottom:16px">
+          <div><div class="asset-frame" style="margin-bottom:0"><img src="assets/png/key-visuals/bem-final-idv-01.png" alt="Key Visual — Cover" style="aspect-ratio:1.88/1;object-fit:cover"><div class="asset-overlay"><span>Cover composition</span><a class="dl-btn" href="assets/svg/bem-final-idv-01.svg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>SVG</a></div></div></div>
+          <div><div class="asset-frame" style="margin-bottom:0"><img src="assets/png/key-visuals/bem-final-idv-05.png" alt="Key Visual — Features" style="aspect-ratio:1.88/1;object-fit:cover"><div class="asset-overlay"><span>Feature composition</span><a class="dl-btn" href="assets/svg/bem-final-idv-05.svg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>SVG</a></div></div></div>
+          <div><div class="asset-frame" style="margin-bottom:0"><img src="assets/png/key-visuals/bem-final-idv-06.png" alt="Key Visual — From input to impact" style="aspect-ratio:1.88/1;object-fit:cover"><div class="asset-overlay"><span>From input to impact</span><a class="dl-btn" href="assets/svg/bem-final-idv-06.svg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>SVG</a></div></div></div>
+          <div><div class="asset-frame" style="margin-bottom:0"><img src="assets/png/key-visuals/bem-final-idv-08.png" alt="Key Visual — Built for clarity" style="aspect-ratio:1.88/1;object-fit:cover"><div class="asset-overlay"><span>Built for clarity</span><a class="dl-btn" href="assets/svg/bem-final-idv-08.svg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>SVG</a></div></div></div>
+          <div><div class="asset-frame" style="margin-bottom:0"><img src="assets/png/key-visuals/bem-final-idv-09.png" alt="Key Visual — Chaos in. Clarity out." style="aspect-ratio:1.88/1;object-fit:cover"><div class="asset-overlay"><span>Chaos in. Clarity out.</span><a class="dl-btn" href="assets/svg/bem-final-idv-09.svg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>SVG</a></div></div></div>
+        </div>
+
+        <!-- Remaining key visuals -->
         <div class="mockups-grid mockup-row-2" style="margin-bottom:16px">
-          <div>
-            <div class="asset-frame" style="margin-bottom:0"><img src="assets/bem-final-idv-04.svg" alt="Intelligence, engineered." style="aspect-ratio:16/9;object-fit:cover"></div>
-            <div class="visual-card-caption">Gradient hero — energy gradient with headline typography</div>
-          </div>
-          <div>
-            <div class="asset-frame" style="margin-bottom:0"><img src="assets/bem-final-idv-03.svg" alt="Turn unstructured data into product" style="aspect-ratio:16/9;object-fit:cover"></div>
-            <div class="visual-card-caption">3D shape hero — blue glow pyramid with mixed-weight type</div>
-          </div>
+          <div><div class="asset-frame" style="margin-bottom:0"><img src="assets/png/key-visuals/bem-final-idv-02.png" alt="Key Visual — Feature grid" style="aspect-ratio:16/9;object-fit:cover"><div class="asset-overlay"><span>Feature grid</span><a class="dl-btn" href="assets/svg/bem-final-idv-02.svg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>SVG</a></div></div></div>
+          <div><div class="asset-frame" style="margin-bottom:0"><img src="assets/png/key-visuals/bem-final-idv-03.png" alt="Key Visual — 3D pyramid" style="aspect-ratio:16/9;object-fit:cover"><div class="asset-overlay"><span>Turn unstructured data into product</span><a class="dl-btn" href="assets/svg/bem-final-idv-03.svg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>SVG</a></div></div></div>
         </div>
-
-        <!-- Row 2: three compositions -->
-        <div class="mockups-grid mockup-row-3" style="margin-bottom:16px">
-          <div>
-            <div class="asset-frame" style="margin-bottom:0"><img src="assets/bem-final-idv-09.svg" alt="Built for clarity." style="aspect-ratio:16/9;object-fit:cover"></div>
-            <div class="visual-card-caption">Split composition — dark/light with diamond</div>
-          </div>
-          <div>
-            <div class="asset-frame" style="margin-bottom:0"><img src="assets/bem-final-idv-07.svg" alt="From input to impact" style="aspect-ratio:16/9;object-fit:cover"></div>
-            <div class="visual-card-caption">Geometric pattern — parallelogram depth</div>
-          </div>
-          <div>
-            <div class="asset-frame" style="margin-bottom:0"><img src="assets/bem-final-idv-25.svg" alt="Key Visual — Composition" style="aspect-ratio:16/9;object-fit:cover"></div>
-            <div class="visual-card-caption">Extended composition — brand language variant</div>
-          </div>
-        </div>
-
-        <!-- Row 3: two wider compositions -->
         <div class="mockups-grid mockup-row-2">
-          <div>
-            <div class="asset-frame" style="margin-bottom:0"><img src="assets/bem-final-idv-26.svg" alt="Key Visual — Composition" style="aspect-ratio:16/9;object-fit:cover"></div>
-            <div class="visual-card-caption">Environmental composition — atmospheric depth</div>
-          </div>
-          <div>
-            <div class="asset-frame" style="margin-bottom:0"><img src="assets/bem-final-idv-27.svg" alt="Key Visual — Composition" style="aspect-ratio:16/9;object-fit:cover"></div>
-            <div class="visual-card-caption">Abstract composition — geometric energy</div>
-          </div>
+          <div><div class="asset-frame" style="margin-bottom:0"><img src="assets/png/key-visuals/bem-final-idv-04.png" alt="Key Visual — Gradient hero" style="aspect-ratio:16/9;object-fit:cover"><div class="asset-overlay"><span>Intelligence, engineered.</span><a class="dl-btn" href="assets/svg/bem-final-idv-04.svg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>SVG</a></div></div></div>
+          <div><div class="asset-frame" style="margin-bottom:0"><img src="assets/png/shapes/bem-final-idv-20.png" alt="Key Visual — Composition" style="aspect-ratio:16/9;object-fit:cover"><div class="asset-overlay"><span>Composition variant</span><a class="dl-btn" href="assets/svg/bem-final-idv-20.svg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>SVG</a></div></div></div>
+        </div>
+        <div class="mockups-grid mockup-row-2" style="margin-top:16px">
+          <div><div class="asset-frame" style="margin-bottom:0"><img src="assets/png/shapes/bem-final-idv-21.png" alt="Key Visual — Composition" style="aspect-ratio:16/9;object-fit:cover"><div class="asset-overlay"><span>Composition variant</span><a class="dl-btn" href="assets/svg/bem-final-idv-21.svg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>SVG</a></div></div></div>
+          <div><div class="asset-frame" style="margin-bottom:0"><img src="assets/png/cover/bem-final-idv-23.png" alt="Brand Guide Cover" style="aspect-ratio:16/9;object-fit:cover"><div class="asset-overlay"><span>Brand Guide Cover</span><a class="dl-btn" href="assets/svg/bem-final-idv-23.svg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>SVG</a></div></div></div>
         </div>
       </div>
 
-      <!-- Brand in Context — Mockups -->
-      <div class="subsection" style="margin-top:80px">
-        <div class="subsection-label">Brand in Context</div>
-        <p class="rule-text" style="margin-bottom:32px">Real-world applications showing how the visual system translates across formats and environments.</p>
-
-        <!-- Row 1: two wide billboards -->
-        <div class="mockups-grid mockup-row-2" style="margin-bottom:16px">
-          <img src="assets/mockup-billboard-chaos.png" alt="Billboard — Chaos in. Clarity out.">
-          <img src="assets/mockup-billboard-clarity.png" alt="Billboard — Built for clarity.">
-        </div>
-
-        <!-- Row 2: full width billboard night -->
-        <div class="mockups-grid mockup-full" style="margin-bottom:16px">
-          <img src="assets/mockup-billboard-clarity-night.png" alt="Billboard — Built for clarity. Night.">
-        </div>
-
-        <!-- Row 3: three context shots -->
-        <div class="mockups-grid mockup-row-3" style="margin-bottom:16px">
-          <img src="assets/mockup-subway-intelligence.png" alt="Subway — Intelligence, engineered.">
-          <img src="assets/mockup-busstop.png" alt="Bus Stop — Compute the real world.">
-          <img src="assets/mockup-billboard-data.png" alt="Billboard — Turn unstructured data into product.">
-        </div>
-
-        <!-- Row 4: digital contexts -->
-        <div class="mockups-grid mockup-row-2">
-          <img src="assets/mockup-laptop.png" alt="Laptop — Product interface">
-          <img src="assets/mockup-tablet-icons.png" alt="Tablet — Icon system showcase">
-        </div>
-      </div>
 
       <div class="subsection" style="margin-top:64px">
         <div class="subsection-label">Brand Lines</div>
@@ -1240,15 +1300,20 @@
       </div>
     </section>
 
+    <!-- DOWNLOAD ALL -->
+    <div class="dl-all-bar">
+      <span>Complete brand package — Illustrator source file with all 33 artboards, fonts, and linked assets</span>
+      <a class="dl-all-btn" href="assets/bem-final-idv.ai" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Download .ai Package</a>
+    </div>
+
     <!-- FOOTER -->
     <footer class="guide-footer">
       <div class="footer-left">
         Bem.ai Brand Expansion Guide v1.0<br>
-        THXType Studio — February 2026
+        Branding&Co — February 2026
       </div>
       <div class="footer-right">
-        <span>bem</span>
-        <svg viewBox="0 0 52 52" fill="none" width="18" height="18"><rect x="0.3" y="0" width="6.7" height="42.5" fill="#3030FF"/><rect x="9.6" y="0" width="42.1" height="6.8" fill="#3030FF"/><rect x="0.3" y="45.3" width="42.1" height="6.7" fill="#3030FF"/><rect x="45" y="9.5" width="6.7" height="42.5" fill="#3030FF"/></svg>
+        <img src="assets/bem-logo.svg" alt="bem" style="height:16px;width:auto">
       </div>
     </footer>
 
@@ -1271,6 +1336,26 @@
     }, { threshold: 0.3 });
 
     sections.forEach(section => observer.observe(section));
+  </script>
+
+  <script>
+    function downloadAll() {
+      const files = document.querySelectorAll('.dl-btn[href]');
+      const seen = new Set();
+      files.forEach((a, i) => {
+        const href = a.getAttribute('href');
+        if (seen.has(href)) return;
+        seen.add(href);
+        setTimeout(() => {
+          const link = document.createElement('a');
+          link.href = href;
+          link.download = '';
+          document.body.appendChild(link);
+          link.click();
+          link.remove();
+        }, i * 300);
+      });
+    }
   </script>
 
 </body>

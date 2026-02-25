@@ -42,7 +42,7 @@
       margin-top: 24px;
       font-size: 14px;
       color: var(--gray-60);
-      font-weight: 300;
+      font-weight: 200;
     }
 
     /* Version cards */
@@ -84,7 +84,7 @@
     .version-col .label {
       font-size: 13px;
       color: var(--gray-40);
-      font-weight: 300;
+      font-weight: 200;
     }
 
     /* Bottom sections */
@@ -133,7 +133,7 @@
       position: absolute;
       font-size: 11px;
       color: var(--gray-60);
-      font-weight: 400;
+      font-weight: 200;
     }
 
     .x-marker--top {
@@ -202,7 +202,7 @@
     .clearspace-note {
       font-size: 13px;
       color: var(--gray-60);
-      font-weight: 300;
+      font-weight: 200;
       margin-top: 16px;
     }
 
@@ -247,14 +247,14 @@
     .minsize-value {
       font-size: 12px;
       color: var(--gray-60);
-      font-weight: 400;
+      font-weight: 200;
       white-space: nowrap;
     }
 
     .minsize-note {
       font-size: 13px;
       color: var(--gray-60);
-      font-weight: 300;
+      font-weight: 200;
       margin-top: 4px;
     }
   </style>
@@ -270,13 +270,8 @@
 
   <!-- Section 1 — Primary Logo -->
   <div class="primary-logo">
-    <div class="logo" style="font-size: 64px;">
-      <span class="logo-text" style="color: var(--white);">bem</span>
-      <svg class="logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M24 0H4C1.79 0 0 1.79 0 4v24c0 2.21 1.79 4 4 4h24c2.21 0 4-1.79 4-4V12h-3v16c0 0.55-0.45 1-1 1H4c-0.55 0-1-0.45-1-1V4c0-0.55 0.45-1 1-1h20V0z" fill="#FFFFFF"/>
-      </svg>
-    </div>
-    <span class="label" style="margin-top: 24px; font-size: 14px; color: var(--gray-60); font-weight: 300;">Primary — White on dark</span>
+    <img src="../assets/bem-logo.svg" alt="bem" style="height: 64px;">
+    <span class="label" style="margin-top: 24px; font-size: 14px; color: var(--gray-60); font-weight: 200;">Primary — White on dark</span>
   </div>
 
   <!-- Section 2 — Versions -->
@@ -284,12 +279,7 @@
     <!-- Dark Background -->
     <div class="version-col">
       <div class="version-card version-card--dark">
-        <div class="logo" style="font-size: 32px;">
-          <span class="logo-text" style="color: var(--white);">bem</span>
-          <svg class="logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M24 0H4C1.79 0 0 1.79 0 4v24c0 2.21 1.79 4 4 4h24c2.21 0 4-1.79 4-4V12h-3v16c0 0.55-0.45 1-1 1H4c-0.55 0-1-0.45-1-1V4c0-0.55 0.45-1 1-1h20V0z" fill="#FFFFFF"/>
-          </svg>
-        </div>
+        <img src="../assets/bem-logo.svg" alt="bem" style="height: 32px;">
       </div>
       <span class="label">Dark Background</span>
     </div>
@@ -297,12 +287,7 @@
     <!-- Light Background -->
     <div class="version-col">
       <div class="version-card version-card--light">
-        <div class="logo" style="font-size: 32px;">
-          <span class="logo-text" style="color: #000000;">bem</span>
-          <svg class="logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M24 0H4C1.79 0 0 1.79 0 4v24c0 2.21 1.79 4 4 4h24c2.21 0 4-1.79 4-4V12h-3v16c0 0.55-0.45 1-1 1H4c-0.55 0-1-0.45-1-1V4c0-0.55 0.45-1 1-1h20V0z" fill="#000000"/>
-          </svg>
-        </div>
+        <img src="../assets/bem-logo.svg" alt="bem" style="height: 32px; filter: invert(1);">
       </div>
       <span class="label">Light Background</span>
     </div>
@@ -310,12 +295,7 @@
     <!-- With Icon -->
     <div class="version-col">
       <div class="version-card version-card--dark">
-        <div class="logo" style="font-size: 32px;">
-          <svg class="logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M24 0H4C1.79 0 0 1.79 0 4v24c0 2.21 1.79 4 4 4h24c2.21 0 4-1.79 4-4V12h-3v16c0 0.55-0.45 1-1 1H4c-0.55 0-1-0.45-1-1V4c0-0.55 0.45-1 1-1h20V0z" fill="#FFFFFF"/>
-          </svg>
-          <span class="logo-text" style="color: var(--white);">bem</span>
-        </div>
+        <img src="../assets/bem-logo.svg" alt="bem" style="height: 32px;">
       </div>
       <span class="label">With Icon</span>
     </div>
@@ -323,9 +303,7 @@
     <!-- Icon Only -->
     <div class="version-col">
       <div class="version-card version-card--dark">
-        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 48px; height: 48px;">
-          <path d="M24 0H4C1.79 0 0 1.79 0 4v24c0 2.21 1.79 4 4 4h24c2.21 0 4-1.79 4-4V12h-3v16c0 0.55-0.45 1-1 1H4c-0.55 0-1-0.45-1-1V4c0-0.55 0.45-1 1-1h20V0z" fill="#FFFFFF"/>
-        </svg>
+        <img src="../assets/bem-logo.svg" alt="bem" style="height: 48px;">
       </div>
       <span class="label">Icon Only</span>
     </div>
@@ -347,12 +325,7 @@
         <div class="x-line x-line--bottom"></div>
         <div class="x-line x-line--left"></div>
         <div class="x-line x-line--right"></div>
-        <div class="logo clearspace-logo">
-          <span class="logo-text" style="color: var(--white);">bem</span>
-          <svg class="logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M24 0H4C1.79 0 0 1.79 0 4v24c0 2.21 1.79 4 4 4h24c2.21 0 4-1.79 4-4V12h-3v16c0 0.55-0.45 1-1 1H4c-0.55 0-1-0.45-1-1V4c0-0.55 0.45-1 1-1h20V0z" fill="#FFFFFF"/>
-          </svg>
-        </div>
+        <img src="../assets/bem-logo.svg" alt="bem" class="clearspace-logo" style="height: 36px;">
       </div>
       <div class="clearspace-note">Clear space = 1x around all sides</div>
     </div>
@@ -361,12 +334,7 @@
     <div class="bottom-section">
       <div class="bottom-section-title">Minimum Size</div>
       <div class="minsize-area">
-        <div class="logo minsize-logo">
-          <span class="logo-text" style="color: var(--white);">bem</span>
-          <svg class="logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M24 0H4C1.79 0 0 1.79 0 4v24c0 2.21 1.79 4 4 4h24c2.21 0 4-1.79 4-4V12h-3v16c0 0.55-0.45 1-1 1H4c-0.55 0-1-0.45-1-1V4c0-0.55 0.45-1 1-1h20V0z" fill="#FFFFFF"/>
-          </svg>
-        </div>
+        <img src="../assets/bem-logo.svg" alt="bem" class="minsize-logo" style="height: 24px;">
         <div class="minsize-ruler">
           <div class="minsize-line"></div>
           <span class="minsize-value">24px min height</span>
