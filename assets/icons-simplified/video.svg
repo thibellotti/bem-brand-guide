@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="#3344FF" stroke-width="1.2" stroke-linejoin="round">
+  <!-- Two same-size chevron triangles pointing right -->
+  <polygon points="4,12 28,32 4,52"/>
+  <polygon points="32,12 56,32 32,52"/>
+</svg>

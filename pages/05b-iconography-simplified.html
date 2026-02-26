@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920">
+  <title>Bem.ai — Icon System: Simplified</title>
+  <link rel="stylesheet" href="shared.css">
+  <style>
+    .icon-content {
+      display: flex;
+      flex-direction: column;
+      height: calc(100% - 40px);
+      justify-content: space-between;
+    }
+
+    .icon-layer {
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-5);
+    }
+
+    .layer-header {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-3);
+    }
+
+    .layer-label {
+      font-size: 16px;
+      font-weight: 200;
+      color: var(--white);
+    }
+
+    .layer-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 3px 10px;
+      border: 1px solid var(--blue-bright);
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--blue-bright);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .icon-cards {
+      display: flex;
+      gap: var(--sp-4);
+    }
+
+    .icon-card {
+      flex: 1;
+      height: 160px;
+      background: var(--dark);
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: var(--sp-3);
+    }
+
+    .icon-card img {
+      width: 56px;
+      height: 56px;
+    }
+
+    .icon-card-label {
+      font-size: 13px;
+      font-weight: 200;
+      color: var(--gray-60);
+    }
+
+    /* Comparison row: 3D vs Simplified */
+    .comparison-section {
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-4);
+    }
+
+    .comparison-row {
+      display: flex;
+      gap: var(--sp-5);
+      align-items: flex-start;
+    }
+
+    .comparison-col {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-3);
+    }
+
+    .version-label {
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--gray-40);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .comparison-cards {
+      display: flex;
+      gap: var(--sp-3);
+    }
+
+    .comparison-card {
+      width: 96px;
+      height: 96px;
+      background: var(--dark);
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .comparison-card img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+    }
+
+    .comparison-card .cc-label {
+      font-size: 9px;
+      font-weight: 200;
+      color: var(--gray-40);
+    }
+
+    .subtitle {
+      font-size: 14px;
+      font-weight: 200;
+      color: var(--gray-40);
+      margin-bottom: var(--sp-6);
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page">
+
+    <!-- Page title -->
+    <div style="font-size: 12px; font-weight: 500; color: var(--gray-40); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: var(--sp-3);">Icon System</div>
+    <div style="font-size: 40px; font-weight: 200; color: var(--white); margin-bottom: var(--sp-2); letter-spacing: -0.01em;">Simplified</div>
+    <p class="subtitle">Flat geometric versions for small sizes, monochrome contexts, and UI usage.</p>
+
+    <div class="icon-content">
+
+      <!-- Layer 1 — Functions -->
+      <div class="icon-layer">
+        <div class="layer-header">
+          <span class="layer-label">Layer #1 — Functions</span>
+          <span class="layer-badge">Geometric</span>
+        </div>
+        <div class="icon-cards">
+          <div class="icon-card">
+            <img src="../assets/icons-simplified/extract.svg" alt="Extract">
+            <span class="icon-card-label">Extract</span>
+          </div>
+          <div class="icon-card">
+            <img src="../assets/icons-simplified/transform.svg" alt="Transform">
+            <span class="icon-card-label">Transform</span>
+          </div>
+          <div class="icon-card">
+            <img src="../assets/icons-simplified/analyze.svg" alt="Analyze">
+            <span class="icon-card-label">Analyze</span>
+          </div>
+          <div class="icon-card">
+            <img src="../assets/icons-simplified/route.svg" alt="Route">
+            <span class="icon-card-label">Route</span>
+          </div>
+          <div class="icon-card">
+            <img src="../assets/icons-simplified/split.svg" alt="Split">
+            <span class="icon-card-label">Split</span>
+          </div>
+          <div class="icon-card">
+            <img src="../assets/icons-simplified/join.svg" alt="Join">
+            <span class="icon-card-label">Join</span>
+          </div>
+          <div class="icon-card">
+            <img src="../assets/icons-simplified/payload-shaping.svg" alt="Payload Shaping">
+            <span class="icon-card-label">Payload Shaping</span>
+          </div>
+          <div class="icon-card">
+            <img src="../assets/icons-simplified/enrich.svg" alt="Enrich">
+            <span class="icon-card-label">Enrich</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Layer 2 — Inputs -->
+      <div class="icon-layer">
+        <div class="layer-header">
+          <span class="layer-label">Layer #2 — Inputs</span>
+          <span class="layer-badge">Geometric</span>
+        </div>
+        <div class="icon-cards">
+          <div class="icon-card">
+            <img src="../assets/icons-simplified/documents.svg" alt="Documents">
+            <span class="icon-card-label">Documents</span>
+          </div>
+          <div class="icon-card">
+            <img src="../assets/icons-simplified/images.svg" alt="Images">
+            <span class="icon-card-label">Images</span>
+          </div>
+          <div class="icon-card">
+            <img src="../assets/icons-simplified/spreadsheets.svg" alt="Spreadsheets">
+            <span class="icon-card-label">Spreadsheets</span>
+          </div>
+          <div class="icon-card">
+            <img src="../assets/icons-simplified/structured-data.svg" alt="Structured Data">
+            <span class="icon-card-label">Structured Data</span>
+          </div>
+          <div class="icon-card">
+            <img src="../assets/icons-simplified/audio.svg" alt="Audio">
+            <span class="icon-card-label">Audio</span>
+          </div>
+          <div class="icon-card">
+            <img src="../assets/icons-simplified/video.svg" alt="Video">
+            <span class="icon-card-label">Video</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Usage guidelines -->
+      <div style="display: flex; gap: var(--sp-7); padding-top: var(--sp-5); border-top: 1px solid var(--gray-20);">
+        <div>
+          <div style="font-size: 12px; font-weight: 500; color: var(--blue-bright); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px;">When to use</div>
+          <div style="font-size: 14px; font-weight: 200; color: var(--gray-60); line-height: 1.6;">
+            UI elements, small sizes (&lt;32px), monochrome contexts,<br>
+            documentation, dark and light backgrounds.
+          </div>
+        </div>
+        <div>
+          <div style="font-size: 12px; font-weight: 500; color: var(--blue-bright); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px;">Stroke</div>
+          <div style="font-size: 14px; font-weight: 200; color: var(--gray-60); line-height: 1.6;">
+            2px at 64x64. Scale proportionally.<br>
+            Color: #3344FF (Blue Bright) or white.
+          </div>
+        </div>
+        <div>
+          <div style="font-size: 12px; font-weight: 500; color: var(--blue-bright); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px;">Min size</div>
+          <div style="font-size: 14px; font-weight: 200; color: var(--gray-60); line-height: 1.6;">
+            16x16px minimum.<br>
+            No fill variants below 24px.
+          </div>
+        </div>
+        <div>
+          <div style="font-size: 12px; font-weight: 500; color: var(--blue-bright); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px;">Format</div>
+          <div style="font-size: 14px; font-weight: 200; color: var(--gray-60); line-height: 1.6;">
+            SVG (vector). 64x64 viewBox.<br>
+            Stroke-based, no raster dependencies.
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Page number -->
+    <span class="page-number">05b</span>
+
+  </div>
+
+</body>
+</html>

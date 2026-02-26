@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="#3344FF" stroke-width="1.2" stroke-linejoin="round">
+  <!-- Two flat squares with more overlap -->
+  <rect x="4" y="4" width="36" height="36"/>
+  <rect x="24" y="24" width="36" height="36"/>
+</svg>

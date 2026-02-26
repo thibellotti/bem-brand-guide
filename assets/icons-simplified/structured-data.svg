@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="#3344FF" stroke-width="1.2">
+  <!-- Square with concentric circles -->
+  <rect x="6" y="6" width="52" height="52" rx="2"/>
+  <circle cx="32" cy="32" r="19"/>
+  <circle cx="32" cy="32" r="8"/>
+</svg>

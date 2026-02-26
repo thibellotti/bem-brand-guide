@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="#3344FF" stroke-width="1.2">
+  <!-- Grid with asymmetric cells matching reference -->
+  <rect x="4" y="4" width="56" height="56"/>
+  <!-- Horizontal divider -->
+  <line x1="4" y1="40" x2="60" y2="40"/>
+  <!-- Vertical divider (full height) -->
+  <line x1="24" y1="4" x2="24" y2="60"/>
+  <!-- Vertical divider (bottom section only) -->
+  <line x1="40" y1="40" x2="40" y2="60"/>
+</svg>

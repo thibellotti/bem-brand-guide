@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="#3344FF" stroke-width="1.2" stroke-linejoin="round">
+  <!-- Vertical emerald/gem shape (tall octagon) -->
+  <polygon points="18,4 46,4 60,18 60,46 46,60 18,60 4,46 4,18"/>
+  <!-- Internal facet lines -->
+  <line x1="4" y1="18" x2="60" y2="18"/>
+  <line x1="4" y1="46" x2="60" y2="46"/>
+  <line x1="18" y1="4" x2="18" y2="60"/>
+  <line x1="46" y1="4" x2="46" y2="60"/>
+</svg>

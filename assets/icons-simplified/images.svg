@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="#3344FF" stroke-width="1.2">
+  <!-- 4 circles in 2x2 grid, non-overlapping -->
+  <circle cx="18" cy="18" r="13"/>
+  <circle cx="46" cy="18" r="13"/>
+  <circle cx="18" cy="46" r="13"/>
+  <circle cx="46" cy="46" r="13"/>
+</svg>
