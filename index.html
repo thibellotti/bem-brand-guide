@@ -741,6 +741,9 @@
     <a href="#iconography" class="nav-link"><span class="nav-num">04</span> Iconography</a>
     <a href="#visual-language" class="nav-link"><span class="nav-num">05</span> Visual Language</a>
 
+    <div class="nav-section">Templates</div>
+    <a href="#social-media" class="nav-link"><span class="nav-num">06</span> Social Media</a>
+
     <div class="sidebar-footer">
       Branding&Co<br>
       February 2026<br>
@@ -1399,6 +1402,501 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- 06 SOCIAL MEDIA -->
+    <section class="section" id="social-media">
+      <div class="section-header">
+        <span class="section-number">06</span>
+        <h2 class="section-title">Social Media</h2>
+      </div>
+      <p class="section-desc">Templates for LinkedIn, X, and Instagram. Each format is shown in four layout directions — gradient, function icon, stroke pattern, and clean.</p>
+
+      <style>
+        /* ─── Social Media Section ─── */
+        .sm-plat { margin-bottom: 64px; }
+        .sm-plat:last-child { margin-bottom: 0; }
+        .sm-plat-label { font-size: 11px; font-weight: 500; color: var(--gray-40); letter-spacing: 0.15em; text-transform: uppercase; padding-bottom: 12px; border-bottom: 1px solid var(--gray-20); margin-bottom: 32px; }
+
+        .sm-fmt { margin-bottom: 48px; }
+        .sm-fmt:last-child { margin-bottom: 0; }
+        .sm-fmt-head { display: flex; align-items: baseline; gap: 12px; margin-bottom: 16px; }
+        .sm-fmt-name { font-size: 16px; font-weight: 200; color: var(--white); }
+        .sm-fmt-dims { font-size: 11px; font-weight: 200; color: var(--gray-40); }
+
+        .sm-vrow { display: flex; gap: 16px; align-items: flex-start; }
+        .sm-vcell { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+        .sm-vtag { font-size: 9px; font-weight: 500; color: var(--gray-40); letter-spacing: 0.1em; text-transform: uppercase; }
+
+        /* Card base */
+        .sm-tpl { border: 1px solid var(--gray-20); border-radius: 8px; background: var(--black); position: relative; overflow: hidden; }
+        .sm-tpl-inner { position: relative; z-index: 2; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box; }
+        .sm-tpl-inner--h { flex-direction: row; align-items: center; gap: 14px; }
+        .sm-pad-l { padding: 24px; }
+        .sm-pad-m { padding: 20px; }
+        .sm-pad-s { padding: 16px; }
+        .sm-pad-xs { padding: 14px; }
+
+        /* Shared text */
+        .sm-logo { opacity: 1; display: block; }
+        .sm-hl { font-weight: 200; color: #fff; line-height: 1.05; letter-spacing: -0.02em; }
+        .sm-sub { font-weight: 200; color: rgba(255,255,255,0.55); line-height: 1.4; display: block; }
+        .sm-dom { font-size: 10px; font-weight: 500; color: var(--gray-40); }
+        .sm-hl-div { width: 1px; height: 16px; background: var(--gray-20); flex-shrink: 0; }
+        .sm-bot { display: flex; justify-content: space-between; align-items: flex-end; }
+
+        /* Card sizes */
+        .sm-sz-lp { width: 400px; height: 209px; }
+        .sm-sz-lb { width: 400px; height: 100px; }
+        .sm-sz-xp { width: 400px; height: 225px; }
+        .sm-sz-xh { width: 400px; height: 133px; }
+        .sm-sz-if { width: 280px; height: 280px; }
+        .sm-sz-is { width: 158px; height: 280px; }
+        .sm-sz-ic { width: 224px; height: 280px; }
+
+        /* Variant A: Radial Edge Glow */
+        .sm-va {
+          background: radial-gradient(ellipse 125% 125% at center, #000 38%, rgba(51,68,255,0.65) 72%, #3344FF 100%);
+          border-color: rgba(51,68,255,0.4);
+        }
+        .sm-va .sm-hl { color: var(--white); }
+        .sm-va .sm-sub { color: rgba(255,255,255,0.4); }
+        .sm-va .sm-dom { color: rgba(255,255,255,0.3); }
+        .sm-va .sm-logo { opacity: 0.6; }
+        .sm-va .sm-hl-div { background: rgba(255,255,255,0.15); }
+
+        /* Variant B: 3D Function Icon — behind content like a background piece */
+        .sm-vb .sm-icon-bleed { position: absolute; z-index: 0; object-fit: contain; opacity: 0.8; }
+
+        /* Variant C: Stroke Pattern */
+        .sm-vc .sm-si { position: absolute; z-index: 0; pointer-events: none; }
+
+        /* Variant D: Gradient Border Frame */
+        .sm-vd { background: linear-gradient(135deg, #3344FF 0%, #0df6f8 45%, #e075ff 100%); border: none; }
+        .sm-vd::before { content: ''; position: absolute; inset: 3px; background: #000; border-radius: 5px; z-index: 1; }
+      </style>
+
+      <!-- ═══ LINKEDIN ═══ -->
+      <div class="sm-plat">
+        <div class="sm-plat-label">LinkedIn</div>
+
+        <!-- Post 1200×627 -->
+        <div class="sm-fmt">
+          <div class="sm-fmt-head">
+            <span class="sm-fmt-name">Post</span>
+            <span class="sm-fmt-dims">1200 × 627</span>
+          </div>
+          <div class="sm-vrow">
+
+            <!-- A: Gradient — huge centered ultralight -->
+            <div class="sm-vcell">
+              <div class="sm-tpl sm-sz-lp sm-va">
+                <div class="sm-tpl-inner sm-pad-l" style="justify-content:center;align-items:center;text-align:center">
+                  <img src="assets/bem-logo.svg" alt="bem" class="sm-logo" style="height:12px;position:absolute;top:20px;left:24px">
+                  <div class="sm-hl" style="font-size:44px">Chaos in.<br>Clarity out.</div>
+                  <span class="sm-dom" style="position:absolute;bottom:16px;right:24px;color:rgba(255,255,255,0.4);font-size:9px">bem.ai</span>
+                </div>
+              </div>
+              <span class="sm-vtag">Gradient</span>
+            </div>
+
+            <!-- B: Function Icon — editorial left, icon dominates right -->
+            <div class="sm-vcell">
+              <div class="sm-tpl sm-sz-lp sm-vb">
+                <img src="assets/png/shapes/bem-final-idv-14.png" class="sm-icon-bleed" style="width:620px;left:50%;top:50%;transform:translate(-38%,-48%)">
+                <div class="sm-tpl-inner sm-pad-l" style="justify-content:flex-end">
+                  <img src="assets/bem-logo.svg" alt="bem" class="sm-logo" style="height:12px;position:absolute;top:20px;left:24px">
+                  <div>
+                    <div class="sm-hl" style="font-size:22px;max-width:50%">Chaos in.<br>Clarity out.</div>
+                    <span class="sm-sub" style="font-size:8px;margin-top:8px;max-width:42%;display:block">Turn unstructured data into structured intelligence.</span>
+                  </div>
+                </div>
+              </div>
+              <span class="sm-vtag">Function Icon</span>
+            </div>
+
+            <!-- C: Stroke Pattern — enormous bottom-anchored type -->
+            <div class="sm-vcell">
+              <div class="sm-tpl sm-sz-lp sm-vc">                <div class="sm-tpl-inner sm-pad-l" style="justify-content:flex-end">
+                  <img src="assets/bem-logo.svg" alt="bem" class="sm-logo" style="height:12px;position:absolute;top:20px;right:24px">
+                  <div class="sm-hl" style="font-size:48px">Chaos in.<br>Clarity out.</div>
+                </div>
+              </div>
+              <span class="sm-vtag">Stroke Pattern</span>
+            </div>
+
+            <!-- D: Clean — centered, refined, balanced stack -->
+            <div class="sm-vcell">
+              <div class="sm-tpl sm-sz-lp sm-vd">
+                <div class="sm-tpl-inner sm-pad-l" style="justify-content:center;align-items:center;text-align:center">
+                  <img src="assets/bem-logo.svg" alt="bem" class="sm-logo" style="height:10px;margin-bottom:16px">
+                  <div class="sm-hl" style="font-size:24px;font-weight:500;letter-spacing:-0.01em">Chaos in. Clarity out.</div>
+                  <span class="sm-sub" style="font-size:9px;margin-top:10px;max-width:65%;text-align:center;line-height:1.6">Turn unstructured data into structured intelligence.</span>
+                </div>
+              </div>
+              <span class="sm-vtag">Clean</span>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Banner 1584×396 -->
+        <div class="sm-fmt">
+          <div class="sm-fmt-head">
+            <span class="sm-fmt-name">Company Banner</span>
+            <span class="sm-fmt-dims">1584 × 396</span>
+          </div>
+          <div class="sm-vrow">
+
+            <!-- A: Gradient — bold centered statement -->
+            <div class="sm-vcell">
+              <div class="sm-tpl sm-sz-lb sm-va">
+                <div class="sm-tpl-inner sm-pad-m" style="justify-content:center;align-items:center;text-align:center">
+                  <div class="sm-hl" style="font-size:24px">Intelligence, engineered.</div>
+                </div>
+              </div>
+              <span class="sm-vtag">Gradient</span>
+            </div>
+
+            <!-- B: Function Icon — logo + text left, shape right -->
+            <div class="sm-vcell">
+              <div class="sm-tpl sm-sz-lb sm-vb">
+                <img src="assets/png/shapes/bem-final-idv-16.png" class="sm-icon-bleed" style="width:420px;left:50%;top:50%;transform:translate(-35%,-50%)">
+                <div class="sm-tpl-inner sm-tpl-inner--h sm-pad-m">
+                  <img src="assets/bem-logo.svg" alt="bem" class="sm-logo" style="height:12px">
+                  <span class="sm-hl" style="font-size:14px;max-width:40%">Intelligence, engineered.</span>
+                </div>
+              </div>
+              <span class="sm-vtag">Function Icon</span>
+            </div>
+
+            <!-- C: Stroke Pattern — right-aligned, logo far left -->
+            <div class="sm-vcell">
+              <div class="sm-tpl sm-sz-lb sm-vc">                <div class="sm-tpl-inner sm-pad-m" style="justify-content:center;align-items:flex-end;text-align:right">
+                  <img src="assets/bem-logo.svg" alt="bem" class="sm-logo" style="height:9px;position:absolute;left:20px;top:50%;transform:translateY(-50%)">
+                  <div class="sm-hl" style="font-size:20px">Intelligence,<br>engineered.</div>
+                </div>
+              </div>
+              <span class="sm-vtag">Stroke Pattern</span>
+            </div>
+
+            <!-- D: Clean — centered inline lockup -->
+            <div class="sm-vcell">
+              <div class="sm-tpl sm-sz-lb sm-vd">
+                <div class="sm-tpl-inner sm-tpl-inner--h sm-pad-m" style="justify-content:center">
+                  <img src="assets/bem-logo.svg" alt="bem" class="sm-logo" style="height:14px">
+                  <div class="sm-hl-div"></div>
+                  <span class="sm-hl" style="font-size:13px;font-weight:500">Intelligence, engineered.</span>
+                </div>
+              </div>
+              <span class="sm-vtag">Clean</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ═══ X (TWITTER) ═══ -->
+      <div class="sm-plat">
+        <div class="sm-plat-label">X (Twitter)</div>
+
+        <!-- Post 1200×675 -->
+        <div class="sm-fmt">
+          <div class="sm-fmt-head">
+            <span class="sm-fmt-name">Post Image</span>
+            <span class="sm-fmt-dims">1200 × 675</span>
+          </div>
+          <div class="sm-vrow">
+
+            <!-- A: Gradient — huge centered -->
+            <div class="sm-vcell">
+              <div class="sm-tpl sm-sz-xp sm-va">
+                <div class="sm-tpl-inner sm-pad-l" style="justify-content:center;align-items:center;text-align:center">
+                  <img src="assets/bem-logo.svg" alt="bem" class="sm-logo" style="height:12px;position:absolute;top:20px;left:24px">
+                  <div class="sm-hl" style="font-size:48px">Built for<br>clarity.</div>
+                  <span class="sm-dom" style="position:absolute;bottom:16px;right:24px;color:rgba(255,255,255,0.4);font-size:9px">bem.ai</span>
+                </div>
+              </div>
+              <span class="sm-vtag">Gradient</span>
+            </div>
+
+            <!-- B: Function Icon — editorial left -->
+            <div class="sm-vcell">
+              <div class="sm-tpl sm-sz-xp sm-vb">
+                <img src="assets/png/shapes/bem-final-idv-15.png" class="sm-icon-bleed" style="width:640px;left:50%;top:50%;transform:translate(-55%,-45%)">
+                <div class="sm-tpl-inner sm-pad-l" style="justify-content:flex-end">
+                  <img src="assets/bem-logo.svg" alt="bem" class="sm-logo" style="height:12px;position:absolute;top:20px;left:24px">
+                  <div>
+                    <div class="sm-hl" style="font-size:24px;max-width:48%">Built for<br>clarity.</div>
+                    <span class="sm-sub" style="font-size:8px;margin-top:8px;max-width:40%;display:block">From unstructured input to structured output.</span>
+                  </div>
+                </div>
+              </div>
+              <span class="sm-vtag">Function Icon</span>
+            </div>
+
+            <!-- C: Stroke Pattern — enormous bottom type -->
+            <div class="sm-vcell">
+              <div class="sm-tpl sm-sz-xp sm-vc">                <div class="sm-tpl-inner sm-pad-l" style="justify-content:flex-end">
+                  <img src="assets/bem-logo.svg" alt="bem" class="sm-logo" style="height:12px;position:absolute;top:20px;right:24px">
+                  <div class="sm-hl" style="font-size:52px">Built for<br>clarity.</div>
+                </div>
+              </div>
+              <span class="sm-vtag">Stroke Pattern</span>
+            </div>
+
+            <!-- D: Clean — refined centered stack -->
+            <div class="sm-vcell">
+              <div class="sm-tpl sm-sz-xp sm-vd">
+                <div class="sm-tpl-inner sm-pad-l" style="justify-content:center;align-items:center;text-align:center">
+                  <img src="assets/bem-logo.svg" alt="bem" class="sm-logo" style="height:10px;margin-bottom:16px">
+                  <div class="sm-hl" style="font-size:26px;font-weight:500;letter-spacing:-0.01em">Built for clarity.</div>
+                  <span class="sm-sub" style="font-size:9px;margin-top:10px;max-width:60%;text-align:center;line-height:1.6">From unstructured input to structured output.</span>
+                </div>
+              </div>
+              <span class="sm-vtag">Clean</span>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Header 1500×500 -->
+        <div class="sm-fmt">
+          <div class="sm-fmt-head">
+            <span class="sm-fmt-name">Profile Header</span>
+            <span class="sm-fmt-dims">1500 × 500</span>
+          </div>
+          <div class="sm-vrow">
+
+            <!-- A: Gradient — centered statement -->
+            <div class="sm-vcell">
+              <div class="sm-tpl sm-sz-xh sm-va">
+                <div class="sm-tpl-inner sm-pad-m" style="justify-content:center;align-items:center;text-align:center">
+                  <div class="sm-hl" style="font-size:26px">Built for clarity.</div>
+                </div>
+              </div>
+              <span class="sm-vtag">Gradient</span>
+            </div>
+
+            <!-- B: Function Icon — logo + text left -->
+            <div class="sm-vcell">
+              <div class="sm-tpl sm-sz-xh sm-vb">
+                <img src="assets/png/shapes/bem-final-idv-17.png" class="sm-icon-bleed" style="width:460px;left:50%;top:50%;transform:translate(-38%,-50%)">
+                <div class="sm-tpl-inner sm-tpl-inner--h sm-pad-m">
+                  <img src="assets/bem-logo.svg" alt="bem" class="sm-logo" style="height:12px">
+                  <span class="sm-hl" style="font-size:15px;max-width:40%">Built for clarity.</span>
+                </div>
+              </div>
+              <span class="sm-vtag">Function Icon</span>
+            </div>
+
+            <!-- C: Stroke Pattern — right-aligned -->
+            <div class="sm-vcell">
+              <div class="sm-tpl sm-sz-xh sm-vc">                <div class="sm-tpl-inner sm-pad-m" style="justify-content:center;align-items:flex-end;text-align:right">
+                  <img src="assets/bem-logo.svg" alt="bem" class="sm-logo" style="height:9px;position:absolute;left:20px;top:50%;transform:translateY(-50%)">
+                  <div class="sm-hl" style="font-size:22px">Built for<br>clarity.</div>
+                </div>
+              </div>
+              <span class="sm-vtag">Stroke Pattern</span>
+            </div>
+
+            <!-- D: Clean — inline lockup -->
+            <div class="sm-vcell">
+              <div class="sm-tpl sm-sz-xh sm-vd">
+                <div class="sm-tpl-inner sm-tpl-inner--h sm-pad-m" style="justify-content:center">
+                  <img src="assets/bem-logo.svg" alt="bem" class="sm-logo" style="height:14px">
+                  <div class="sm-hl-div"></div>
+                  <span class="sm-hl" style="font-size:14px;font-weight:500">Built for clarity.</span>
+                </div>
+              </div>
+              <span class="sm-vtag">Clean</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ═══ INSTAGRAM ═══ -->
+      <div class="sm-plat">
+        <div class="sm-plat-label">Instagram</div>
+
+        <!-- Feed 1080×1080 -->
+        <div class="sm-fmt">
+          <div class="sm-fmt-head">
+            <span class="sm-fmt-name">Feed</span>
+            <span class="sm-fmt-dims">1080 × 1080</span>
+          </div>
+          <div class="sm-vrow">
+
+            <!-- A: Gradient — huge centered in square -->
+            <div class="sm-vcell">
+              <div class="sm-tpl sm-sz-if sm-va">
+                <div class="sm-tpl-inner sm-pad-m" style="justify-content:center;align-items:center;text-align:center">
+                  <img src="assets/bem-logo.svg" alt="bem" class="sm-logo" style="height:10px;position:absolute;top:16px;left:20px">
+                  <div class="sm-hl" style="font-size:36px">Chaos in.<br>Clarity out.</div>
+                  <span class="sm-dom" style="position:absolute;bottom:14px;right:20px;color:rgba(255,255,255,0.4);font-size:8px">bem.ai</span>
+                </div>
+              </div>
+              <span class="sm-vtag">Gradient</span>
+            </div>
+
+            <!-- B: Function Icon — top-left text, icon fills bottom-right -->
+            <div class="sm-vcell">
+              <div class="sm-tpl sm-sz-if sm-vb">
+                <img src="assets/png/shapes/bem-final-idv-18.png" class="sm-icon-bleed" style="width:500px;left:50%;top:50%;transform:translate(-42%,-46%)">
+                <div class="sm-tpl-inner sm-pad-m" style="justify-content:flex-start">
+                  <img src="assets/bem-logo.svg" alt="bem" class="sm-logo" style="height:10px;margin-bottom:10px">
+                  <div class="sm-hl" style="font-size:20px;max-width:60%">Chaos in.<br>Clarity out.</div>
+                  <span class="sm-sub" style="font-size:7px;margin-top:8px;max-width:50%">Structured intelligence for every workflow.</span>
+                </div>
+              </div>
+              <span class="sm-vtag">Function Icon</span>
+            </div>
+
+            <!-- C: Stroke Pattern — huge bottom-anchored -->
+            <div class="sm-vcell">
+              <div class="sm-tpl sm-sz-if sm-vc">                <div class="sm-tpl-inner sm-pad-m" style="justify-content:flex-end">
+                  <img src="assets/bem-logo.svg" alt="bem" class="sm-logo" style="height:10px;position:absolute;top:16px;right:20px">
+                  <div class="sm-hl" style="font-size:42px">Chaos in.<br>Clarity out.</div>
+                </div>
+              </div>
+              <span class="sm-vtag">Stroke Pattern</span>
+            </div>
+
+            <!-- D: Clean — centered vertical stack -->
+            <div class="sm-vcell">
+              <div class="sm-tpl sm-sz-if sm-vd">
+                <div class="sm-tpl-inner sm-pad-m" style="justify-content:center;align-items:center;text-align:center">
+                  <img src="assets/bem-logo.svg" alt="bem" class="sm-logo" style="height:8px;margin-bottom:16px">
+                  <div class="sm-hl" style="font-size:20px;font-weight:500;letter-spacing:-0.01em">Chaos in.<br>Clarity out.</div>
+                  <span class="sm-sub" style="font-size:7px;margin-top:10px;max-width:70%;text-align:center;line-height:1.6">Structured intelligence for every workflow.</span>
+                </div>
+              </div>
+              <span class="sm-vtag">Clean</span>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Stories / Reels 1080×1920 -->
+        <div class="sm-fmt">
+          <div class="sm-fmt-head">
+            <span class="sm-fmt-name">Stories / Reels</span>
+            <span class="sm-fmt-dims">1080 × 1920</span>
+          </div>
+          <div class="sm-vrow">
+
+            <!-- A: Gradient — centered vertically, tall format -->
+            <div class="sm-vcell">
+              <div class="sm-tpl sm-sz-is sm-va">
+                <div class="sm-tpl-inner sm-pad-xs" style="justify-content:center;align-items:center;text-align:center">
+                  <img src="assets/bem-logo.svg" alt="bem" class="sm-logo" style="height:8px;position:absolute;top:14px;left:14px">
+                  <div class="sm-hl" style="font-size:24px">From<br>input<br>to<br>impact.</div>
+                  <span class="sm-dom" style="position:absolute;bottom:12px;right:14px;color:rgba(255,255,255,0.4);font-size:7px">bem.ai</span>
+                </div>
+              </div>
+              <span class="sm-vtag">Gradient</span>
+            </div>
+
+            <!-- B: Function Icon — text top, icon bottom-right -->
+            <div class="sm-vcell">
+              <div class="sm-tpl sm-sz-is sm-vb">
+                <img src="assets/png/shapes/bem-final-idv-19.png" class="sm-icon-bleed" style="width:400px;left:50%;top:50%;transform:translate(-45%,-42%)">
+                <div class="sm-tpl-inner sm-pad-xs" style="justify-content:flex-start">
+                  <img src="assets/bem-logo.svg" alt="bem" class="sm-logo" style="height:8px;margin-bottom:10px">
+                  <div class="sm-hl" style="font-size:15px">From input<br>to impact.</div>
+                  <span class="sm-sub" style="font-size:7px;margin-top:6px;max-width:85%">AI-powered intelligence.</span>
+                </div>
+              </div>
+              <span class="sm-vtag">Function Icon</span>
+            </div>
+
+            <!-- C: Stroke Pattern — huge bottom-anchored -->
+            <div class="sm-vcell">
+              <div class="sm-tpl sm-sz-is sm-vc">                <div class="sm-tpl-inner sm-pad-xs" style="justify-content:flex-end">
+                  <img src="assets/bem-logo.svg" alt="bem" class="sm-logo" style="height:8px;position:absolute;top:14px;right:14px">
+                  <div class="sm-hl" style="font-size:28px">From<br>input<br>to<br>impact.</div>
+                </div>
+              </div>
+              <span class="sm-vtag">Stroke Pattern</span>
+            </div>
+
+            <!-- D: Clean — centered vertical -->
+            <div class="sm-vcell">
+              <div class="sm-tpl sm-sz-is sm-vd">
+                <div class="sm-tpl-inner sm-pad-xs" style="justify-content:center;align-items:center;text-align:center">
+                  <img src="assets/bem-logo.svg" alt="bem" class="sm-logo" style="height:7px;margin-bottom:14px">
+                  <div class="sm-hl" style="font-size:14px;font-weight:500;letter-spacing:-0.01em">From input<br>to impact.</div>
+                  <span class="sm-sub" style="font-size:6px;margin-top:8px;max-width:80%;text-align:center;line-height:1.6">AI-powered intelligence.</span>
+                </div>
+              </div>
+              <span class="sm-vtag">Clean</span>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Carrossel 1080×1350 -->
+        <div class="sm-fmt">
+          <div class="sm-fmt-head">
+            <span class="sm-fmt-name">Carrossel</span>
+            <span class="sm-fmt-dims">1080 × 1350</span>
+          </div>
+          <div class="sm-vrow">
+
+            <!-- A: Gradient — large centered -->
+            <div class="sm-vcell">
+              <div class="sm-tpl sm-sz-ic sm-va">
+                <div class="sm-tpl-inner sm-pad-s" style="justify-content:center;align-items:center;text-align:center">
+                  <img src="assets/bem-logo.svg" alt="bem" class="sm-logo" style="height:9px;position:absolute;top:14px;left:16px">
+                  <div class="sm-hl" style="font-size:30px">Turn chaos<br>into clarity.</div>
+                  <span class="sm-dom" style="position:absolute;bottom:12px;right:16px;color:rgba(255,255,255,0.4);font-size:7px">bem.ai</span>
+                </div>
+              </div>
+              <span class="sm-vtag">Gradient</span>
+            </div>
+
+            <!-- B: Function Icon — top text, icon bottom -->
+            <div class="sm-vcell">
+              <div class="sm-tpl sm-sz-ic sm-vb">
+                <img src="assets/png/shapes/bem-final-idv-20.png" class="sm-icon-bleed" style="width:460px;right:-100px;bottom:-100px">
+                <div class="sm-tpl-inner sm-pad-s" style="justify-content:flex-start">
+                  <img src="assets/bem-logo.svg" alt="bem" class="sm-logo" style="height:10px;margin-bottom:10px">
+                  <div class="sm-hl" style="font-size:17px;max-width:60%">Turn chaos<br>into clarity.</div>
+                  <span class="sm-sub" style="font-size:7px;margin-top:8px;max-width:55%">Process raw data. Get structured output.</span>
+                </div>
+              </div>
+              <span class="sm-vtag">Function Icon</span>
+            </div>
+
+            <!-- C: Stroke Pattern — huge bottom-anchored -->
+            <div class="sm-vcell">
+              <div class="sm-tpl sm-sz-ic sm-vc">                <div class="sm-tpl-inner sm-pad-s" style="justify-content:flex-end">
+                  <img src="assets/bem-logo.svg" alt="bem" class="sm-logo" style="height:9px;position:absolute;top:14px;right:16px">
+                  <div class="sm-hl" style="font-size:34px">Turn chaos<br>into clarity.</div>
+                </div>
+              </div>
+              <span class="sm-vtag">Stroke Pattern</span>
+            </div>
+
+            <!-- D: Clean — centered stack -->
+            <div class="sm-vcell">
+              <div class="sm-tpl sm-sz-ic sm-vd">
+                <div class="sm-tpl-inner sm-pad-s" style="justify-content:center;align-items:center;text-align:center">
+                  <img src="assets/bem-logo.svg" alt="bem" class="sm-logo" style="height:7px;margin-bottom:14px">
+                  <div class="sm-hl" style="font-size:16px;font-weight:500;letter-spacing:-0.01em">Turn chaos<br>into clarity.</div>
+                  <span class="sm-sub" style="font-size:7px;margin-top:8px;max-width:72%;text-align:center;line-height:1.6">Process raw data. Get structured output.</span>
+                </div>
+              </div>
+              <span class="sm-vtag">Clean</span>
+            </div>
+
+          </div>
+        </div>
+
       </div>
     </section>
 

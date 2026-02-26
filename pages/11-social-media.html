@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920">
+  <title>Bem.ai — Social Media Templates</title>
+  <link rel="stylesheet" href="shared.css">
+  <style>
+    /* Scrollable page */
+    .page { height: auto; min-height: var(--page-h); padding-bottom: 128px; }
+
+    /* ─── Header ─── */
+    .sm-header { margin-bottom: 56px; }
+    .sm-title { font-size: 12px; font-weight: 500; color: var(--gray-40); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 6px; }
+    .sm-sub { font-size: 18px; font-weight: 200; color: var(--gray-40); }
+
+    /* ─── Platform section ─── */
+    .plat { margin-bottom: 64px; }
+    .plat-label { font-size: 11px; font-weight: 500; color: var(--gray-40); letter-spacing: 0.15em; text-transform: uppercase; padding-bottom: 12px; border-bottom: 1px solid var(--gray-20); margin-bottom: 32px; }
+
+    /* ─── Format block ─── */
+    .fmt { margin-bottom: 48px; }
+    .fmt:last-child { margin-bottom: 0; }
+    .fmt-head { display: flex; align-items: baseline; gap: 12px; margin-bottom: 16px; }
+    .fmt-name { font-size: 16px; font-weight: 200; color: var(--white); }
+    .fmt-dims { font-size: 11px; font-weight: 200; color: var(--gray-40); }
+
+    /* ─── Variants row ─── */
+    .vrow { display: flex; gap: 16px; align-items: flex-start; }
+
+    /* ─── Variant cell ─── */
+    .vcell { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .vtag { font-size: 9px; font-weight: 500; color: var(--gray-40); letter-spacing: 0.1em; text-transform: uppercase; }
+
+    /* ─── Card base ─── */
+    .tpl { border: 1px solid var(--gray-20); border-radius: 8px; background: var(--black); position: relative; overflow: hidden; }
+
+    /* ─── Inner content ─── */
+    .tpl-inner { position: relative; z-index: 2; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box; }
+    .pad-l { padding: 24px; }
+    .pad-m { padding: 20px; }
+    .pad-s { padding: 16px; }
+    .pad-xs { padding: 14px; }
+
+    /* Banner inner (horizontal) */
+    .tpl-inner--h { flex-direction: row; align-items: center; gap: 14px; }
+
+    /* ─── Shared text ─── */
+    .logo { opacity: 0.7; display: block; }
+    .hl { font-weight: 800; color: var(--white); line-height: 1.0; letter-spacing: -0.02em; }
+    .sub { font-weight: 200; color: var(--gray-60); line-height: 1.4; display: block; }
+    .dom { font-size: 10px; font-weight: 500; color: var(--gray-40); }
+    .hl-div { width: 1px; height: 16px; background: var(--gray-20); flex-shrink: 0; }
+    .bot { display: flex; justify-content: space-between; align-items: flex-end; }
+
+    /* ─── Card sizes ─── */
+    .sz-lp { width: 400px; height: 209px; }
+    .sz-lb { width: 400px; height: 100px; }
+    .sz-xp { width: 400px; height: 225px; }
+    .sz-xh { width: 400px; height: 133px; }
+    .sz-if { width: 280px; height: 280px; }
+    .sz-is { width: 158px; height: 280px; }
+    .sz-ic { width: 224px; height: 280px; }
+
+    /* ═══════════════════════════════════════════
+       VARIANT A: RADIAL EDGE GLOW
+    ═══════════════════════════════════════════ */
+    .va {
+      background: radial-gradient(ellipse 125% 125% at center, #000 38%, rgba(51,68,255,0.65) 72%, #3344FF 100%);
+      border-color: rgba(51,68,255,0.4);
+    }
+    .va .hl { color: var(--white); }
+    .va .sub { color: rgba(255,255,255,0.4); }
+    .va .dom { color: rgba(255,255,255,0.3); }
+    .va .logo { opacity: 0.6; }
+    .va .hl-div { background: rgba(255,255,255,0.15); }
+
+    /* ═══════════════════════════════════════════
+       VARIANT B: 3D FUNCTION ICON (bleeding)
+    ═══════════════════════════════════════════ */
+    .vb .icon-bleed {
+      position: absolute;
+      z-index: 1;
+      object-fit: contain;
+    }
+
+    /* ═══════════════════════════════════════════
+       VARIANT C: STROKE PATTERN
+    ═══════════════════════════════════════════ */
+    .vc .si { position: absolute; z-index: 0; pointer-events: none; }
+
+    /* ═══════════════════════════════════════════
+       VARIANT D: GRADIENT BORDER FRAME
+    ═══════════════════════════════════════════ */
+    .vd { background: linear-gradient(135deg, #3344FF 0%, #0df6f8 45%, #e075ff 100%); border: none; }
+    .vd::before { content: ''; position: absolute; inset: 3px; background: #000; border-radius: 5px; z-index: 1; }
+  </style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- Header -->
+  <div class="sm-header">
+    <div class="sm-title">Social Media Templates</div>
+    <div class="sm-sub">LinkedIn, X & Instagram — 4 layout directions per format</div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       LINKEDIN
+  ═══════════════════════════════════════════════════════ -->
+  <div class="plat">
+    <div class="plat-label">LinkedIn</div>
+
+    <!-- ── Post 1200×627 ── -->
+    <div class="fmt">
+      <div class="fmt-head">
+        <span class="fmt-name">Post</span>
+        <span class="fmt-dims">1200 × 627</span>
+      </div>
+      <div class="vrow">
+
+        <!-- A: Gradient -->
+        <div class="vcell">
+          <div class="tpl sz-lp va">
+            <div class="tpl-inner pad-l">
+              <img src="../assets/bem-logo.svg" alt="bem" class="logo" style="height:10px">
+              <div class="hl" style="font-size:24px">Chaos in.<br>Clarity out.</div>
+              <div class="bot">
+                <span class="sub" style="font-size:10px;max-width:200px">Turn unstructured data into structured intelligence.</span>
+                <span class="dom">bem.ai</span>
+              </div>
+            </div>
+          </div>
+          <span class="vtag">Gradient</span>
+        </div>
+
+        <!-- B: 3D Icon — Transform (pyramid) -->
+        <div class="vcell">
+          <div class="tpl sz-lp vb">
+            <img src="../assets/png/shapes/bem-final-idv-14.png" class="icon-bleed" style="width:560px;right:-120px;top:50%;transform:translateY(-50%)">
+            <div class="tpl-inner pad-l">
+              <img src="../assets/bem-logo.svg" alt="bem" class="logo" style="height:10px">
+              <div class="hl" style="font-size:24px">Chaos in.<br>Clarity out.</div>
+              <div class="bot">
+                <span class="sub" style="font-size:10px;max-width:200px">Turn unstructured data into structured intelligence.</span>
+                <span class="dom">bem.ai</span>
+              </div>
+            </div>
+          </div>
+          <span class="vtag">Function Icon</span>
+        </div>
+
+        <!-- C: Stroke Pattern -->
+        <div class="vcell">
+          <div class="tpl sz-lp vc">
+            <img src="../assets/icons-simplified/transform.svg" class="si" style="width:140px;top:-30px;right:30px;opacity:0.08;transform:rotate(12deg)">
+            <img src="../assets/icons-simplified/analyze.svg" class="si" style="width:90px;bottom:-5px;left:-15px;opacity:0.06;transform:rotate(-8deg)">
+            <img src="../assets/icons-simplified/route.svg" class="si" style="width:70px;top:50px;right:-10px;opacity:0.05">
+            <div class="tpl-inner pad-l">
+              <img src="../assets/bem-logo.svg" alt="bem" class="logo" style="height:10px">
+              <div class="hl" style="font-size:24px">Chaos in.<br>Clarity out.</div>
+              <div class="bot">
+                <span class="sub" style="font-size:10px;max-width:200px">Turn unstructured data into structured intelligence.</span>
+                <span class="dom">bem.ai</span>
+              </div>
+            </div>
+          </div>
+          <span class="vtag">Stroke Pattern</span>
+        </div>
+
+        <!-- D: Clean -->
+        <div class="vcell">
+          <div class="tpl sz-lp vd">
+            <div class="tpl-inner pad-l">
+              <img src="../assets/bem-logo.svg" alt="bem" class="logo" style="height:10px">
+              <div class="hl" style="font-size:24px">Chaos in.<br>Clarity out.</div>
+              <div class="bot">
+                <span class="sub" style="font-size:10px;max-width:200px">Turn unstructured data into structured intelligence.</span>
+                <span class="dom">bem.ai</span>
+              </div>
+            </div>
+          </div>
+          <span class="vtag">Clean</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ── Banner 1584×396 ── -->
+    <div class="fmt">
+      <div class="fmt-head">
+        <span class="fmt-name">Company Banner</span>
+        <span class="fmt-dims">1584 × 396</span>
+      </div>
+      <div class="vrow">
+
+        <!-- A: Gradient -->
+        <div class="vcell">
+          <div class="tpl sz-lb va">
+            <div class="tpl-inner tpl-inner--h pad-m">
+              <img src="../assets/bem-logo.svg" alt="bem" class="logo" style="height:14px">
+              <div class="hl-div"></div>
+              <span class="hl" style="font-size:14px">Intelligence, engineered.</span>
+              <span class="dom" style="margin-left:auto">bem.ai</span>
+            </div>
+          </div>
+          <span class="vtag">Gradient</span>
+        </div>
+
+        <!-- B: 3D Icon — Route (diamond) -->
+        <div class="vcell">
+          <div class="tpl sz-lb vb">
+            <img src="../assets/png/shapes/bem-final-idv-16.png" class="icon-bleed" style="width:240px;right:-40px;top:50%;transform:translateY(-50%)">
+            <div class="tpl-inner tpl-inner--h pad-m">
+              <img src="../assets/bem-logo.svg" alt="bem" class="logo" style="height:14px">
+              <div class="hl-div"></div>
+              <span class="hl" style="font-size:14px">Intelligence, engineered.</span>
+              <span class="dom" style="margin-left:auto">bem.ai</span>
+            </div>
+          </div>
+          <span class="vtag">Function Icon</span>
+        </div>
+
+        <!-- C: Stroke Pattern -->
+        <div class="vcell">
+          <div class="tpl sz-lb vc">
+            <img src="../assets/icons-simplified/split.svg" class="si" style="width:110px;right:20px;top:-20px;opacity:0.07;transform:rotate(15deg)">
+            <img src="../assets/icons-simplified/join.svg" class="si" style="width:80px;left:-20px;top:10px;opacity:0.05;transform:rotate(-5deg)">
+            <div class="tpl-inner tpl-inner--h pad-m">
+              <img src="../assets/bem-logo.svg" alt="bem" class="logo" style="height:14px">
+              <div class="hl-div"></div>
+              <span class="hl" style="font-size:14px">Intelligence, engineered.</span>
+              <span class="dom" style="margin-left:auto">bem.ai</span>
+            </div>
+          </div>
+          <span class="vtag">Stroke Pattern</span>
+        </div>
+
+        <!-- D: Clean -->
+        <div class="vcell">
+          <div class="tpl sz-lb vd">
+            <div class="tpl-inner tpl-inner--h pad-m">
+              <img src="../assets/bem-logo.svg" alt="bem" class="logo" style="height:14px">
+              <div class="hl-div"></div>
+              <span class="hl" style="font-size:14px">Intelligence, engineered.</span>
+              <span class="dom" style="margin-left:auto">bem.ai</span>
+            </div>
+          </div>
+          <span class="vtag">Clean</span>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       X (TWITTER)
+  ═══════════════════════════════════════════════════════ -->
+  <div class="plat">
+    <div class="plat-label">X (Twitter)</div>
+
+    <!-- ── Post 1200×675 ── -->
+    <div class="fmt">
+      <div class="fmt-head">
+        <span class="fmt-name">Post Image</span>
+        <span class="fmt-dims">1200 × 675</span>
+      </div>
+      <div class="vrow">
+
+        <!-- A: Gradient -->
+        <div class="vcell">
+          <div class="tpl sz-xp va">
+            <div class="tpl-inner pad-l">
+              <img src="../assets/bem-logo.svg" alt="bem" class="logo" style="height:10px">
+              <div class="hl" style="font-size:26px">Built for<br>clarity.</div>
+              <div class="bot">
+                <span class="sub" style="font-size:10px;max-width:220px">From unstructured input to structured output — automatically.</span>
+                <span class="dom">bem.ai</span>
+              </div>
+            </div>
+          </div>
+          <span class="vtag">Gradient</span>
+        </div>
+
+        <!-- B: 3D Icon — Analyze (3 diamonds) -->
+        <div class="vcell">
+          <div class="tpl sz-xp vb">
+            <img src="../assets/png/shapes/bem-final-idv-15.png" class="icon-bleed" style="width:380px;right:-80px;top:50%;transform:translateY(-50%)">
+            <div class="tpl-inner pad-l">
+              <img src="../assets/bem-logo.svg" alt="bem" class="logo" style="height:10px">
+              <div class="hl" style="font-size:26px">Built for<br>clarity.</div>
+              <div class="bot">
+                <span class="sub" style="font-size:10px;max-width:220px">From unstructured input to structured output — automatically.</span>
+                <span class="dom">bem.ai</span>
+              </div>
+            </div>
+          </div>
+          <span class="vtag">Function Icon</span>
+        </div>
+
+        <!-- C: Stroke Pattern -->
+        <div class="vcell">
+          <div class="tpl sz-xp vc">
+            <img src="../assets/icons-simplified/payload-shaping.svg" class="si" style="width:160px;top:-40px;right:20px;opacity:0.07;transform:rotate(8deg)">
+            <img src="../assets/icons-simplified/enrich.svg" class="si" style="width:100px;bottom:-10px;left:-20px;opacity:0.06;transform:rotate(-12deg)">
+            <img src="../assets/icons-simplified/split.svg" class="si" style="width:60px;top:80px;right:-5px;opacity:0.04">
+            <div class="tpl-inner pad-l">
+              <img src="../assets/bem-logo.svg" alt="bem" class="logo" style="height:10px">
+              <div class="hl" style="font-size:26px">Built for<br>clarity.</div>
+              <div class="bot">
+                <span class="sub" style="font-size:10px;max-width:220px">From unstructured input to structured output — automatically.</span>
+                <span class="dom">bem.ai</span>
+              </div>
+            </div>
+          </div>
+          <span class="vtag">Stroke Pattern</span>
+        </div>
+
+        <!-- D: Clean -->
+        <div class="vcell">
+          <div class="tpl sz-xp vd">
+            <div class="tpl-inner pad-l">
+              <img src="../assets/bem-logo.svg" alt="bem" class="logo" style="height:10px">
+              <div class="hl" style="font-size:26px">Built for<br>clarity.</div>
+              <div class="bot">
+                <span class="sub" style="font-size:10px;max-width:220px">From unstructured input to structured output — automatically.</span>
+                <span class="dom">bem.ai</span>
+              </div>
+            </div>
+          </div>
+          <span class="vtag">Clean</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ── Header 1500×500 ── -->
+    <div class="fmt">
+      <div class="fmt-head">
+        <span class="fmt-name">Profile Header</span>
+        <span class="fmt-dims">1500 × 500</span>
+      </div>
+      <div class="vrow">
+
+        <!-- A: Gradient -->
+        <div class="vcell">
+          <div class="tpl sz-xh va">
+            <div class="tpl-inner tpl-inner--h pad-m">
+              <img src="../assets/bem-logo.svg" alt="bem" class="logo" style="height:14px">
+              <div class="hl-div"></div>
+              <span class="hl" style="font-size:16px">Built for clarity.</span>
+              <span class="dom" style="margin-left:auto">bem.ai</span>
+            </div>
+          </div>
+          <span class="vtag">Gradient</span>
+        </div>
+
+        <!-- B: 3D Icon — Split (diamond split) -->
+        <div class="vcell">
+          <div class="tpl sz-xh vb">
+            <img src="../assets/png/shapes/bem-final-idv-17.png" class="icon-bleed" style="width:260px;right:-40px;top:50%;transform:translateY(-50%)">
+            <div class="tpl-inner tpl-inner--h pad-m">
+              <img src="../assets/bem-logo.svg" alt="bem" class="logo" style="height:14px">
+              <div class="hl-div"></div>
+              <span class="hl" style="font-size:16px">Built for clarity.</span>
+              <span class="dom" style="margin-left:auto">bem.ai</span>
+            </div>
+          </div>
+          <span class="vtag">Function Icon</span>
+        </div>
+
+        <!-- C: Stroke Pattern -->
+        <div class="vcell">
+          <div class="tpl sz-xh vc">
+            <img src="../assets/icons-simplified/documents.svg" class="si" style="width:120px;right:30px;top:-20px;opacity:0.07;transform:rotate(10deg)">
+            <img src="../assets/icons-simplified/images.svg" class="si" style="width:90px;left:-15px;bottom:-10px;opacity:0.05;transform:rotate(-6deg)">
+            <div class="tpl-inner tpl-inner--h pad-m">
+              <img src="../assets/bem-logo.svg" alt="bem" class="logo" style="height:14px">
+              <div class="hl-div"></div>
+              <span class="hl" style="font-size:16px">Built for clarity.</span>
+              <span class="dom" style="margin-left:auto">bem.ai</span>
+            </div>
+          </div>
+          <span class="vtag">Stroke Pattern</span>
+        </div>
+
+        <!-- D: Clean -->
+        <div class="vcell">
+          <div class="tpl sz-xh vd">
+            <div class="tpl-inner tpl-inner--h pad-m">
+              <img src="../assets/bem-logo.svg" alt="bem" class="logo" style="height:14px">
+              <div class="hl-div"></div>
+              <span class="hl" style="font-size:16px">Built for clarity.</span>
+              <span class="dom" style="margin-left:auto">bem.ai</span>
+            </div>
+          </div>
+          <span class="vtag">Clean</span>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       INSTAGRAM
+  ═══════════════════════════════════════════════════════ -->
+  <div class="plat">
+    <div class="plat-label">Instagram</div>
+
+    <!-- ── Feed 1080×1080 ── -->
+    <div class="fmt">
+      <div class="fmt-head">
+        <span class="fmt-name">Feed</span>
+        <span class="fmt-dims">1080 × 1080</span>
+      </div>
+      <div class="vrow">
+
+        <!-- A: Gradient -->
+        <div class="vcell">
+          <div class="tpl sz-if va">
+            <div class="tpl-inner pad-m">
+              <img src="../assets/bem-logo.svg" alt="bem" class="logo" style="height:9px">
+              <div>
+                <div class="hl" style="font-size:22px">Chaos in.<br>Clarity out.</div>
+                <span class="sub" style="font-size:9px;margin-top:8px;max-width:180px">Structured intelligence for every workflow.</span>
+              </div>
+              <span class="dom">bem.ai</span>
+            </div>
+          </div>
+          <span class="vtag">Gradient</span>
+        </div>
+
+        <!-- B: 3D Icon — Join (overlapping squares) -->
+        <div class="vcell">
+          <div class="tpl sz-if vb">
+            <img src="../assets/png/shapes/bem-final-idv-18.png" class="icon-bleed" style="width:340px;right:-70px;bottom:-40px">
+            <div class="tpl-inner pad-m">
+              <img src="../assets/bem-logo.svg" alt="bem" class="logo" style="height:9px">
+              <div>
+                <div class="hl" style="font-size:22px">Chaos in.<br>Clarity out.</div>
+                <span class="sub" style="font-size:9px;margin-top:8px;max-width:180px">Structured intelligence for every workflow.</span>
+              </div>
+              <span class="dom">bem.ai</span>
+            </div>
+          </div>
+          <span class="vtag">Function Icon</span>
+        </div>
+
+        <!-- C: Stroke Pattern -->
+        <div class="vcell">
+          <div class="tpl sz-if vc">
+            <img src="../assets/icons-simplified/audio.svg" class="si" style="width:140px;top:-30px;right:-20px;opacity:0.07;transform:rotate(20deg)">
+            <img src="../assets/icons-simplified/video.svg" class="si" style="width:100px;bottom:20px;left:-25px;opacity:0.05;transform:rotate(-15deg)">
+            <img src="../assets/icons-simplified/spreadsheets.svg" class="si" style="width:70px;top:100px;right:10px;opacity:0.04;transform:rotate(5deg)">
+            <div class="tpl-inner pad-m">
+              <img src="../assets/bem-logo.svg" alt="bem" class="logo" style="height:9px">
+              <div>
+                <div class="hl" style="font-size:22px">Chaos in.<br>Clarity out.</div>
+                <span class="sub" style="font-size:9px;margin-top:8px;max-width:180px">Structured intelligence for every workflow.</span>
+              </div>
+              <span class="dom">bem.ai</span>
+            </div>
+          </div>
+          <span class="vtag">Stroke Pattern</span>
+        </div>
+
+        <!-- D: Clean -->
+        <div class="vcell">
+          <div class="tpl sz-if vd">
+            <div class="tpl-inner pad-m">
+              <img src="../assets/bem-logo.svg" alt="bem" class="logo" style="height:9px">
+              <div>
+                <div class="hl" style="font-size:22px">Chaos in.<br>Clarity out.</div>
+                <span class="sub" style="font-size:9px;margin-top:8px;max-width:180px">Structured intelligence for every workflow.</span>
+              </div>
+              <span class="dom">bem.ai</span>
+            </div>
+          </div>
+          <span class="vtag">Clean</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ── Stories / Reels 1080×1920 ── -->
+    <div class="fmt">
+      <div class="fmt-head">
+        <span class="fmt-name">Stories / Reels</span>
+        <span class="fmt-dims">1080 × 1920</span>
+      </div>
+      <div class="vrow">
+
+        <!-- A: Gradient -->
+        <div class="vcell">
+          <div class="tpl sz-is va">
+            <div class="tpl-inner pad-xs">
+              <img src="../assets/bem-logo.svg" alt="bem" class="logo" style="height:8px">
+              <div>
+                <div class="hl" style="font-size:16px">From input<br>to impact.</div>
+                <span class="sub" style="font-size:8px;margin-top:6px;max-width:120px">AI-powered intelligence.</span>
+              </div>
+              <span class="dom" style="font-size:8px">bem.ai</span>
+            </div>
+          </div>
+          <span class="vtag">Gradient</span>
+        </div>
+
+        <!-- B: 3D Icon — Payload Shaping (gem) -->
+        <div class="vcell">
+          <div class="tpl sz-is vb">
+            <img src="../assets/png/shapes/bem-final-idv-19.png" class="icon-bleed" style="width:260px;bottom:-30px;left:50%;transform:translateX(-50%)">
+            <div class="tpl-inner pad-xs">
+              <img src="../assets/bem-logo.svg" alt="bem" class="logo" style="height:8px">
+              <div>
+                <div class="hl" style="font-size:16px">From input<br>to impact.</div>
+                <span class="sub" style="font-size:8px;margin-top:6px;max-width:120px">AI-powered intelligence.</span>
+              </div>
+              <span class="dom" style="font-size:8px">bem.ai</span>
+            </div>
+          </div>
+          <span class="vtag">Function Icon</span>
+        </div>
+
+        <!-- C: Stroke Pattern -->
+        <div class="vcell">
+          <div class="tpl sz-is vc">
+            <img src="../assets/icons-simplified/route.svg" class="si" style="width:120px;top:-20px;right:-30px;opacity:0.08;transform:rotate(10deg)">
+            <img src="../assets/icons-simplified/transform.svg" class="si" style="width:80px;bottom:40px;left:-20px;opacity:0.05;transform:rotate(-12deg)">
+            <div class="tpl-inner pad-xs">
+              <img src="../assets/bem-logo.svg" alt="bem" class="logo" style="height:8px">
+              <div>
+                <div class="hl" style="font-size:16px">From input<br>to impact.</div>
+                <span class="sub" style="font-size:8px;margin-top:6px;max-width:120px">AI-powered intelligence.</span>
+              </div>
+              <span class="dom" style="font-size:8px">bem.ai</span>
+            </div>
+          </div>
+          <span class="vtag">Stroke Pattern</span>
+        </div>
+
+        <!-- D: Clean -->
+        <div class="vcell">
+          <div class="tpl sz-is vd">
+            <div class="tpl-inner pad-xs">
+              <img src="../assets/bem-logo.svg" alt="bem" class="logo" style="height:8px">
+              <div>
+                <div class="hl" style="font-size:16px">From input<br>to impact.</div>
+                <span class="sub" style="font-size:8px;margin-top:6px;max-width:120px">AI-powered intelligence.</span>
+              </div>
+              <span class="dom" style="font-size:8px">bem.ai</span>
+            </div>
+          </div>
+          <span class="vtag">Clean</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ── Carrossel 1080×1350 ── -->
+    <div class="fmt">
+      <div class="fmt-head">
+        <span class="fmt-name">Carrossel</span>
+        <span class="fmt-dims">1080 × 1350</span>
+      </div>
+      <div class="vrow">
+
+        <!-- A: Gradient -->
+        <div class="vcell">
+          <div class="tpl sz-ic va">
+            <div class="tpl-inner pad-s">
+              <img src="../assets/bem-logo.svg" alt="bem" class="logo" style="height:9px">
+              <div>
+                <div class="hl" style="font-size:18px">Turn chaos<br>into clarity.</div>
+                <span class="sub" style="font-size:9px;margin-top:8px;max-width:160px">Process raw data. Get structured output.</span>
+              </div>
+              <span class="dom" style="font-size:9px">bem.ai</span>
+            </div>
+          </div>
+          <span class="vtag">Gradient</span>
+        </div>
+
+        <!-- B: 3D Icon — Enrich (nested rectangles) -->
+        <div class="vcell">
+          <div class="tpl sz-ic vb">
+            <img src="../assets/png/shapes/bem-final-idv-20.png" class="icon-bleed" style="width:300px;right:-50px;bottom:-30px">
+            <div class="tpl-inner pad-s">
+              <img src="../assets/bem-logo.svg" alt="bem" class="logo" style="height:9px">
+              <div>
+                <div class="hl" style="font-size:18px">Turn chaos<br>into clarity.</div>
+                <span class="sub" style="font-size:9px;margin-top:8px;max-width:160px">Process raw data. Get structured output.</span>
+              </div>
+              <span class="dom">bem.ai</span>
+            </div>
+          </div>
+          <span class="vtag">Function Icon</span>
+        </div>
+
+        <!-- C: Stroke Pattern -->
+        <div class="vcell">
+          <div class="tpl sz-ic vc">
+            <img src="../assets/icons-simplified/enrich.svg" class="si" style="width:130px;top:-25px;right:-20px;opacity:0.08;transform:rotate(8deg)">
+            <img src="../assets/icons-simplified/join.svg" class="si" style="width:90px;bottom:30px;left:-25px;opacity:0.05;transform:rotate(-10deg)">
+            <img src="../assets/icons-simplified/analyze.svg" class="si" style="width:60px;top:90px;left:10px;opacity:0.04;transform:rotate(18deg)">
+            <div class="tpl-inner pad-s">
+              <img src="../assets/bem-logo.svg" alt="bem" class="logo" style="height:9px">
+              <div>
+                <div class="hl" style="font-size:18px">Turn chaos<br>into clarity.</div>
+                <span class="sub" style="font-size:9px;margin-top:8px;max-width:160px">Process raw data. Get structured output.</span>
+              </div>
+              <span class="dom">bem.ai</span>
+            </div>
+          </div>
+          <span class="vtag">Stroke Pattern</span>
+        </div>
+
+        <!-- D: Clean -->
+        <div class="vcell">
+          <div class="tpl sz-ic vd">
+            <div class="tpl-inner pad-s">
+              <img src="../assets/bem-logo.svg" alt="bem" class="logo" style="height:9px">
+              <div>
+                <div class="hl" style="font-size:18px">Turn chaos<br>into clarity.</div>
+                <span class="sub" style="font-size:9px;margin-top:8px;max-width:160px">Process raw data. Get structured output.</span>
+              </div>
+              <span class="dom" style="font-size:9px">bem.ai</span>
+            </div>
+          </div>
+          <span class="vtag">Clean</span>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Page number -->
+  <span style="position:fixed;bottom:var(--sp-7);right:var(--page-pad);font-size:14px;font-weight:200;color:var(--gray-40)">11</span>
+
+</div>
+
+</body>
+</html>

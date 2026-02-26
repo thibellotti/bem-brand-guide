@@ -227,11 +227,45 @@ Shared CSS with all tokens, reset, page frame. Index links to all 10 pages.
 
 ---
 
+## Task 12: Page 11 — Social Media: LinkedIn
+
+**Files:** `pages/11-social-linkedin.html`
+
+- Page title "Social Media Templates" top-left, subtitle "LinkedIn"
+- LinkedIn Post (1200x627) — headline + gradient blobs + logo
+- LinkedIn Banner (1584x396) — wordmark + tagline + gradient
+- Templates scaled and centered with format label + dimensions
+
+---
+
+## Task 13: Page 12 — Social Media: X
+
+**Files:** `pages/12-social-x.html`
+
+- Page title "Social Media Templates" top-left, subtitle "X (Twitter)"
+- X Post (1200x675) — headline + gradient line accent + logo
+- X Header (1500x500) — centered wordmark + tagline + subtle gradients
+- Templates scaled and centered with format label + dimensions
+
+---
+
+## Task 14: Page 13 — Social Media: Instagram
+
+**Files:** `pages/13-social-instagram.html`
+
+- Page title "Social Media Templates" top-left, subtitle "Instagram"
+- Feed (1080x1080), Stories (1080x1920), Carrossel (1080x1350)
+- 3 templates side by side, correct proportions
+- Each with brand copy, gradients, logo
+
+---
+
 ## Execution Order
 
 1. Task 1 (shared CSS + index) — foundation
 2. Tasks 2-6 (brand system pages) — parallel possible
 3. Tasks 7-9 (templates) — parallel possible
 4. Tasks 10-11 (starter assets) — parallel possible
+5. Tasks 12-14 (social media templates) — parallel possible
 
-Total: ~10 files + shared CSS + index
+Total: ~13 files + shared CSS + index
